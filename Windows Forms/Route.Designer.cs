@@ -37,7 +37,6 @@
             this.labelTimeStop = new System.Windows.Forms.Label();
             this.labelNameStop = new System.Windows.Forms.Label();
             this.textBoxNameStop = new System.Windows.Forms.TextBox();
-            this.labelStop = new System.Windows.Forms.Label();
             this.textBoxNumberRoute = new System.Windows.Forms.TextBox();
             this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
@@ -54,22 +53,26 @@
             this.labelTo = new System.Windows.Forms.Label();
             this.labelFrom = new System.Windows.Forms.Label();
             this.labelNumberRoute = new System.Windows.Forms.Label();
+            this.listViewStop = new System.Windows.Forms.ListView();
+            this.stop = new System.Windows.Forms.ColumnHeader();
+            this.time = new System.Windows.Forms.ColumnHeader();
+            this.buttonRemoveStop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // timePickerStop
             // 
             this.timePickerStop.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timePickerStop.Location = new System.Drawing.Point(371, 262);
+            this.timePickerStop.Location = new System.Drawing.Point(201, 315);
             this.timePickerStop.MinDate = new System.DateTime(2023, 6, 19, 0, 0, 0, 0);
             this.timePickerStop.Name = "timePickerStop";
             this.timePickerStop.ShowUpDown = true;
-            this.timePickerStop.Size = new System.Drawing.Size(196, 23);
+            this.timePickerStop.Size = new System.Drawing.Size(178, 23);
             this.timePickerStop.TabIndex = 119;
             // 
             // timePickerTo
             // 
             this.timePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timePickerTo.Location = new System.Drawing.Point(371, 156);
+            this.timePickerTo.Location = new System.Drawing.Point(371, 147);
             this.timePickerTo.MinDate = new System.DateTime(2023, 6, 19, 0, 0, 0, 0);
             this.timePickerTo.Name = "timePickerTo";
             this.timePickerTo.ShowUpDown = true;
@@ -79,7 +82,7 @@
             // timePickerFrom
             // 
             this.timePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timePickerFrom.Location = new System.Drawing.Point(92, 154);
+            this.timePickerFrom.Location = new System.Drawing.Point(92, 145);
             this.timePickerFrom.MinDate = new System.DateTime(2023, 6, 19, 0, 0, 0, 0);
             this.timePickerFrom.Name = "timePickerFrom";
             this.timePickerFrom.ShowUpDown = true;
@@ -110,9 +113,9 @@
             // 
             // buttonAddStop
             // 
-            this.buttonAddStop.Location = new System.Drawing.Point(440, 304);
+            this.buttonAddStop.Location = new System.Drawing.Point(385, 292);
             this.buttonAddStop.Name = "buttonAddStop";
-            this.buttonAddStop.Size = new System.Drawing.Size(127, 30);
+            this.buttonAddStop.Size = new System.Drawing.Size(88, 45);
             this.buttonAddStop.TabIndex = 94;
             this.buttonAddStop.Text = "Додати зупинку";
             this.buttonAddStop.UseVisualStyleBackColor = true;
@@ -122,7 +125,7 @@
             // 
             this.labelTimeStop.AutoSize = true;
             this.labelTimeStop.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTimeStop.Location = new System.Drawing.Point(371, 238);
+            this.labelTimeStop.Location = new System.Drawing.Point(201, 290);
             this.labelTimeStop.Name = "labelTimeStop";
             this.labelTimeStop.Size = new System.Drawing.Size(36, 21);
             this.labelTimeStop.TabIndex = 114;
@@ -132,7 +135,7 @@
             // 
             this.labelNameStop.AutoSize = true;
             this.labelNameStop.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelNameStop.Location = new System.Drawing.Point(90, 238);
+            this.labelNameStop.Location = new System.Drawing.Point(12, 290);
             this.labelNameStop.Name = "labelNameStop";
             this.labelNameStop.Size = new System.Drawing.Size(52, 21);
             this.labelNameStop.TabIndex = 113;
@@ -140,20 +143,10 @@
             // 
             // textBoxNameStop
             // 
-            this.textBoxNameStop.Location = new System.Drawing.Point(90, 265);
+            this.textBoxNameStop.Location = new System.Drawing.Point(12, 314);
             this.textBoxNameStop.Name = "textBoxNameStop";
-            this.textBoxNameStop.Size = new System.Drawing.Size(196, 23);
+            this.textBoxNameStop.Size = new System.Drawing.Size(178, 23);
             this.textBoxNameStop.TabIndex = 112;
-            // 
-            // labelStop
-            // 
-            this.labelStop.AutoSize = true;
-            this.labelStop.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelStop.Location = new System.Drawing.Point(17, 201);
-            this.labelStop.Name = "labelStop";
-            this.labelStop.Size = new System.Drawing.Size(84, 25);
-            this.labelStop.TabIndex = 111;
-            this.labelStop.Text = "Зупинки:";
             // 
             // textBoxNumberRoute
             // 
@@ -164,7 +157,7 @@
             // 
             // dateTimePickerTo
             // 
-            this.dateTimePickerTo.Location = new System.Drawing.Point(371, 122);
+            this.dateTimePickerTo.Location = new System.Drawing.Point(371, 113);
             this.dateTimePickerTo.MinDate = new System.DateTime(2023, 6, 12, 0, 0, 0, 0);
             this.dateTimePickerTo.Name = "dateTimePickerTo";
             this.dateTimePickerTo.Size = new System.Drawing.Size(196, 23);
@@ -173,7 +166,7 @@
             // 
             // dateTimePickerFrom
             // 
-            this.dateTimePickerFrom.Location = new System.Drawing.Point(92, 120);
+            this.dateTimePickerFrom.Location = new System.Drawing.Point(92, 111);
             this.dateTimePickerFrom.MinDate = new System.DateTime(2023, 6, 19, 0, 0, 0, 0);
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
             this.dateTimePickerFrom.Size = new System.Drawing.Size(196, 23);
@@ -195,14 +188,14 @@
             // 
             // textBoxTo
             // 
-            this.textBoxTo.Location = new System.Drawing.Point(371, 82);
+            this.textBoxTo.Location = new System.Drawing.Point(371, 73);
             this.textBoxTo.Name = "textBoxTo";
             this.textBoxTo.Size = new System.Drawing.Size(196, 23);
             this.textBoxTo.TabIndex = 105;
             // 
             // textBoxFrom
             // 
-            this.textBoxFrom.Location = new System.Drawing.Point(92, 82);
+            this.textBoxFrom.Location = new System.Drawing.Point(92, 73);
             this.textBoxFrom.Name = "textBoxFrom";
             this.textBoxFrom.Size = new System.Drawing.Size(196, 23);
             this.textBoxFrom.TabIndex = 104;
@@ -231,7 +224,7 @@
             // 
             this.labelTimeTo.AutoSize = true;
             this.labelTimeTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTimeTo.Location = new System.Drawing.Point(320, 154);
+            this.labelTimeTo.Location = new System.Drawing.Point(320, 145);
             this.labelTimeTo.Name = "labelTimeTo";
             this.labelTimeTo.Size = new System.Drawing.Size(45, 25);
             this.labelTimeTo.TabIndex = 101;
@@ -241,7 +234,7 @@
             // 
             this.labelDateTo.AutoSize = true;
             this.labelDateTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelDateTo.Location = new System.Drawing.Point(312, 120);
+            this.labelDateTo.Location = new System.Drawing.Point(312, 111);
             this.labelDateTo.Name = "labelDateTo";
             this.labelDateTo.Size = new System.Drawing.Size(53, 25);
             this.labelDateTo.TabIndex = 100;
@@ -251,7 +244,7 @@
             // 
             this.labelTimeFrom.AutoSize = true;
             this.labelTimeFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTimeFrom.Location = new System.Drawing.Point(41, 154);
+            this.labelTimeFrom.Location = new System.Drawing.Point(41, 145);
             this.labelTimeFrom.Name = "labelTimeFrom";
             this.labelTimeFrom.Size = new System.Drawing.Size(45, 25);
             this.labelTimeFrom.TabIndex = 99;
@@ -261,7 +254,7 @@
             // 
             this.labelDateFrom.AutoSize = true;
             this.labelDateFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelDateFrom.Location = new System.Drawing.Point(33, 120);
+            this.labelDateFrom.Location = new System.Drawing.Point(33, 111);
             this.labelDateFrom.Name = "labelDateFrom";
             this.labelDateFrom.Size = new System.Drawing.Size(53, 25);
             this.labelDateFrom.TabIndex = 98;
@@ -271,7 +264,7 @@
             // 
             this.labelTo.AutoSize = true;
             this.labelTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTo.Location = new System.Drawing.Point(312, 79);
+            this.labelTo.Location = new System.Drawing.Point(312, 70);
             this.labelTo.Name = "labelTo";
             this.labelTo.Size = new System.Drawing.Size(55, 25);
             this.labelTo.TabIndex = 97;
@@ -281,7 +274,7 @@
             // 
             this.labelFrom.AutoSize = true;
             this.labelFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelFrom.Location = new System.Drawing.Point(17, 79);
+            this.labelFrom.Location = new System.Drawing.Point(17, 70);
             this.labelFrom.Name = "labelFrom";
             this.labelFrom.Size = new System.Drawing.Size(69, 25);
             this.labelFrom.TabIndex = 96;
@@ -297,12 +290,48 @@
             this.labelNumberRoute.TabIndex = 95;
             this.labelNumberRoute.Text = "Маршрут №";
             // 
+            // listViewStop
+            // 
+            this.listViewStop.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.stop,
+            this.time});
+            this.listViewStop.FullRowSelect = true;
+            this.listViewStop.GridLines = true;
+            this.listViewStop.Location = new System.Drawing.Point(12, 176);
+            this.listViewStop.Name = "listViewStop";
+            this.listViewStop.Size = new System.Drawing.Size(556, 111);
+            this.listViewStop.TabIndex = 120;
+            this.listViewStop.UseCompatibleStateImageBehavior = false;
+            this.listViewStop.View = System.Windows.Forms.View.Details;
+            // 
+            // stop
+            // 
+            this.stop.Text = "Зупинки";
+            this.stop.Width = 350;
+            // 
+            // time
+            // 
+            this.time.Text = "Час";
+            this.time.Width = 190;
+            // 
+            // buttonRemoveStop
+            // 
+            this.buttonRemoveStop.Location = new System.Drawing.Point(479, 293);
+            this.buttonRemoveStop.Name = "buttonRemoveStop";
+            this.buttonRemoveStop.Size = new System.Drawing.Size(88, 45);
+            this.buttonRemoveStop.TabIndex = 121;
+            this.buttonRemoveStop.Text = "Видалити зупинку";
+            this.buttonRemoveStop.UseVisualStyleBackColor = true;
+            this.buttonRemoveStop.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Route
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(584, 451);
+            this.Controls.Add(this.buttonRemoveStop);
+            this.Controls.Add(this.listViewStop);
             this.Controls.Add(this.timePickerStop);
             this.Controls.Add(this.timePickerTo);
             this.Controls.Add(this.timePickerFrom);
@@ -312,7 +341,6 @@
             this.Controls.Add(this.labelTimeStop);
             this.Controls.Add(this.labelNameStop);
             this.Controls.Add(this.textBoxNameStop);
-            this.Controls.Add(this.labelStop);
             this.Controls.Add(this.textBoxNumberRoute);
             this.Controls.Add(this.dateTimePickerTo);
             this.Controls.Add(this.dateTimePickerFrom);
@@ -350,7 +378,6 @@
         private Label labelTimeStop;
         private Label labelNameStop;
         private TextBox textBoxNameStop;
-        private Label labelStop;
         private TextBox textBoxNumberRoute;
         private DateTimePicker dateTimePickerTo;
         private DateTimePicker dateTimePickerFrom;
@@ -367,5 +394,9 @@
         private Label labelTo;
         private Label labelFrom;
         private Label labelNumberRoute;
+        private ListView listViewStop;
+        private ColumnHeader stop;
+        private ColumnHeader time;
+        private Button buttonRemoveStop;
     }
 }

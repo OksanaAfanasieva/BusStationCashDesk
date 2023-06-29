@@ -24,5 +24,23 @@ namespace BusStationCashDesk.Windows_Forms
             form.Show();
             this.Hide();
         }
+
+        private void HomePageAdministration_FormClosing(object? sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void HomePageAdministration_Load(object sender, EventArgs e)
+        {
+            this.FormClosing += HomePageAdministration_FormClosing;
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

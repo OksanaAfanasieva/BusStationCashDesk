@@ -82,6 +82,7 @@
             this.buttonSearch.TabIndex = 31;
             this.buttonSearch.Text = "Пошук";
             this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // buttonRemove
             // 
@@ -107,6 +108,7 @@
             this.listRoute.FormattingEnabled = true;
             this.listRoute.ItemHeight = 15;
             this.listRoute.Location = new System.Drawing.Point(274, 9);
+            this.listRoute.MultiColumn = true;
             this.listRoute.Name = "listRoute";
             this.listRoute.Size = new System.Drawing.Size(514, 394);
             this.listRoute.TabIndex = 28;
@@ -173,6 +175,7 @@
             this.Name = "HomePageAdministration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Головна сторінка";
+            this.Load += new System.EventHandler(this.HomePageAdministration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

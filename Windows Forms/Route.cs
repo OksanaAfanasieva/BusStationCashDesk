@@ -19,8 +19,9 @@ namespace BusStationCashDesk.Windows_Forms
     {
         private SaveLoadData<RouteData> file;
         private List<RouteData> routeList;
-        private List<string> nameStop = new List<string>();
-        private List<DateTime> timeStop = new List<DateTime>();
+        private List<string>? nameStop;
+        private List<DateTime>? timeStop; 
+
         public Route()
         {
             InitializeComponent();
@@ -72,6 +73,22 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void buttonSave_Click_1(object sender, EventArgs e)
         {
+            if(nameStop == null)
+            {
+                nameStop = new List<string>();
+            }
+
+            if(timeStop == null)
+            {
+                timeStop = new List<DateTime>();
+            }
+
+            foreach(ListViewItem item in listViewStop.Items)
+            {
+                nameStop.Add(item.SubItems[0].Text);
+                timeStop.Add(DateTime.Parse(item.SubItems[1].Text));
+            }
+
             string number = textBoxNumberRoute.Text;
             string fromName = textBoxFrom.Text;
             string toName = textBoxTo.Text;
@@ -118,36 +135,21 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void buttonAddStop_Click_1(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(textBoxNameStop.Text))
+            if(string.IsNullOrEmpty(textBoxNameStop.Text) || string.IsNullOrEmpty(timePickerStop.Text))
             {
-                int index = nameStop.Count + 1;
-                TextBox textBoxNameStop = new TextBox();
-                textBoxNameStop.Location = new Point(90, 265 + (index + 25));
-                textBoxNameStop.Width = 196;
-                this.Controls.Add(textBoxNameStop);
-                nameStop.Add(textBoxNameStop.Text);
-
-                DateTimePicker timePickerStop = new DateTimePicker();
-                timePickerStop.Format = DateTimePickerFormat.Custom;
-                timePickerStop.CustomFormat = "HH:mm";
-                timePickerStop.ShowUpDown = true;
-                timePickerStop.Location = new Point(371, 265 + (index + 25));
-                timePickerStop.Width = 196;
-                this.Controls.Add(timePickerStop);
-                timeStop.Add(timePickerStop.Value);
-
-                buttonAddStop.Location = new Point(buttonAddStop.Location.X, buttonAddStop.Location.Y + 28);
-                labelFreePlace.Location = new Point(labelFreePlace.Location.X, labelFreePlace.Location.Y + 28);
-                textBoxFreePlace.Location = new Point(textBoxFreePlace.Location.X, textBoxFreePlace.Location.Y + 28);
-                labelPrice.Location = new Point(labelPrice.Location.X, labelPrice.Location.Y + 28);
-                textBoxPrice.Location = new Point(textBoxPrice.Location.X, textBoxPrice.Location.Y + 28);
-                buttonCancel.Location = new Point(buttonCancel.Location.X, buttonCancel.Location.Y + 28);
-                buttonSave.Location = new Point(buttonSave.Location.X, buttonSave.Location.Y + 28);
-
-                int height = buttonSave.Location.Y + buttonSave.Height + 10;
-                this.AutoScrollMinSize = new Size(0, height);
-                this.AutoScrollPosition = new Point(0, height);
+                MessageBox.Show("Введіть назву зупинки.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
+            ListViewItem item = new ListViewItem(textBoxNameStop.Text);
+            item.SubItems.Add(timePickerStop.Text);
+            listViewStop.Items.Add(item);
+            textBoxNameStop.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (listViewStop.Items.Count > 0)
+                listViewStop.Items.Remove(listViewStop.SelectedItems[0]);
         }
     }
 }
