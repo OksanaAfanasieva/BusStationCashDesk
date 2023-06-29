@@ -147,7 +147,9 @@
             this.Controls.Add(this.labelFrom);
             this.Controls.Add(this.textBoxFrom);
             this.Name = "HomePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Головна сторінка";
+            this.Load += new System.EventHandler(this.HomePage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

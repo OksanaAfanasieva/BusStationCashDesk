@@ -15,6 +15,14 @@ namespace BusStationCashDesk.Windows_Forms
         public HomePageAdministration()
         {
             InitializeComponent();
+            dateTimePicker.MinDate = DateTime.Today;
+        }
+
+        private void buttonCreate_Click(object sender, EventArgs e)
+        {
+            Route form = new Route();
+            form.Show();
+            this.Hide();
         }
     }
 }

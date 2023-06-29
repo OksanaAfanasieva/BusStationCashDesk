@@ -74,6 +74,7 @@
             this.Controls.Add(this.buttonReturnTicket);
             this.Controls.Add(this.linkLabelBack);
             this.Name = "MyTravel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Мої подорожі";
             this.ResumeLayout(false);
             this.PerformLayout();

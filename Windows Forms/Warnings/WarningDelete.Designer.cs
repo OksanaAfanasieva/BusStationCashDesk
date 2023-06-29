@@ -72,6 +72,7 @@
             this.MaximumSize = new System.Drawing.Size(325, 200);
             this.MinimumSize = new System.Drawing.Size(325, 200);
             this.Name = "WarningDelete";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "WarningDelete";
             this.ResumeLayout(false);
             this.PerformLayout();

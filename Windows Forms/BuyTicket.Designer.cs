@@ -303,6 +303,7 @@
             this.Controls.Add(this.labelFrom);
             this.Controls.Add(this.labelNumberRoute);
             this.Name = "BuyTicket";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuyTicket";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPassenger)).EndInit();
             this.ResumeLayout(false);

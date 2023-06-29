@@ -16,5 +16,18 @@ namespace BusStationCashDesk.Windows_Forms
         {
             InitializeComponent();
         }
+
+        private void BoardingList_FormClosing(object? sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void BoardingList_Load(object sender, EventArgs e)
+        {
+            this.FormClosing += BoardingList_FormClosing;
+        }
     }
 }

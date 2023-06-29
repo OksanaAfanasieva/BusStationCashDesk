@@ -28,95 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.labelRegistration = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.buttonRegistration = new System.Windows.Forms.Button();
+            this.linkLabelToLogIn = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // label1
+            // labelRegistration
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(107, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Реєстрація";
+            this.labelRegistration.AutoSize = true;
+            this.labelRegistration.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelRegistration.Location = new System.Drawing.Point(98, 52);
+            this.labelRegistration.Name = "labelRegistration";
+            this.labelRegistration.Size = new System.Drawing.Size(148, 37);
+            this.labelRegistration.TabIndex = 0;
+            this.labelRegistration.Text = "Реєстрація";
             // 
-            // label2
+            // labelName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(58, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ім\'я";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelName.Location = new System.Drawing.Point(58, 115);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(43, 25);
+            this.labelName.TabIndex = 1;
+            this.labelName.Text = "Ім\'я";
             // 
-            // label3
+            // labelPassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(27, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Пароль";
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPassword.Location = new System.Drawing.Point(27, 140);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(74, 25);
+            this.labelPassword.TabIndex = 2;
+            this.labelPassword.Text = "Пароль";
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 23);
-            this.textBox1.TabIndex = 3;
+            this.textBoxName.Location = new System.Drawing.Point(107, 115);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(203, 23);
+            this.textBoxName.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(107, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 23);
-            this.textBox2.TabIndex = 4;
+            this.textBoxPassword.Location = new System.Drawing.Point(107, 145);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(203, 23);
+            this.textBoxPassword.TabIndex = 4;
             // 
-            // button1
+            // buttonRegistration
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(91, 183);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 41);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Зареєструватися";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonRegistration.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonRegistration.Location = new System.Drawing.Point(91, 183);
+            this.buttonRegistration.Name = "buttonRegistration";
+            this.buttonRegistration.Size = new System.Drawing.Size(190, 41);
+            this.buttonRegistration.TabIndex = 5;
+            this.buttonRegistration.Text = "Зареєструватися";
+            this.buttonRegistration.UseVisualStyleBackColor = true;
+            this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
             // 
-            // linkLabel1
+            // linkLabelToLogIn
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(117, 227);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(129, 15);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Я вже зареєстрований";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Blue;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabelToLogIn.AutoSize = true;
+            this.linkLabelToLogIn.Location = new System.Drawing.Point(117, 227);
+            this.linkLabelToLogIn.Name = "linkLabelToLogIn";
+            this.linkLabelToLogIn.Size = new System.Drawing.Size(129, 15);
+            this.linkLabelToLogIn.TabIndex = 6;
+            this.linkLabelToLogIn.TabStop = true;
+            this.linkLabelToLogIn.Text = "Я вже зареєстрований";
+            this.linkLabelToLogIn.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.linkLabelToLogIn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 281);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.linkLabelToLogIn);
+            this.Controls.Add(this.buttonRegistration);
+            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.labelRegistration);
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(360, 320);
             this.Name = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Реєстрація";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -126,12 +129,12 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
-        private LinkLabel linkLabel1;
+        private Label labelRegistration;
+        private Label labelName;
+        private Label labelPassword;
+        private TextBox textBoxName;
+        private TextBox textBoxPassword;
+        private Button buttonRegistration;
+        private LinkLabel linkLabelToLogIn;
     }
 }

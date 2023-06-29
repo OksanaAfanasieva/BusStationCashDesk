@@ -41,6 +41,7 @@
             this.buttonNo.TabIndex = 5;
             this.buttonNo.Text = "Ні";
             this.buttonNo.UseVisualStyleBackColor = true;
+            this.buttonNo.Click += new System.EventHandler(this.buttonNo_Click);
             // 
             // buttonYes
             // 
@@ -50,6 +51,7 @@
             this.buttonYes.TabIndex = 4;
             this.buttonYes.Text = "Так";
             this.buttonYes.UseVisualStyleBackColor = true;
+            this.buttonYes.Click += new System.EventHandler(this.buttonYes_Click);
             // 
             // labelWarning
             // 
@@ -72,6 +74,7 @@
             this.MaximumSize = new System.Drawing.Size(325, 200);
             this.MinimumSize = new System.Drawing.Size(325, 200);
             this.Name = "WarningCancel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Попередження";
             this.ResumeLayout(false);
             this.PerformLayout();

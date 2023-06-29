@@ -16,5 +16,19 @@ namespace BusStationCashDesk.Windows_Forms.Warnings
         {
             InitializeComponent();
         }
+
+        private void buttonYes_Click(object sender, EventArgs e)
+        {
+            HomePageAdministration form = new HomePageAdministration();
+            form.Show();
+            this.Hide();
+        }
+
+        private void buttonNo_Click(object sender, EventArgs e)
+        {
+            Route form = new Route();
+            form.Show();
+            this.Hide();
+        }
     }
 }

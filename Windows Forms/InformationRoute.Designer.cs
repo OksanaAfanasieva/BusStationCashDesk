@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.textBoxNumberRoute = new System.Windows.Forms.TextBox();
-            this.maskedTextBoxTimeTo = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBoxTimeFrom = new System.Windows.Forms.MaskedTextBox();
             this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
@@ -46,9 +44,11 @@
             this.labelTo = new System.Windows.Forms.Label();
             this.labelFrom = new System.Windows.Forms.Label();
             this.labelNumberRoute = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewStop = new System.Windows.Forms.ListView();
             this.stop = new System.Windows.Forms.ColumnHeader();
             this.time = new System.Windows.Forms.ColumnHeader();
+            this.timePickerFrom = new System.Windows.Forms.DateTimePicker();
+            this.timePickerTo = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // textBoxNumberRoute
@@ -59,25 +59,10 @@
             this.textBoxNumberRoute.Size = new System.Drawing.Size(79, 23);
             this.textBoxNumberRoute.TabIndex = 109;
             // 
-            // maskedTextBoxTimeTo
-            // 
-            this.maskedTextBoxTimeTo.Location = new System.Drawing.Point(371, 157);
-            this.maskedTextBoxTimeTo.Name = "maskedTextBoxTimeTo";
-            this.maskedTextBoxTimeTo.ReadOnly = true;
-            this.maskedTextBoxTimeTo.Size = new System.Drawing.Size(196, 23);
-            this.maskedTextBoxTimeTo.TabIndex = 108;
-            // 
-            // maskedTextBoxTimeFrom
-            // 
-            this.maskedTextBoxTimeFrom.Location = new System.Drawing.Point(92, 157);
-            this.maskedTextBoxTimeFrom.Name = "maskedTextBoxTimeFrom";
-            this.maskedTextBoxTimeFrom.ReadOnly = true;
-            this.maskedTextBoxTimeFrom.Size = new System.Drawing.Size(196, 23);
-            this.maskedTextBoxTimeFrom.TabIndex = 107;
-            // 
             // dateTimePickerTo
             // 
             this.dateTimePickerTo.Enabled = false;
+            this.dateTimePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerTo.Location = new System.Drawing.Point(371, 122);
             this.dateTimePickerTo.MinDate = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
             this.dateTimePickerTo.Name = "dateTimePickerTo";
@@ -88,6 +73,7 @@
             // dateTimePickerFrom
             // 
             this.dateTimePickerFrom.Enabled = false;
+            this.dateTimePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerFrom.Location = new System.Drawing.Point(92, 120);
             this.dateTimePickerFrom.MinDate = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
@@ -97,16 +83,17 @@
             // textBoxPrice
             // 
             this.textBoxPrice.Enabled = false;
-            this.textBoxPrice.Location = new System.Drawing.Point(487, 416);
+            this.textBoxPrice.Location = new System.Drawing.Point(487, 342);
+            this.textBoxPrice.Multiline = true;
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.ReadOnly = true;
-            this.textBoxPrice.Size = new System.Drawing.Size(80, 23);
+            this.textBoxPrice.Size = new System.Drawing.Size(80, 30);
             this.textBoxPrice.TabIndex = 104;
             // 
             // textBoxFreePlace
             // 
             this.textBoxFreePlace.Enabled = false;
-            this.textBoxFreePlace.Location = new System.Drawing.Point(223, 413);
+            this.textBoxFreePlace.Location = new System.Drawing.Point(223, 349);
             this.textBoxFreePlace.Name = "textBoxFreePlace";
             this.textBoxFreePlace.ReadOnly = true;
             this.textBoxFreePlace.Size = new System.Drawing.Size(51, 23);
@@ -134,7 +121,7 @@
             // 
             this.labelPrice.AutoSize = true;
             this.labelPrice.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPrice.Location = new System.Drawing.Point(429, 413);
+            this.labelPrice.Location = new System.Drawing.Point(429, 346);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(52, 25);
             this.labelPrice.TabIndex = 100;
@@ -144,11 +131,12 @@
             // 
             this.labelFreePlace.AutoSize = true;
             this.labelFreePlace.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelFreePlace.Location = new System.Drawing.Point(17, 413);
+            this.labelFreePlace.Location = new System.Drawing.Point(17, 346);
             this.labelFreePlace.Name = "labelFreePlace";
             this.labelFreePlace.Size = new System.Drawing.Size(200, 25);
             this.labelFreePlace.TabIndex = 99;
             this.labelFreePlace.Text = "Кількість вільних місць:";
+            this.labelFreePlace.Click += new System.EventHandler(this.labelFreePlace_Click);
             // 
             // labelTimeTo
             // 
@@ -220,17 +208,17 @@
             this.labelNumberRoute.TabIndex = 92;
             this.labelNumberRoute.Text = "Маршрут №";
             // 
-            // listView1
+            // listViewStop
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewStop.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.stop,
             this.time});
-            this.listView1.Location = new System.Drawing.Point(17, 199);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(550, 211);
-            this.listView1.TabIndex = 110;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewStop.Location = new System.Drawing.Point(17, 199);
+            this.listViewStop.Name = "listViewStop";
+            this.listViewStop.Size = new System.Drawing.Size(550, 137);
+            this.listViewStop.TabIndex = 110;
+            this.listViewStop.UseCompatibleStateImageBehavior = false;
+            this.listViewStop.View = System.Windows.Forms.View.Details;
             // 
             // stop
             // 
@@ -242,15 +230,35 @@
             this.time.Text = "Час";
             this.time.Width = 190;
             // 
+            // timePickerFrom
+            // 
+            this.timePickerFrom.Enabled = false;
+            this.timePickerFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timePickerFrom.Location = new System.Drawing.Point(92, 156);
+            this.timePickerFrom.MinDate = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
+            this.timePickerFrom.Name = "timePickerFrom";
+            this.timePickerFrom.Size = new System.Drawing.Size(196, 23);
+            this.timePickerFrom.TabIndex = 111;
+            // 
+            // timePickerTo
+            // 
+            this.timePickerTo.Enabled = false;
+            this.timePickerTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.timePickerTo.Location = new System.Drawing.Point(371, 156);
+            this.timePickerTo.MinDate = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
+            this.timePickerTo.Name = "timePickerTo";
+            this.timePickerTo.Size = new System.Drawing.Size(196, 23);
+            this.timePickerTo.TabIndex = 112;
+            // 
             // InformationRoute
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 451);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(584, 381);
+            this.Controls.Add(this.timePickerTo);
+            this.Controls.Add(this.timePickerFrom);
+            this.Controls.Add(this.listViewStop);
             this.Controls.Add(this.textBoxNumberRoute);
-            this.Controls.Add(this.maskedTextBoxTimeTo);
-            this.Controls.Add(this.maskedTextBoxTimeFrom);
             this.Controls.Add(this.dateTimePickerTo);
             this.Controls.Add(this.dateTimePickerFrom);
             this.Controls.Add(this.textBoxPrice);
@@ -266,8 +274,13 @@
             this.Controls.Add(this.labelTo);
             this.Controls.Add(this.labelFrom);
             this.Controls.Add(this.labelNumberRoute);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(600, 420);
+            this.MinimumSize = new System.Drawing.Size(600, 420);
             this.Name = "InformationRoute";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Маршрут";
+            this.Load += new System.EventHandler(this.InformationRoute_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,8 +289,6 @@
         #endregion
 
         private TextBox textBoxNumberRoute;
-        private MaskedTextBox maskedTextBoxTimeTo;
-        private MaskedTextBox maskedTextBoxTimeFrom;
         private DateTimePicker dateTimePickerTo;
         private DateTimePicker dateTimePickerFrom;
         private TextBox textBoxPrice;
@@ -293,8 +304,10 @@
         private Label labelTo;
         private Label labelFrom;
         private Label labelNumberRoute;
-        private ListView listView1;
+        private ListView listViewStop;
         private ColumnHeader stop;
         private ColumnHeader time;
+        private DateTimePicker timePickerFrom;
+        private DateTimePicker timePickerTo;
     }
 }

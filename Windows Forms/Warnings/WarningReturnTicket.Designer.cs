@@ -70,6 +70,7 @@
             this.Controls.Add(this.buttonYes);
             this.Controls.Add(this.labelWarning);
             this.Name = "WarningReturnTicket";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Попередження";
             this.ResumeLayout(false);
             this.PerformLayout();

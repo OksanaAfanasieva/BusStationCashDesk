@@ -113,7 +113,9 @@
             this.Controls.Add(this.textBoxNumberRoute);
             this.Controls.Add(this.labelNumberRoute);
             this.Name = "BoardingList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Посадкова відомість";
+            this.Load += new System.EventHandler(this.BoardingList_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

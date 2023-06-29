@@ -1,3 +1,6 @@
+using BusStationCashDesk.Classes;
+using BusStationCashDesk.Windows_Forms;
+
 namespace BusStationCashDesk
 {
     internal static class Program

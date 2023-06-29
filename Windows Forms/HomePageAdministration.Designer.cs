@@ -51,6 +51,7 @@
             this.buttonCreate.TabIndex = 34;
             this.buttonCreate.Text = "Створити";
             this.buttonCreate.UseVisualStyleBackColor = true;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // buttonBoardingList
             // 
@@ -153,6 +154,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.buttonBoardingList);
@@ -166,7 +169,9 @@
             this.Controls.Add(this.labelTo);
             this.Controls.Add(this.labelFrom);
             this.Controls.Add(this.textBoxFrom);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "HomePageAdministration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Головна сторінка";
             this.ResumeLayout(false);
             this.PerformLayout();
