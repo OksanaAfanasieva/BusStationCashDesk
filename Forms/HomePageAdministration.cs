@@ -43,6 +43,7 @@ namespace BusStationCashDesk.Windows_Forms
         private void HomePageAdministration_Load(object sender, EventArgs e)
         {
             this.FormClosing += HomePageAdministration_FormClosing;
+            DisplayRoute(routeList);
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -58,39 +59,37 @@ namespace BusStationCashDesk.Windows_Forms
             }
             else
             {
-                List<RouteData> selectRoute = SelectedRoute(from, to, date);
+                List<RouteData> selectedRoute = SelectedRoute(from, to, date);
 
-                if (selectRoute.Count == 0)
+                if (selectedRoute.Count == 0)
                 {
                     listRoute.Items.Clear();
                     MessageBox.Show("Жодного маршруту не знайдено.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                else DisplayRoute(selectRoute);
+                else DisplayRoute(selectedRoute);
             }
         }
 
         private List<RouteData> SelectedRoute(string from, string to, DateTime date)
         {
-            List<RouteData> sortRoute = new List<RouteData>();
+            List<RouteData> selectedRoute = new List<RouteData>();
 
             foreach (RouteData route in routeList)
             {
-                if (route.FromName == from && route.ToName == to && route.DateTimeFrom == date)
+                if (route.FromName == from && route.ToName == to && route.DateTimeFrom == date && int.Parse(route.FreeSeats) > 0)
                 {
-                    sortRoute.Add(route);
+                    selectedRoute.Add(route);
                 }
             }
-            return sortRoute;
+            return selectedRoute;
         }
 
         private void DisplayRoute(List<RouteData> route)
         {
             listRoute.Items.Clear();
-
-            route.Sort((r1, r2) => r1.DateTimeFrom.CompareTo(r2.DateTimeFrom));
             
-            foreach (RouteData route1 in routeList)
+            foreach (RouteData route1 in route)
             {
                 ListViewItem item = new ListViewItem(route1.Number);
                 item.SubItems.Add(route1.FromName);

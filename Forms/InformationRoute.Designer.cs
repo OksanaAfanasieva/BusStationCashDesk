@@ -53,66 +53,79 @@
             // 
             // textBoxNumberRoute
             // 
-            this.textBoxNumberRoute.Location = new System.Drawing.Point(148, 27);
+            this.textBoxNumberRoute.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNumberRoute.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNumberRoute.Location = new System.Drawing.Point(148, 23);
             this.textBoxNumberRoute.Name = "textBoxNumberRoute";
             this.textBoxNumberRoute.ReadOnly = true;
-            this.textBoxNumberRoute.Size = new System.Drawing.Size(79, 23);
+            this.textBoxNumberRoute.Size = new System.Drawing.Size(79, 24);
             this.textBoxNumberRoute.TabIndex = 109;
             // 
             // dateTimePickerTo
             // 
             this.dateTimePickerTo.Enabled = false;
-            this.dateTimePickerTo.Location = new System.Drawing.Point(371, 122);
+            this.dateTimePickerTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerTo.Location = new System.Drawing.Point(371, 116);
             this.dateTimePickerTo.MinDate = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
             this.dateTimePickerTo.Name = "dateTimePickerTo";
-            this.dateTimePickerTo.Size = new System.Drawing.Size(196, 23);
+            this.dateTimePickerTo.Size = new System.Drawing.Size(196, 31);
             this.dateTimePickerTo.TabIndex = 106;
             this.dateTimePickerTo.Value = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
             // 
             // dateTimePickerFrom
             // 
             this.dateTimePickerFrom.Enabled = false;
-            this.dateTimePickerFrom.Location = new System.Drawing.Point(92, 120);
+            this.dateTimePickerFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerFrom.Location = new System.Drawing.Point(92, 116);
             this.dateTimePickerFrom.MinDate = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
-            this.dateTimePickerFrom.Size = new System.Drawing.Size(196, 23);
+            this.dateTimePickerFrom.Size = new System.Drawing.Size(196, 31);
             this.dateTimePickerFrom.TabIndex = 105;
             // 
             // textBoxPrice
             // 
+            this.textBoxPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPrice.Enabled = false;
-            this.textBoxPrice.Location = new System.Drawing.Point(487, 342);
-            this.textBoxPrice.Multiline = true;
+            this.textBoxPrice.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPrice.Location = new System.Drawing.Point(487, 347);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.ReadOnly = true;
-            this.textBoxPrice.Size = new System.Drawing.Size(80, 30);
+            this.textBoxPrice.Size = new System.Drawing.Size(80, 24);
             this.textBoxPrice.TabIndex = 104;
             // 
             // textBoxFreePlace
             // 
+            this.textBoxFreePlace.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxFreePlace.Enabled = false;
-            this.textBoxFreePlace.Location = new System.Drawing.Point(223, 349);
+            this.textBoxFreePlace.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxFreePlace.ForeColor = System.Drawing.Color.Black;
+            this.textBoxFreePlace.Location = new System.Drawing.Point(223, 348);
             this.textBoxFreePlace.Name = "textBoxFreePlace";
             this.textBoxFreePlace.ReadOnly = true;
-            this.textBoxFreePlace.Size = new System.Drawing.Size(51, 23);
+            this.textBoxFreePlace.Size = new System.Drawing.Size(51, 24);
             this.textBoxFreePlace.TabIndex = 103;
             // 
             // textBoxTo
             // 
+            this.textBoxTo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTo.Enabled = false;
-            this.textBoxTo.Location = new System.Drawing.Point(371, 82);
+            this.textBoxTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTo.Location = new System.Drawing.Point(371, 80);
             this.textBoxTo.Name = "textBoxTo";
             this.textBoxTo.ReadOnly = true;
-            this.textBoxTo.Size = new System.Drawing.Size(196, 23);
+            this.textBoxTo.Size = new System.Drawing.Size(196, 24);
             this.textBoxTo.TabIndex = 102;
+            this.textBoxTo.TextChanged += new System.EventHandler(this.textBoxTo_TextChanged);
             // 
             // textBoxFrom
             // 
+            this.textBoxFrom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxFrom.Enabled = false;
-            this.textBoxFrom.Location = new System.Drawing.Point(92, 82);
+            this.textBoxFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxFrom.Location = new System.Drawing.Point(92, 79);
             this.textBoxFrom.Name = "textBoxFrom";
             this.textBoxFrom.ReadOnly = true;
-            this.textBoxFrom.Size = new System.Drawing.Size(196, 23);
+            this.textBoxFrom.Size = new System.Drawing.Size(196, 24);
             this.textBoxFrom.TabIndex = 101;
             // 
             // labelPrice
@@ -211,6 +224,7 @@
             this.listViewStop.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.stop,
             this.time});
+            this.listViewStop.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listViewStop.Location = new System.Drawing.Point(17, 199);
             this.listViewStop.Name = "listViewStop";
             this.listViewStop.Size = new System.Drawing.Size(550, 137);
@@ -230,20 +244,24 @@
             // 
             // textBoxTimeFrom
             // 
+            this.textBoxTimeFrom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTimeFrom.Enabled = false;
-            this.textBoxTimeFrom.Location = new System.Drawing.Point(92, 157);
+            this.textBoxTimeFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTimeFrom.Location = new System.Drawing.Point(92, 154);
             this.textBoxTimeFrom.Name = "textBoxTimeFrom";
             this.textBoxTimeFrom.ReadOnly = true;
-            this.textBoxTimeFrom.Size = new System.Drawing.Size(196, 23);
+            this.textBoxTimeFrom.Size = new System.Drawing.Size(196, 24);
             this.textBoxTimeFrom.TabIndex = 111;
             // 
             // textBoxTimeTo
             // 
+            this.textBoxTimeTo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTimeTo.Enabled = false;
+            this.textBoxTimeTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxTimeTo.Location = new System.Drawing.Point(371, 156);
             this.textBoxTimeTo.Name = "textBoxTimeTo";
             this.textBoxTimeTo.ReadOnly = true;
-            this.textBoxTimeTo.Size = new System.Drawing.Size(196, 23);
+            this.textBoxTimeTo.Size = new System.Drawing.Size(196, 24);
             this.textBoxTimeTo.TabIndex = 112;
             // 
             // InformationRoute

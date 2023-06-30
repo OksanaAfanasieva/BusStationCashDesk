@@ -36,6 +36,7 @@ namespace BusStationCashDesk.Windows_Forms
         private void HomePage_Load(object sender, EventArgs e)
         {
             this.FormClosing += HomePage_FormClosing;
+            DisplayRoute(routeList);
         }
 
         private void linkLabelMyTravels_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -51,7 +52,7 @@ namespace BusStationCashDesk.Windows_Forms
 
             foreach (RouteData route in routeList)
             {
-                if (route.FromName == from && route.ToName == to && route.DateTimeFrom == date)
+                if (route.FromName == from && route.ToName == to && route.DateTimeFrom == date && int.Parse(route.FreeSeats) > 0)
                 {
                     sortRoute.Add(route);
                 }
@@ -63,9 +64,7 @@ namespace BusStationCashDesk.Windows_Forms
         {
             listRoute.Items.Clear();
 
-            route.Sort((r1, r2) => r1.DateTimeFrom.CompareTo(r2.DateTimeFrom));
-
-            foreach (RouteData route1 in routeList)
+            foreach (RouteData route1 in route)
             {
                 ListViewItem item = new ListViewItem(route1.Number);
                 item.SubItems.Add(route1.FromName);
@@ -106,10 +105,16 @@ namespace BusStationCashDesk.Windows_Forms
         {
             if (listRoute.SelectedItems.Count > 0)
             {
-                RouteData selectedRoute = (RouteData)listRoute.SelectedItems[0].Tag;
+                string selected = listRoute.SelectedItems[0].Text;
 
-                InformationRoute informationRoute = new InformationRoute(selectedRoute);
-                informationRoute.ShowDialog();
+                for (int i = 0; i < routeList.Count; i++)
+                {
+                    if (routeList[i].Number == selected && selected != null)
+                    {
+                        InformationRoute informationRoute = new InformationRoute(selected);
+                        informationRoute.ShowDialog();
+                    }
+                }   
             }
         }
     }
