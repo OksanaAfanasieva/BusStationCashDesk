@@ -32,12 +32,17 @@
             this.buttonBuy = new System.Windows.Forms.Button();
             this.linkLabelMyTravels = new System.Windows.Forms.LinkLabel();
             this.labelDate = new System.Windows.Forms.Label();
-            this.listRoute = new System.Windows.Forms.ListBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.textBoxTo = new System.Windows.Forms.TextBox();
             this.labelTo = new System.Windows.Forms.Label();
             this.labelFrom = new System.Windows.Forms.Label();
             this.textBoxFrom = new System.Windows.Forms.TextBox();
+            this.listRoute = new System.Windows.Forms.ListView();
+            this.number = new System.Windows.Forms.ColumnHeader();
+            this.from = new System.Windows.Forms.ColumnHeader();
+            this.to = new System.Windows.Forms.ColumnHeader();
+            this.timeFrom = new System.Windows.Forms.ColumnHeader();
+            this.freeSeat = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // buttonSearch
@@ -49,11 +54,12 @@
             this.buttonSearch.TabIndex = 19;
             this.buttonSearch.Text = "Пошук";
             this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click_1);
             // 
             // buttonBuy
             // 
             this.buttonBuy.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonBuy.Location = new System.Drawing.Point(628, 408);
+            this.buttonBuy.Location = new System.Drawing.Point(739, 412);
             this.buttonBuy.Name = "buttonBuy";
             this.buttonBuy.Size = new System.Drawing.Size(160, 32);
             this.buttonBuy.TabIndex = 18;
@@ -73,6 +79,7 @@
             this.linkLabelMyTravels.TabStop = true;
             this.linkLabelMyTravels.Text = "Мої подорожі";
             this.linkLabelMyTravels.VisitedLinkColor = System.Drawing.Color.Black;
+            this.linkLabelMyTravels.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMyTravels_LinkClicked);
             // 
             // labelDate
             // 
@@ -82,15 +89,6 @@
             this.labelDate.Size = new System.Drawing.Size(32, 15);
             this.labelDate.TabIndex = 16;
             this.labelDate.Text = "Дата";
-            // 
-            // listRoute
-            // 
-            this.listRoute.FormattingEnabled = true;
-            this.listRoute.ItemHeight = 15;
-            this.listRoute.Location = new System.Drawing.Point(274, 10);
-            this.listRoute.Name = "listRoute";
-            this.listRoute.Size = new System.Drawing.Size(514, 394);
-            this.listRoute.TabIndex = 15;
             // 
             // dateTimePicker
             // 
@@ -131,21 +129,63 @@
             this.textBoxFrom.Size = new System.Drawing.Size(190, 23);
             this.textBoxFrom.TabIndex = 10;
             // 
+            // listRoute
+            // 
+            this.listRoute.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.number,
+            this.from,
+            this.to,
+            this.timeFrom,
+            this.freeSeat});
+            this.listRoute.Location = new System.Drawing.Point(222, 10);
+            this.listRoute.Name = "listRoute";
+            this.listRoute.Size = new System.Drawing.Size(677, 396);
+            this.listRoute.TabIndex = 36;
+            this.listRoute.UseCompatibleStateImageBehavior = false;
+            this.listRoute.View = System.Windows.Forms.View.Details;
+            this.listRoute.DoubleClick += new System.EventHandler(this.listRoute_DoubleClick);
+            // 
+            // number
+            // 
+            this.number.Text = "Номер рейса";
+            this.number.Width = 90;
+            // 
+            // from
+            // 
+            this.from.Text = "Місто відправлення";
+            this.from.Width = 160;
+            // 
+            // to
+            // 
+            this.to.Text = "Місто призначення";
+            this.to.Width = 160;
+            // 
+            // timeFrom
+            // 
+            this.timeFrom.Text = "Час відправлення";
+            this.timeFrom.Width = 150;
+            // 
+            // freeSeat
+            // 
+            this.freeSeat.Text = "Вільні місця";
+            this.freeSeat.Width = 100;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(911, 450);
+            this.Controls.Add(this.listRoute);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.buttonBuy);
             this.Controls.Add(this.linkLabelMyTravels);
             this.Controls.Add(this.labelDate);
-            this.Controls.Add(this.listRoute);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.textBoxTo);
             this.Controls.Add(this.labelTo);
             this.Controls.Add(this.labelFrom);
             this.Controls.Add(this.textBoxFrom);
+            this.MinimumSize = new System.Drawing.Size(927, 489);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Головна сторінка";
@@ -161,11 +201,16 @@
         private Button buttonBuy;
         private LinkLabel linkLabelMyTravels;
         private Label labelDate;
-        private ListBox listRoute;
         private DateTimePicker dateTimePicker;
         private TextBox textBoxTo;
         private Label labelTo;
         private Label labelFrom;
         private TextBox textBoxFrom;
+        private ListView listRoute;
+        private ColumnHeader number;
+        private ColumnHeader from;
+        private ColumnHeader to;
+        private ColumnHeader timeFrom;
+        private ColumnHeader freeSeat;
     }
 }

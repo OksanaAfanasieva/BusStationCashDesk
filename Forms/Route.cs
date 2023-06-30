@@ -1,5 +1,4 @@
 ﻿using BusStationCashDesk.Classes;
-using BusStationCashDesk.Windows_Forms.Warnings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +19,7 @@ namespace BusStationCashDesk.Windows_Forms
         private SaveLoadData<RouteData> file;
         private List<RouteData> routeList;
         private List<string>? nameStop;
-        private List<DateTime>? timeStop; 
+        private List<string>? timeStop; 
 
         public Route()
         {
@@ -50,7 +49,7 @@ namespace BusStationCashDesk.Windows_Forms
             this.FormClosing += Route_FormClosing;
             timePickerFrom.CustomFormat = "HH:mm";
             timePickerTo.CustomFormat = "HH:mm";
-            timePickerStop.CustomFormat = "HH:mm";
+            timePickerStop.CustomFormat = "HH:mm"; 
         }
 
         private void buttonCancel_Click_1(object sender, EventArgs e)
@@ -80,24 +79,24 @@ namespace BusStationCashDesk.Windows_Forms
 
             if(timeStop == null)
             {
-                timeStop = new List<DateTime>();
+                timeStop = new List<string>();
             }
 
             foreach(ListViewItem item in listViewStop.Items)
             {
                 nameStop.Add(item.SubItems[0].Text);
-                timeStop.Add(DateTime.Parse(item.SubItems[1].Text));
+                timeStop.Add(item.SubItems[1].Text);
             }
 
             string number = textBoxNumberRoute.Text;
             string fromName = textBoxFrom.Text;
             string toName = textBoxTo.Text;
-            DateTime dateTimeFrom = dateTimePickerFrom.Value;
-            DateTime timeFrom = timePickerFrom.Value;
-            DateTime dateTimeTo = dateTimePickerTo.Value;
-            DateTime timeTo = timePickerTo.Value;
+            DateTime dateTimeFrom = dateTimePickerFrom.Value.Date;
+            string timeFrom = timePickerFrom.Value.ToString("HH:mm");
+            DateTime dateTimeTo = dateTimePickerTo.Value.Date;
+            string timeTo = timePickerTo.Value.ToString("HH:mm");
             List<string> stops = nameStop ?? new List<string>();
-            List<DateTime> timeStops = timeStop ?? new List<DateTime>();
+            List<string> timeStops = timeStop /* ?? new List<string>()*/;
             string freeSeats = textBoxFreePlace.Text;
             string price = textBoxPrice.Text;
 
@@ -148,8 +147,20 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (listViewStop.Items.Count > 0)
+            if (listViewStop.SelectedItems.Count > 0)
                 listViewStop.Items.Remove(listViewStop.SelectedItems[0]);
+        }
+
+        private void textBoxFrom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void textBoxTo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void textBoxNameStop_KeyPress(object sender, KeyPressEventArgs e)
+        {
         }
     }
 }

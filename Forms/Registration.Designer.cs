@@ -117,6 +117,7 @@
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelRegistration);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(360, 320);
             this.MinimumSize = new System.Drawing.Size(360, 320);
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

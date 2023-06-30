@@ -19,7 +19,7 @@ namespace BusStationCashDesk.Classes
             this.filePath = filePath;
         }
 
-        //Метод, що зберігає список користувачів у файл .json
+        //Метод, що зберігає список у файл .json
         public void Save(List<T> users)
         {
             string jsonData = JsonSerializer.Serialize(users);

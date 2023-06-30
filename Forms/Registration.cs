@@ -77,7 +77,7 @@ namespace BusStationCashDesk
             this.Hide();
         }
 
-        //Метод призначений для перевірки чи існує вже користувач з таким ім'ям
+        //Метод призначений для перевірки чи існує вже користувач з таким ім'ям.
         private bool IsUserRegistered(string name)
         {
             if (userList == null)
@@ -96,6 +96,5 @@ namespace BusStationCashDesk
             }
             return false;
         }
-
     }
 }

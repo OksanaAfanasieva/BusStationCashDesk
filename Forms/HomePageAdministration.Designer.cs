@@ -34,18 +34,23 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.labelDate = new System.Windows.Forms.Label();
-            this.listRoute = new System.Windows.Forms.ListBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.textBoxToHome = new System.Windows.Forms.TextBox();
+            this.textBoxTo = new System.Windows.Forms.TextBox();
             this.labelTo = new System.Windows.Forms.Label();
             this.labelFrom = new System.Windows.Forms.Label();
             this.textBoxFrom = new System.Windows.Forms.TextBox();
+            this.listRoute = new System.Windows.Forms.ListView();
+            this.number = new System.Windows.Forms.ColumnHeader();
+            this.from = new System.Windows.Forms.ColumnHeader();
+            this.to = new System.Windows.Forms.ColumnHeader();
+            this.timeFrom = new System.Windows.Forms.ColumnHeader();
+            this.freeSeat = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // buttonCreate
             // 
             this.buttonCreate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonCreate.Location = new System.Drawing.Point(274, 409);
+            this.buttonCreate.Location = new System.Drawing.Point(382, 409);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(112, 32);
             this.buttonCreate.TabIndex = 34;
@@ -56,7 +61,7 @@
             // buttonBoardingList
             // 
             this.buttonBoardingList.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonBoardingList.Location = new System.Drawing.Point(628, 409);
+            this.buttonBoardingList.Location = new System.Drawing.Point(736, 409);
             this.buttonBoardingList.Name = "buttonBoardingList";
             this.buttonBoardingList.Size = new System.Drawing.Size(160, 32);
             this.buttonBoardingList.TabIndex = 33;
@@ -66,7 +71,7 @@
             // buttonEdit
             // 
             this.buttonEdit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonEdit.Location = new System.Drawing.Point(392, 409);
+            this.buttonEdit.Location = new System.Drawing.Point(500, 409);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(112, 32);
             this.buttonEdit.TabIndex = 32;
@@ -87,12 +92,13 @@
             // buttonRemove
             // 
             this.buttonRemove.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonRemove.Location = new System.Drawing.Point(510, 409);
+            this.buttonRemove.Location = new System.Drawing.Point(618, 409);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(112, 32);
             this.buttonRemove.TabIndex = 30;
             this.buttonRemove.Text = "Видалити";
             this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // labelDate
             // 
@@ -103,16 +109,6 @@
             this.labelDate.TabIndex = 29;
             this.labelDate.Text = "Дата";
             // 
-            // listRoute
-            // 
-            this.listRoute.FormattingEnabled = true;
-            this.listRoute.ItemHeight = 15;
-            this.listRoute.Location = new System.Drawing.Point(274, 9);
-            this.listRoute.MultiColumn = true;
-            this.listRoute.Name = "listRoute";
-            this.listRoute.Size = new System.Drawing.Size(514, 394);
-            this.listRoute.TabIndex = 28;
-            // 
             // dateTimePicker
             // 
             this.dateTimePicker.Location = new System.Drawing.Point(12, 136);
@@ -120,12 +116,12 @@
             this.dateTimePicker.Size = new System.Drawing.Size(189, 23);
             this.dateTimePicker.TabIndex = 27;
             // 
-            // textBoxToHome
+            // textBoxTo
             // 
-            this.textBoxToHome.Location = new System.Drawing.Point(13, 80);
-            this.textBoxToHome.Name = "textBoxToHome";
-            this.textBoxToHome.Size = new System.Drawing.Size(189, 23);
-            this.textBoxToHome.TabIndex = 26;
+            this.textBoxTo.Location = new System.Drawing.Point(13, 80);
+            this.textBoxTo.Name = "textBoxTo";
+            this.textBoxTo.Size = new System.Drawing.Size(189, 23);
+            this.textBoxTo.TabIndex = 26;
             // 
             // labelTo
             // 
@@ -152,26 +148,66 @@
             this.textBoxFrom.Size = new System.Drawing.Size(190, 23);
             this.textBoxFrom.TabIndex = 23;
             // 
+            // listRoute
+            // 
+            this.listRoute.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.number,
+            this.from,
+            this.to,
+            this.timeFrom,
+            this.freeSeat});
+            this.listRoute.Location = new System.Drawing.Point(219, 7);
+            this.listRoute.Name = "listRoute";
+            this.listRoute.Size = new System.Drawing.Size(677, 396);
+            this.listRoute.TabIndex = 35;
+            this.listRoute.UseCompatibleStateImageBehavior = false;
+            this.listRoute.View = System.Windows.Forms.View.Details;
+            // 
+            // number
+            // 
+            this.number.Text = "Номер рейса";
+            this.number.Width = 90;
+            // 
+            // from
+            // 
+            this.from.Text = "Місто відправлення";
+            this.from.Width = 160;
+            // 
+            // to
+            // 
+            this.to.Text = "Місто призначення";
+            this.to.Width = 160;
+            // 
+            // timeFrom
+            // 
+            this.timeFrom.Text = "Час відправлення";
+            this.timeFrom.Width = 150;
+            // 
+            // freeSeat
+            // 
+            this.freeSeat.Text = "Вільні місця";
+            this.freeSeat.Width = 100;
+            // 
             // HomePageAdministration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(908, 450);
+            this.Controls.Add(this.listRoute);
             this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.buttonBoardingList);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.labelDate);
-            this.Controls.Add(this.listRoute);
             this.Controls.Add(this.dateTimePicker);
-            this.Controls.Add(this.textBoxToHome);
+            this.Controls.Add(this.textBoxTo);
             this.Controls.Add(this.labelTo);
             this.Controls.Add(this.labelFrom);
             this.Controls.Add(this.textBoxFrom);
-            this.MinimumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(924, 489);
             this.Name = "HomePageAdministration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Головна сторінка";
@@ -189,11 +225,16 @@
         private Button buttonSearch;
         private Button buttonRemove;
         private Label labelDate;
-        private ListBox listRoute;
         private DateTimePicker dateTimePicker;
-        private TextBox textBoxToHome;
+        private TextBox textBoxTo;
         private Label labelTo;
         private Label labelFrom;
         private TextBox textBoxFrom;
+        private ListView listRoute;
+        private ColumnHeader number;
+        private ColumnHeader from;
+        private ColumnHeader to;
+        private ColumnHeader timeFrom;
+        private ColumnHeader freeSeat;
     }
 }

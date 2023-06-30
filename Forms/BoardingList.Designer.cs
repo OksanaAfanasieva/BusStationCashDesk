@@ -112,6 +112,7 @@
             this.Controls.Add(this.listViewPassenger);
             this.Controls.Add(this.textBoxNumberRoute);
             this.Controls.Add(this.labelNumberRoute);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "BoardingList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Посадкова відомість";

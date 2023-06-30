@@ -39,8 +39,6 @@
             this.labelSurname = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.textBoxNumberRoute = new System.Windows.Forms.TextBox();
-            this.maskedTextBoxTimeTo = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBoxTimeFrom = new System.Windows.Forms.MaskedTextBox();
             this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
             this.textBoxTo = new System.Windows.Forms.TextBox();
@@ -52,6 +50,8 @@
             this.labelTo = new System.Windows.Forms.Label();
             this.labelFrom = new System.Windows.Forms.Label();
             this.labelNumberRoute = new System.Windows.Forms.Label();
+            this.textBoxTimeFrom = new System.Windows.Forms.TextBox();
+            this.textBoxTimeTo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPassenger)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,22 +152,6 @@
             this.textBoxNumberRoute.ReadOnly = true;
             this.textBoxNumberRoute.Size = new System.Drawing.Size(79, 23);
             this.textBoxNumberRoute.TabIndex = 76;
-            // 
-            // maskedTextBoxTimeTo
-            // 
-            this.maskedTextBoxTimeTo.Location = new System.Drawing.Point(370, 148);
-            this.maskedTextBoxTimeTo.Name = "maskedTextBoxTimeTo";
-            this.maskedTextBoxTimeTo.ReadOnly = true;
-            this.maskedTextBoxTimeTo.Size = new System.Drawing.Size(196, 23);
-            this.maskedTextBoxTimeTo.TabIndex = 75;
-            // 
-            // maskedTextBoxTimeFrom
-            // 
-            this.maskedTextBoxTimeFrom.Location = new System.Drawing.Point(91, 148);
-            this.maskedTextBoxTimeFrom.Name = "maskedTextBoxTimeFrom";
-            this.maskedTextBoxTimeFrom.ReadOnly = true;
-            this.maskedTextBoxTimeFrom.Size = new System.Drawing.Size(196, 23);
-            this.maskedTextBoxTimeFrom.TabIndex = 74;
             // 
             // dateTimePickerTo
             // 
@@ -273,11 +257,31 @@
             this.labelNumberRoute.TabIndex = 63;
             this.labelNumberRoute.Text = "Маршрут №";
             // 
+            // textBoxTimeFrom
+            // 
+            this.textBoxTimeFrom.Enabled = false;
+            this.textBoxTimeFrom.Location = new System.Drawing.Point(91, 148);
+            this.textBoxTimeFrom.Name = "textBoxTimeFrom";
+            this.textBoxTimeFrom.ReadOnly = true;
+            this.textBoxTimeFrom.Size = new System.Drawing.Size(196, 23);
+            this.textBoxTimeFrom.TabIndex = 87;
+            // 
+            // textBoxTimeTo
+            // 
+            this.textBoxTimeTo.Enabled = false;
+            this.textBoxTimeTo.Location = new System.Drawing.Point(370, 148);
+            this.textBoxTimeTo.Name = "textBoxTimeTo";
+            this.textBoxTimeTo.ReadOnly = true;
+            this.textBoxTimeTo.Size = new System.Drawing.Size(196, 23);
+            this.textBoxTimeTo.TabIndex = 88;
+            // 
             // BuyTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 451);
+            this.Controls.Add(this.textBoxTimeTo);
+            this.Controls.Add(this.textBoxTimeFrom);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.numericUpDownPassenger);
             this.Controls.Add(this.textBoxSurname);
@@ -289,8 +293,6 @@
             this.Controls.Add(this.labelSurname);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.textBoxNumberRoute);
-            this.Controls.Add(this.maskedTextBoxTimeTo);
-            this.Controls.Add(this.maskedTextBoxTimeFrom);
             this.Controls.Add(this.dateTimePickerTo);
             this.Controls.Add(this.dateTimePickerFrom);
             this.Controls.Add(this.textBoxTo);
@@ -302,9 +304,11 @@
             this.Controls.Add(this.labelTo);
             this.Controls.Add(this.labelFrom);
             this.Controls.Add(this.labelNumberRoute);
+            this.MinimumSize = new System.Drawing.Size(600, 490);
             this.Name = "BuyTicket";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuyTicket";
+            this.Load += new System.EventHandler(this.BuyTicket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPassenger)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -324,8 +328,6 @@
         private Label labelSurname;
         private Label labelName;
         private TextBox textBoxNumberRoute;
-        private MaskedTextBox maskedTextBoxTimeTo;
-        private MaskedTextBox maskedTextBoxTimeFrom;
         private DateTimePicker dateTimePickerTo;
         private DateTimePicker dateTimePickerFrom;
         private TextBox textBoxTo;
@@ -337,5 +339,7 @@
         private Label labelTo;
         private Label labelFrom;
         private Label labelNumberRoute;
+        private TextBox textBoxTimeFrom;
+        private TextBox textBoxTimeTo;
     }
 }
