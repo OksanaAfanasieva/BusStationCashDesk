@@ -70,7 +70,7 @@ namespace BusStationCashDesk.Windows_Forms
                 ListViewItem item = new ListViewItem(route1.Number);
                 item.SubItems.Add(route1.FromName);
                 item.SubItems.Add(route1.ToName);
-                item.SubItems.Add(route1.TimeFrom.ToString());
+                item.SubItems.Add(route1.TimeFrom);
                 item.SubItems.Add(route1.FreeSeats);
 
                 listRoute.Items.Add(item);
@@ -83,8 +83,23 @@ namespace BusStationCashDesk.Windows_Forms
             string to = textBoxTo.Text;
             DateTime date = dateTimePicker.Value.Date;
 
-            List<RouteData> selectRoute = SelectedRoute(from, to, date);
-            DisplayRoute(selectRoute);
+            if (from == "" || to == "")
+            {
+                MessageBox.Show("Введіть дані для пошуку.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                List<RouteData> selectRoute = SelectedRoute(from, to, date);
+
+                if (selectRoute.Count == 0)
+                {
+                    listRoute.Items.Clear();
+                    MessageBox.Show("Жодного маршруту не знайдено.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else DisplayRoute(selectRoute);
+            }
         }
 
         private void listRoute_DoubleClick(object sender, EventArgs e)
