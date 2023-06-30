@@ -19,7 +19,7 @@ namespace BusStationCashDesk.Windows_Forms
         private SaveLoadData<RouteData> file;
         private List<RouteData> routeList;
         private List<string>? nameStop;
-        private List<string>? timeStop; 
+        private List<string>? timeStop;
 
         public Route()
         {

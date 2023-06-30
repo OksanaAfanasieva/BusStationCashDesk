@@ -55,11 +55,12 @@
             // 
             this.textBoxNumberRoute.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNumberRoute.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxNumberRoute.Location = new System.Drawing.Point(148, 23);
+            this.textBoxNumberRoute.Location = new System.Drawing.Point(148, 24);
             this.textBoxNumberRoute.Name = "textBoxNumberRoute";
             this.textBoxNumberRoute.ReadOnly = true;
             this.textBoxNumberRoute.Size = new System.Drawing.Size(79, 24);
             this.textBoxNumberRoute.TabIndex = 109;
+            this.textBoxNumberRoute.TextChanged += new System.EventHandler(this.textBoxNumberRoute_TextChanged);
             // 
             // dateTimePickerTo
             // 
@@ -85,9 +86,8 @@
             // textBoxPrice
             // 
             this.textBoxPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPrice.Enabled = false;
             this.textBoxPrice.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPrice.Location = new System.Drawing.Point(487, 347);
+            this.textBoxPrice.Location = new System.Drawing.Point(487, 348);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.ReadOnly = true;
             this.textBoxPrice.Size = new System.Drawing.Size(80, 24);
@@ -96,7 +96,6 @@
             // textBoxFreePlace
             // 
             this.textBoxFreePlace.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFreePlace.Enabled = false;
             this.textBoxFreePlace.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxFreePlace.ForeColor = System.Drawing.Color.Black;
             this.textBoxFreePlace.Location = new System.Drawing.Point(223, 348);
@@ -108,7 +107,6 @@
             // textBoxTo
             // 
             this.textBoxTo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTo.Enabled = false;
             this.textBoxTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxTo.Location = new System.Drawing.Point(371, 80);
             this.textBoxTo.Name = "textBoxTo";
@@ -120,7 +118,6 @@
             // textBoxFrom
             // 
             this.textBoxFrom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFrom.Enabled = false;
             this.textBoxFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxFrom.Location = new System.Drawing.Point(92, 79);
             this.textBoxFrom.Name = "textBoxFrom";
@@ -245,7 +242,6 @@
             // textBoxTimeFrom
             // 
             this.textBoxTimeFrom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTimeFrom.Enabled = false;
             this.textBoxTimeFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxTimeFrom.Location = new System.Drawing.Point(92, 154);
             this.textBoxTimeFrom.Name = "textBoxTimeFrom";
@@ -256,9 +252,8 @@
             // textBoxTimeTo
             // 
             this.textBoxTimeTo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTimeTo.Enabled = false;
             this.textBoxTimeTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxTimeTo.Location = new System.Drawing.Point(371, 156);
+            this.textBoxTimeTo.Location = new System.Drawing.Point(371, 155);
             this.textBoxTimeTo.Name = "textBoxTimeTo";
             this.textBoxTimeTo.ReadOnly = true;
             this.textBoxTimeTo.Size = new System.Drawing.Size(196, 24);
@@ -268,7 +263,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 381);
+            this.ClientSize = new System.Drawing.Size(584, 391);
             this.Controls.Add(this.textBoxTimeTo);
             this.Controls.Add(this.textBoxTimeFrom);
             this.Controls.Add(this.listViewStop);
@@ -289,8 +284,8 @@
             this.Controls.Add(this.labelFrom);
             this.Controls.Add(this.labelNumberRoute);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(600, 420);
-            this.MinimumSize = new System.Drawing.Size(600, 420);
+            this.MaximumSize = new System.Drawing.Size(600, 430);
+            this.MinimumSize = new System.Drawing.Size(600, 430);
             this.Name = "InformationRoute";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Маршрут";

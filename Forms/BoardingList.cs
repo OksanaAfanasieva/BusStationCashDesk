@@ -29,5 +29,12 @@ namespace BusStationCashDesk.Windows_Forms
         {
             this.FormClosing += BoardingList_FormClosing;
         }
+
+        private void linkLabelBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            HomePageAdministration form = new HomePageAdministration();
+            form.Show();
+            this.Hide();
+        }
     }
 }

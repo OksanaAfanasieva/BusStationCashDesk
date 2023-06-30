@@ -1,4 +1,5 @@
 ﻿using BusStationCashDesk.Classes;
+using BusStationCashDesk.Forms;
 using Microsoft.VisualBasic.Devices;
 using System;
 using System.Collections.Generic;
@@ -54,6 +55,7 @@ namespace BusStationCashDesk.Windows_Forms
 
             if (from == "" || to == "")
             {
+                DisplayRoute(routeList);
                 MessageBox.Show("Введіть дані для пошуку.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -63,7 +65,6 @@ namespace BusStationCashDesk.Windows_Forms
 
                 if (selectedRoute.Count == 0)
                 {
-                    listRoute.Items.Clear();
                     MessageBox.Show("Жодного маршруту не знайдено.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
@@ -94,6 +95,7 @@ namespace BusStationCashDesk.Windows_Forms
                 ListViewItem item = new ListViewItem(route1.Number);
                 item.SubItems.Add(route1.FromName);
                 item.SubItems.Add(route1.ToName);
+                item.SubItems.Add(route1.DateTimeFrom.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(route1.TimeFrom);
                 item.SubItems.Add(route1.FreeSeats);
 
@@ -133,6 +135,45 @@ namespace BusStationCashDesk.Windows_Forms
                     route.Save(routeList);
                 }
             }
+            else MessageBox.Show("Виберіть маршрут, який хочете видалити.",
+                    "Видалення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void listRoute_DoubleClick(object sender, EventArgs e)
+        {
+            if (listRoute.SelectedItems.Count > 0)
+            {
+                string selected = listRoute.SelectedItems[0].Text;
+
+                for (int i = 0; i < routeList.Count; i++)
+                {
+                    if (routeList[i].Number == selected && selected != null)
+                    {
+                        InformationRoute informationRoute = new InformationRoute(selected);
+                        informationRoute.ShowDialog();
+                    }
+                }
+            }
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            if (listRoute.SelectedItems.Count > 0)
+            {
+                string selected = listRoute.SelectedItems[0].Text;
+
+                for (int i = 0; i < routeList.Count; i++)
+                {
+                    if (routeList[i].Number == selected && selected != null)
+                    {
+                        Edit form = new Edit(selected);
+                        form.Show();
+                        this.Hide();
+                    }
+                }
+            }
+            else MessageBox.Show("Виберіть маршрут, який хочете відредагувати.",
+                    "Редагування", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

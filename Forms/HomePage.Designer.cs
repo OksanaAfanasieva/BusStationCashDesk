@@ -37,10 +37,11 @@
             this.labelTo = new System.Windows.Forms.Label();
             this.labelFrom = new System.Windows.Forms.Label();
             this.textBoxFrom = new System.Windows.Forms.TextBox();
-            this.listRoute = new System.Windows.Forms.ListView();
             this.number = new System.Windows.Forms.ColumnHeader();
             this.from = new System.Windows.Forms.ColumnHeader();
             this.to = new System.Windows.Forms.ColumnHeader();
+            this.listRoute = new System.Windows.Forms.ListView();
+            this.dateFrom = new System.Windows.Forms.ColumnHeader();
             this.timeFrom = new System.Windows.Forms.ColumnHeader();
             this.freeSeat = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
@@ -59,7 +60,7 @@
             // buttonBuy
             // 
             this.buttonBuy.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonBuy.Location = new System.Drawing.Point(739, 412);
+            this.buttonBuy.Location = new System.Drawing.Point(758, 412);
             this.buttonBuy.Name = "buttonBuy";
             this.buttonBuy.Size = new System.Drawing.Size(160, 32);
             this.buttonBuy.TabIndex = 18;
@@ -129,52 +130,58 @@
             this.textBoxFrom.Size = new System.Drawing.Size(190, 23);
             this.textBoxFrom.TabIndex = 10;
             // 
+            // number
+            // 
+            this.number.Text = "Номер рейса";
+            this.number.Width = 85;
+            // 
+            // from
+            // 
+            this.from.Text = "Місто відправлення";
+            this.from.Width = 150;
+            // 
+            // to
+            // 
+            this.to.Text = "Місто призначення";
+            this.to.Width = 150;
+            // 
             // listRoute
             // 
             this.listRoute.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.number,
             this.from,
             this.to,
+            this.dateFrom,
             this.timeFrom,
             this.freeSeat});
             this.listRoute.Location = new System.Drawing.Point(222, 10);
             this.listRoute.Name = "listRoute";
-            this.listRoute.Size = new System.Drawing.Size(677, 396);
+            this.listRoute.Size = new System.Drawing.Size(696, 396);
             this.listRoute.TabIndex = 36;
             this.listRoute.UseCompatibleStateImageBehavior = false;
             this.listRoute.View = System.Windows.Forms.View.Details;
             this.listRoute.DoubleClick += new System.EventHandler(this.listRoute_DoubleClick);
             // 
-            // number
+            // dateFrom
             // 
-            this.number.Text = "Номер рейса";
-            this.number.Width = 90;
-            // 
-            // from
-            // 
-            this.from.Text = "Місто відправлення";
-            this.from.Width = 160;
-            // 
-            // to
-            // 
-            this.to.Text = "Місто призначення";
-            this.to.Width = 160;
+            this.dateFrom.Text = "Дата";
+            this.dateFrom.Width = 110;
             // 
             // timeFrom
             // 
             this.timeFrom.Text = "Час відправлення";
-            this.timeFrom.Width = 150;
+            this.timeFrom.Width = 110;
             // 
             // freeSeat
             // 
             this.freeSeat.Text = "Вільні місця";
-            this.freeSeat.Width = 100;
+            this.freeSeat.Width = 80;
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 450);
+            this.ClientSize = new System.Drawing.Size(930, 450);
             this.Controls.Add(this.listRoute);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.buttonBuy);
@@ -185,7 +192,7 @@
             this.Controls.Add(this.labelTo);
             this.Controls.Add(this.labelFrom);
             this.Controls.Add(this.textBoxFrom);
-            this.MinimumSize = new System.Drawing.Size(927, 489);
+            this.MinimumSize = new System.Drawing.Size(946, 489);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Головна сторінка";
@@ -206,10 +213,11 @@
         private Label labelTo;
         private Label labelFrom;
         private TextBox textBoxFrom;
-        private ListView listRoute;
         private ColumnHeader number;
         private ColumnHeader from;
         private ColumnHeader to;
+        private ListView listRoute;
+        private ColumnHeader dateFrom;
         private ColumnHeader timeFrom;
         private ColumnHeader freeSeat;
     }

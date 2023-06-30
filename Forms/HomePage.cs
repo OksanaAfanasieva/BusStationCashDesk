@@ -69,6 +69,7 @@ namespace BusStationCashDesk.Windows_Forms
                 ListViewItem item = new ListViewItem(route1.Number);
                 item.SubItems.Add(route1.FromName);
                 item.SubItems.Add(route1.ToName);
+                item.SubItems.Add(route1.DateTimeFrom.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(route1.TimeFrom);
                 item.SubItems.Add(route1.FreeSeats);
 
@@ -84,6 +85,7 @@ namespace BusStationCashDesk.Windows_Forms
 
             if (from == "" || to == "")
             {
+                DisplayRoute(routeList);
                 MessageBox.Show("Введіть дані для пошуку.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -93,7 +95,6 @@ namespace BusStationCashDesk.Windows_Forms
 
                 if (selectRoute.Count == 0)
                 {
-                    listRoute.Items.Clear();
                     MessageBox.Show("Жодного маршруту не знайдено.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }

@@ -50,6 +50,7 @@
             this.linkLabelBack.TabStop = true;
             this.linkLabelBack.Text = "Назад";
             this.linkLabelBack.VisitedLinkColor = System.Drawing.Color.Black;
+            this.linkLabelBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelBack_LinkClicked);
             // 
             // listViewPassenger
             // 
@@ -58,6 +59,7 @@
             this.surname,
             this.reservedSeat,
             this.price});
+            this.listViewPassenger.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listViewPassenger.Location = new System.Drawing.Point(7, 52);
             this.listViewPassenger.Name = "listViewPassenger";
             this.listViewPassenger.Size = new System.Drawing.Size(786, 358);
@@ -87,10 +89,12 @@
             // 
             // textBoxNumberRoute
             // 
-            this.textBoxNumberRoute.Location = new System.Drawing.Point(138, 14);
+            this.textBoxNumberRoute.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNumberRoute.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNumberRoute.Location = new System.Drawing.Point(138, 9);
             this.textBoxNumberRoute.Name = "textBoxNumberRoute";
             this.textBoxNumberRoute.ReadOnly = true;
-            this.textBoxNumberRoute.Size = new System.Drawing.Size(100, 23);
+            this.textBoxNumberRoute.Size = new System.Drawing.Size(100, 24);
             this.textBoxNumberRoute.TabIndex = 5;
             // 
             // labelNumberRoute
