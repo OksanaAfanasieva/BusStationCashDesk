@@ -1,4 +1,5 @@
 ﻿using BusStationCashDesk.Classes;
+using BusStationCashDesk.Forms;
 using Microsoft.VisualBasic.Devices;
 using System;
 using System.Collections.Generic;
@@ -143,6 +144,26 @@ namespace BusStationCashDesk.Windows_Forms
         private void buttonAllRoute_Click(object sender, EventArgs e)
         {
             DisplayRoute(routeList);
+        }
+
+        private void buttonBuy_Click(object sender, EventArgs e)
+        {
+            if (listRoute.SelectedItems.Count > 0)
+            {
+                string selected = listRoute.SelectedItems[0].Text;
+
+                for (int i = 0; i < routeList.Count; i++)
+                {
+                    if (routeList[i].Number == selected && selected != null)
+                    {
+                        BuyTicket form = new BuyTicket(selected);
+                        form.Show();
+                        this.Hide();
+                    }
+                }
+            }
+            else MessageBox.Show("Виберіть маршрут, який хочете відредагувати.",
+                    "Редагування", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

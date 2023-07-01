@@ -1,4 +1,5 @@
 ﻿using BusStationCashDesk.Classes;
+using BusStationCashDesk.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,12 +16,16 @@ namespace BusStationCashDesk.Windows_Forms
     {
         private SaveLoadData<UserData> file;
         private List<UserData> userList;
+        private SaveLoadData<string> file1;
+        private List<string> nicknameList;
 
         public LogIn()
         {
             InitializeComponent();
             file = new SaveLoadData<UserData>("userData.json");
             userList = file.Load();
+            file1 = new SaveLoadData<string>("nicknameData.json");
+            nicknameList = new List<string>();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -53,6 +58,8 @@ namespace BusStationCashDesk.Windows_Forms
             {
                 if (IsAdministrator(name) == false)
                 {
+                    nicknameList.Add(textBoxName.Text);
+                    file1.Save(nicknameList);
                     HomePage form = new HomePage();
                     form.Show();
                     this.Hide();

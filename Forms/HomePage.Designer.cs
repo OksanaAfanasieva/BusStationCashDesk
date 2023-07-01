@@ -67,6 +67,7 @@
             this.buttonBuy.TabIndex = 18;
             this.buttonBuy.Text = "Купити";
             this.buttonBuy.UseVisualStyleBackColor = true;
+            this.buttonBuy.Click += new System.EventHandler(this.buttonBuy_Click);
             // 
             // linkLabelMyTravels
             // 

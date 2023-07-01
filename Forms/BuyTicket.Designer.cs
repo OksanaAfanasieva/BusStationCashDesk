@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.numericUpDownPassenger = new System.Windows.Forms.NumericUpDown();
+            this.numericPassenger = new System.Windows.Forms.NumericUpDown();
             this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.buttonCancel = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             this.labelNumberRoute = new System.Windows.Forms.Label();
             this.textBoxTimeFrom = new System.Windows.Forms.TextBox();
             this.textBoxTimeTo = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPassenger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPassenger)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxPrice
@@ -65,12 +65,23 @@
             this.textBoxPrice.Size = new System.Drawing.Size(99, 24);
             this.textBoxPrice.TabIndex = 86;
             // 
-            // numericUpDownPassenger
+            // numericPassenger
             // 
-            this.numericUpDownPassenger.Location = new System.Drawing.Point(196, 260);
-            this.numericUpDownPassenger.Name = "numericUpDownPassenger";
-            this.numericUpDownPassenger.Size = new System.Drawing.Size(69, 23);
-            this.numericUpDownPassenger.TabIndex = 85;
+            this.numericPassenger.Location = new System.Drawing.Point(196, 260);
+            this.numericPassenger.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericPassenger.Name = "numericPassenger";
+            this.numericPassenger.Size = new System.Drawing.Size(69, 23);
+            this.numericPassenger.TabIndex = 85;
+            this.numericPassenger.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericPassenger.ValueChanged += new System.EventHandler(this.numericPassenger_ValueChanged);
             // 
             // textBoxSurname
             // 
@@ -106,6 +117,7 @@
             this.buttonBuy.TabIndex = 81;
             this.buttonBuy.Text = "Придбати";
             this.buttonBuy.UseVisualStyleBackColor = true;
+            this.buttonBuy.Click += new System.EventHandler(this.buttonBuy_Click);
             // 
             // labelPrice
             // 
@@ -178,7 +190,6 @@
             // textBoxTo
             // 
             this.textBoxTo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTo.Enabled = false;
             this.textBoxTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxTo.Location = new System.Drawing.Point(370, 71);
             this.textBoxTo.Name = "textBoxTo";
@@ -189,7 +200,6 @@
             // textBoxFrom
             // 
             this.textBoxFrom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFrom.Enabled = false;
             this.textBoxFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxFrom.Location = new System.Drawing.Point(86, 71);
             this.textBoxFrom.Name = "textBoxFrom";
@@ -201,7 +211,7 @@
             // 
             this.labelTimeTo.AutoSize = true;
             this.labelTimeTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTimeTo.Location = new System.Drawing.Point(319, 145);
+            this.labelTimeTo.Location = new System.Drawing.Point(319, 148);
             this.labelTimeTo.Name = "labelTimeTo";
             this.labelTimeTo.Size = new System.Drawing.Size(45, 25);
             this.labelTimeTo.TabIndex = 69;
@@ -270,7 +280,6 @@
             // textBoxTimeFrom
             // 
             this.textBoxTimeFrom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTimeFrom.Enabled = false;
             this.textBoxTimeFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxTimeFrom.Location = new System.Drawing.Point(86, 149);
             this.textBoxTimeFrom.Name = "textBoxTimeFrom";
@@ -281,9 +290,8 @@
             // textBoxTimeTo
             // 
             this.textBoxTimeTo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTimeTo.Enabled = false;
             this.textBoxTimeTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxTimeTo.Location = new System.Drawing.Point(370, 142);
+            this.textBoxTimeTo.Location = new System.Drawing.Point(370, 150);
             this.textBoxTimeTo.Name = "textBoxTimeTo";
             this.textBoxTimeTo.ReadOnly = true;
             this.textBoxTimeTo.Size = new System.Drawing.Size(196, 24);
@@ -297,7 +305,7 @@
             this.Controls.Add(this.textBoxTimeTo);
             this.Controls.Add(this.textBoxTimeFrom);
             this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.numericUpDownPassenger);
+            this.Controls.Add(this.numericPassenger);
             this.Controls.Add(this.textBoxSurname);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.buttonCancel);
@@ -323,7 +331,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuyTicket";
             this.Load += new System.EventHandler(this.BuyTicket_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPassenger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPassenger)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,7 +340,7 @@
         #endregion
 
         private TextBox textBoxPrice;
-        private NumericUpDown numericUpDownPassenger;
+        private NumericUpDown numericPassenger;
         private TextBox textBoxSurname;
         private TextBox textBoxName;
         private Button buttonCancel;

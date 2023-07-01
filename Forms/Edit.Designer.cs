@@ -358,6 +358,7 @@
             this.Controls.Add(this.labelNumberRoute);
             this.MinimumSize = new System.Drawing.Size(600, 490);
             this.Name = "Edit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit";
             this.Load += new System.EventHandler(this.Edit_Load);
             this.ResumeLayout(false);
