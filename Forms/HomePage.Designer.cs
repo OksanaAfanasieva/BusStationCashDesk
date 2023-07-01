@@ -44,14 +44,15 @@
             this.dateFrom = new System.Windows.Forms.ColumnHeader();
             this.timeFrom = new System.Windows.Forms.ColumnHeader();
             this.freeSeat = new System.Windows.Forms.ColumnHeader();
+            this.buttonAllRoute = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonSearch
             // 
             this.buttonSearch.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSearch.Location = new System.Drawing.Point(45, 234);
+            this.buttonSearch.Location = new System.Drawing.Point(13, 235);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(117, 40);
+            this.buttonSearch.Size = new System.Drawing.Size(189, 39);
             this.buttonSearch.TabIndex = 19;
             this.buttonSearch.Text = "Пошук";
             this.buttonSearch.UseVisualStyleBackColor = true;
@@ -177,11 +178,23 @@
             this.freeSeat.Text = "Вільні місця";
             this.freeSeat.Width = 80;
             // 
+            // buttonAllRoute
+            // 
+            this.buttonAllRoute.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAllRoute.Location = new System.Drawing.Point(13, 280);
+            this.buttonAllRoute.Name = "buttonAllRoute";
+            this.buttonAllRoute.Size = new System.Drawing.Size(189, 39);
+            this.buttonAllRoute.TabIndex = 37;
+            this.buttonAllRoute.Text = "Вивести усі маршрути";
+            this.buttonAllRoute.UseVisualStyleBackColor = true;
+            this.buttonAllRoute.Click += new System.EventHandler(this.buttonAllRoute_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 450);
+            this.Controls.Add(this.buttonAllRoute);
             this.Controls.Add(this.listRoute);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.buttonBuy);
@@ -220,5 +233,6 @@
         private ColumnHeader dateFrom;
         private ColumnHeader timeFrom;
         private ColumnHeader freeSeat;
+        private Button buttonAllRoute;
     }
 }

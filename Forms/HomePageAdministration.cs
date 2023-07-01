@@ -56,7 +56,6 @@ namespace BusStationCashDesk.Windows_Forms
 
             if (from == "" || to == "")
             {
-                DisplayRoute(routeList);
                 MessageBox.Show("Введіть дані для пошуку.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -196,6 +195,11 @@ namespace BusStationCashDesk.Windows_Forms
             }
             else MessageBox.Show("Виберіть маршрут, який хочете відредагувати.",
                     "Редагування", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void buttonAllRoute_Click(object sender, EventArgs e)
+        {
+            DisplayRoute(routeList);
         }
     }
 }

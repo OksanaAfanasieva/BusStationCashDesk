@@ -86,9 +86,11 @@ namespace BusStationCashDesk.Windows_Forms
 
             foreach (RouteData route1 in route)
             {
+                TextInfo title = CultureInfo.InvariantCulture.TextInfo;
+
                 ListViewItem item = new ListViewItem(route1.Number);
-                item.SubItems.Add(route1.FromName);
-                item.SubItems.Add(route1.ToName);
+                item.SubItems.Add(title.ToTitleCase(route1.FromName ?? string.Empty));
+                item.SubItems.Add(title.ToTitleCase(route1.ToName ?? string.Empty));
                 item.SubItems.Add(route1.DateTimeFrom.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(route1.TimeFrom);
                 item.SubItems.Add(route1.FreeSeats);
@@ -105,7 +107,6 @@ namespace BusStationCashDesk.Windows_Forms
 
             if (from == "" || to == "")
             {
-                DisplayRoute(routeList);
                 MessageBox.Show("Введіть дані для пошуку.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -137,6 +138,11 @@ namespace BusStationCashDesk.Windows_Forms
                     }
                 }   
             }
+        }
+
+        private void buttonAllRoute_Click(object sender, EventArgs e)
+        {
+            DisplayRoute(routeList);
         }
     }
 }
