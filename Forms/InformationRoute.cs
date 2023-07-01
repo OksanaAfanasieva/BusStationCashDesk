@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,9 +32,11 @@ namespace BusStationCashDesk.Windows_Forms
             {
                 if (routeList[i].Number == selected && selected != null)
                 {
+                    TextInfo title = CultureInfo.InvariantCulture.TextInfo;
+
                     textBoxNumberRoute.Text = routeList[i].Number;
-                    textBoxFrom.Text = routeList[i].FromName;
-                    textBoxTo.Text = routeList[i].ToName;
+                    textBoxFrom.Text = title.ToTitleCase(routeList[i].FromName ?? string.Empty);
+                    textBoxTo.Text = title.ToTitleCase(routeList[i].ToName ?? string.Empty);
                     dateTimePickerFrom.Value = routeList[i].DateTimeFrom;
                     textBoxTimeFrom.Text = routeList[i].TimeFrom;
                     dateTimePickerTo.Value = routeList[i].DateTimeTo;

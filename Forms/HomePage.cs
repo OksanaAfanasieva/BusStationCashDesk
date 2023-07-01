@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,16 +49,35 @@ namespace BusStationCashDesk.Windows_Forms
 
         private List<RouteData> SelectedRoute(string from, string to, DateTime date)
         {
-            List<RouteData> sortRoute = new List<RouteData>();
+            List<RouteData> selectedRoute = new List<RouteData>();
 
             foreach (RouteData route in routeList)
             {
                 if (route.FromName == from && route.ToName == to && route.DateTimeFrom == date && int.Parse(route.FreeSeats) > 0)
                 {
-                    sortRoute.Add(route);
+                    selectedRoute.Add(route);
                 }
             }
-            return sortRoute;
+
+            if (selectedRoute.Count > 1)
+            {
+                for (int i = 0; i < selectedRoute.Count - 1; i++)
+                {
+                    int min = i;
+                    for (int j = i + 1; j < selectedRoute.Count; j++)
+                    {
+                        if (DateTime.ParseExact(selectedRoute[j].TimeFrom, "HH:mm", CultureInfo.InvariantCulture) < DateTime.ParseExact(selectedRoute[min].TimeFrom, "HH:mm", CultureInfo.InvariantCulture))
+                        {
+                            min = j;
+                        }
+                    }
+
+                    RouteData k = selectedRoute[i];
+                    selectedRoute[i] = selectedRoute[min];
+                    selectedRoute[min] = k;
+                }
+            }
+            return selectedRoute;
         }
 
         private void DisplayRoute(List<RouteData> route)
@@ -79,8 +99,8 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void buttonSearch_Click_1(object sender, EventArgs e)
         {
-            string from = textBoxFrom.Text;
-            string to = textBoxTo.Text;
+            string from = textBoxFrom.Text.ToLower();
+            string to = textBoxTo.Text.ToLower();
             DateTime date = dateTimePicker.Value.Date;
 
             if (from == "" || to == "")
@@ -91,14 +111,14 @@ namespace BusStationCashDesk.Windows_Forms
             }
             else
             {
-                List<RouteData> selectRoute = SelectedRoute(from, to, date);
+                List<RouteData> selectedRoute = SelectedRoute(from, to, date);
 
-                if (selectRoute.Count == 0)
+                if (selectedRoute.Count == 0)
                 {
                     MessageBox.Show("Жодного маршруту не знайдено.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                else DisplayRoute(selectRoute);
+                else DisplayRoute(selectedRoute);
             }
         }
 

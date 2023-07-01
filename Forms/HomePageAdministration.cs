@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,8 +50,8 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            string from = textBoxFrom.Text;
-            string to = textBoxTo.Text;
+            string from = textBoxFrom.Text.ToLower();
+            string to = textBoxTo.Text.ToLower();
             DateTime date = dateTimePicker.Value.Date;
 
             if (from == "" || to == "")
@@ -83,6 +84,25 @@ namespace BusStationCashDesk.Windows_Forms
                     selectedRoute.Add(route);
                 }
             }
+
+            if (selectedRoute.Count > 1)
+            {
+                for (int i = 0; i < selectedRoute.Count - 1; i++)
+                {
+                    int min = i;
+                    for (int j = i + 1; j < selectedRoute.Count; j++)
+                    {
+                        if (DateTime.ParseExact(selectedRoute[j].TimeFrom, "HH:mm", CultureInfo.InvariantCulture) < DateTime.ParseExact(selectedRoute[min].TimeFrom, "HH:mm", CultureInfo.InvariantCulture))
+                        {
+                            min = j;
+                        }
+                    }
+
+                    RouteData k = selectedRoute[i];
+                    selectedRoute[i] = selectedRoute[min];
+                    selectedRoute[min] = k;
+                }
+            }
             return selectedRoute;
         }
 
@@ -92,9 +112,11 @@ namespace BusStationCashDesk.Windows_Forms
             
             foreach (RouteData route1 in route)
             {
+                TextInfo title = CultureInfo.InvariantCulture.TextInfo;
+
                 ListViewItem item = new ListViewItem(route1.Number);
-                item.SubItems.Add(route1.FromName);
-                item.SubItems.Add(route1.ToName);
+                item.SubItems.Add(title.ToTitleCase(route1.FromName ?? string.Empty));
+                item.SubItems.Add(title.ToTitleCase(route1.ToName ?? string.Empty));
                 item.SubItems.Add(route1.DateTimeFrom.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(route1.TimeFrom);
                 item.SubItems.Add(route1.FreeSeats);
@@ -122,8 +144,7 @@ namespace BusStationCashDesk.Windows_Forms
                 if(result == DialogResult.Yes)
                 {
                     string selected = listRoute.SelectedItems[0].Text;
-                    listRoute.Items.Clear();
-                    
+
                     for (int i = 0; i < routeList.Count; i++)
                     {
                         if (routeList[i].Number == selected)
@@ -133,6 +154,7 @@ namespace BusStationCashDesk.Windows_Forms
                         }
                     }
                     route.Save(routeList);
+                    DisplayRoute(routeList);
                 }
             }
             else MessageBox.Show("Виберіть маршрут, який хочете видалити.",

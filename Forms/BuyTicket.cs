@@ -35,5 +35,23 @@ namespace BusStationCashDesk.Windows_Forms
         {
             this.FormClosing += BuyTicket_FormClosing;
         }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Ви впевнені, що хочете скасувати бронювання?", "Попередження",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                HomePage form = new HomePage();
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+                var close = e as FormClosingEventArgs;
+                if (close != null)
+                    close.Cancel = true;
+            }
+        }
     }
 }

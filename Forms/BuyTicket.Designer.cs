@@ -95,6 +95,7 @@
             this.buttonCancel.TabIndex = 82;
             this.buttonCancel.Text = "Скасувати";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonBuy
             // 

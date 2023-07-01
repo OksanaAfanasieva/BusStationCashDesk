@@ -67,6 +67,7 @@
             this.buttonRemoveStop.TabIndex = 148;
             this.buttonRemoveStop.Text = "Видалити зупинку";
             this.buttonRemoveStop.UseVisualStyleBackColor = true;
+            this.buttonRemoveStop.Click += new System.EventHandler(this.buttonRemoveStop_Click);
             // 
             // listViewStop
             // 
@@ -131,6 +132,7 @@
             this.buttonCancel.TabIndex = 143;
             this.buttonCancel.Text = "Скасувати";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonSave
             // 
@@ -141,6 +143,7 @@
             this.buttonSave.TabIndex = 142;
             this.buttonSave.Text = "Зберегти";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonAddStop
             // 
@@ -150,6 +153,7 @@
             this.buttonAddStop.TabIndex = 122;
             this.buttonAddStop.Text = "Додати зупинку";
             this.buttonAddStop.UseVisualStyleBackColor = true;
+            this.buttonAddStop.Click += new System.EventHandler(this.buttonAddStop_Click);
             // 
             // labelTimeStop
             // 

@@ -54,7 +54,7 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void buttonCancel_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Дані не будуть збережені! Ви впевнені, що хочете закрити сторінку?", "Попередження",
+            DialogResult result = MessageBox.Show("Дані не будуть збережені! Ви впевнені, що хочете скасувати створення?", "Попередження",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
@@ -89,14 +89,14 @@ namespace BusStationCashDesk.Windows_Forms
             }
 
             string number = textBoxNumberRoute.Text;
-            string fromName = textBoxFrom.Text;
-            string toName = textBoxTo.Text;
+            string fromName = textBoxFrom.Text.ToLower();
+            string toName = textBoxTo.Text.ToLower();
             DateTime dateTimeFrom = dateTimePickerFrom.Value.Date;
             string timeFrom = timePickerFrom.Value.ToString("HH:mm");
             DateTime dateTimeTo = dateTimePickerTo.Value.Date;
             string timeTo = timePickerTo.Value.ToString("HH:mm");
-            List<string> stops = nameStop ?? new List<string>();
-            List<string> timeStops = timeStop /* ?? new List<string>()*/;
+            List<string> stops = nameStop;
+            List<string> timeStops = timeStop;
             string freeSeats = textBoxFreePlace.Text;
             string price = textBoxPrice.Text;
 
@@ -118,14 +118,30 @@ namespace BusStationCashDesk.Windows_Forms
                 routeList.Add(newRoute);
                 file.Save(routeList);
             }
-            else
+            else for (int i = 0; i < routeList.Count; i++)
             {
-                RouteData newRoute = new RouteData(number, fromName, toName,
+                int repeat = 0;
+                if (routeList[i].Number == number)
+                {
+                    repeat++;
+                }
+
+                if (repeat == 0 && i == routeList.Count - 1)
+                {
+                    RouteData newRoute = new RouteData(number, fromName, toName,
                     dateTimeFrom, timeFrom, dateTimeTo, timeTo, stops, timeStop,
                     freeSeats, price);
-                routeList.Add(newRoute);
-                file.Save(routeList);
-            }
+                    routeList.Add(newRoute);
+                    file.Save(routeList);
+                    break;
+                }
+                else if (i == routeList.Count - 1)
+                {
+                    MessageBox.Show("Вже існує маршурт з таким номером.", "Помилка збереження",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                }
 
             HomePageAdministration form = new HomePageAdministration();
             form.Show();
