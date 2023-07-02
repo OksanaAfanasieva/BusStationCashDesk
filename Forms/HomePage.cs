@@ -38,6 +38,15 @@ namespace BusStationCashDesk.Windows_Forms
         private void HomePage_Load(object sender, EventArgs e)
         {
             this.FormClosing += HomePage_FormClosing;
+
+            for (int i = 0; i < routeList.Count; i++)
+            {
+                if (routeList[i].DateTimeFrom.Date < DateTime.Today)
+                {
+                    routeList.RemoveAt(i);
+                }
+            }
+            route.Save(routeList);
             DisplayRoute(routeList);
         }
 
