@@ -40,7 +40,7 @@ namespace BusStationCashDesk.Windows_Forms
         private void BoardingList_Load(object sender, EventArgs e)
         {
             int found = 0;
-            textBoxNumberRoute.Text = selected;
+            numberRouteTextBox.Text = selected;
             for (int i = 0; i < ticketList.Count; i++)
             {
                 if (ticketList[i].Number == selected)
@@ -73,7 +73,7 @@ namespace BusStationCashDesk.Windows_Forms
             item.SubItems.Add(ticket.Seats.ToString());
             item.SubItems.Add(ticket.Price.ToString());
 
-            listViewPassenger.Items.Add(item);
+            passengerList.Items.Add(item);
         }
     }
 }

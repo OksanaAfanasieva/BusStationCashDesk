@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonReturnTicket = new System.Windows.Forms.Button();
-            this.linkLabelBack = new System.Windows.Forms.LinkLabel();
+            this.returnTicket = new System.Windows.Forms.Button();
+            this.backLinkLabel = new System.Windows.Forms.LinkLabel();
             this.listTicket = new System.Windows.Forms.ListView();
             this.number = new System.Windows.Forms.ColumnHeader();
             this.from = new System.Windows.Forms.ColumnHeader();
@@ -39,33 +39,44 @@
             this.seat = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
-            // buttonReturnTicket
+            // returnTicket
             // 
-            this.buttonReturnTicket.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonReturnTicket.Location = new System.Drawing.Point(580, 391);
-            this.buttonReturnTicket.Name = "buttonReturnTicket";
-            this.buttonReturnTicket.Size = new System.Drawing.Size(208, 49);
-            this.buttonReturnTicket.TabIndex = 4;
-            this.buttonReturnTicket.Text = "Повернути квиток";
-            this.buttonReturnTicket.UseVisualStyleBackColor = true;
-            this.buttonReturnTicket.Click += new System.EventHandler(this.buttonReturnTicket_Click);
+            this.returnTicket.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.returnTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.returnTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.returnTicket.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.returnTicket.ForeColor = System.Drawing.Color.White;
+            this.returnTicket.Location = new System.Drawing.Point(793, 391);
+            this.returnTicket.Name = "returnTicket";
+            this.returnTicket.Size = new System.Drawing.Size(208, 49);
+            this.returnTicket.TabIndex = 4;
+            this.returnTicket.Text = "Повернути квиток";
+            this.returnTicket.UseVisualStyleBackColor = false;
+            this.returnTicket.Click += new System.EventHandler(this.buttonReturnTicket_Click);
             // 
-            // linkLabelBack
+            // backLinkLabel
             // 
-            this.linkLabelBack.AutoSize = true;
-            this.linkLabelBack.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabelBack.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelBack.Location = new System.Drawing.Point(12, 412);
-            this.linkLabelBack.Name = "linkLabelBack";
-            this.linkLabelBack.Size = new System.Drawing.Size(66, 28);
-            this.linkLabelBack.TabIndex = 3;
-            this.linkLabelBack.TabStop = true;
-            this.linkLabelBack.Text = "Назад";
-            this.linkLabelBack.VisitedLinkColor = System.Drawing.Color.Black;
-            this.linkLabelBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelBack_LinkClicked);
+            this.backLinkLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.backLinkLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.backLinkLabel.AutoSize = true;
+            this.backLinkLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.backLinkLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.backLinkLabel.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.backLinkLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.backLinkLabel.Location = new System.Drawing.Point(12, 412);
+            this.backLinkLabel.Name = "backLinkLabel";
+            this.backLinkLabel.Size = new System.Drawing.Size(68, 28);
+            this.backLinkLabel.TabIndex = 3;
+            this.backLinkLabel.TabStop = true;
+            this.backLinkLabel.Text = "Назад";
+            this.backLinkLabel.VisitedLinkColor = System.Drawing.Color.Black;
+            this.backLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelBack_LinkClicked);
             // 
             // listTicket
             // 
+            this.listTicket.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listTicket.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.number,
             this.from,
@@ -73,9 +84,11 @@
             this.dateFrom,
             this.timeFrom,
             this.seat});
+            this.listTicket.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.listTicket.FullRowSelect = true;
             this.listTicket.Location = new System.Drawing.Point(12, 12);
             this.listTicket.Name = "listTicket";
-            this.listTicket.Size = new System.Drawing.Size(776, 373);
+            this.listTicket.Size = new System.Drawing.Size(989, 373);
             this.listTicket.TabIndex = 37;
             this.listTicket.UseCompatibleStateImageBehavior = false;
             this.listTicket.View = System.Windows.Forms.View.Details;
@@ -84,42 +97,43 @@
             // number
             // 
             this.number.Text = "Номер маршруту";
-            this.number.Width = 120;
+            this.number.Width = 160;
             // 
             // from
             // 
             this.from.Text = "Місто відправлення";
-            this.from.Width = 150;
+            this.from.Width = 180;
             // 
             // to
             // 
             this.to.Text = "Місто призначення";
-            this.to.Width = 150;
+            this.to.Width = 180;
             // 
             // dateFrom
             // 
             this.dateFrom.Text = "Дата";
-            this.dateFrom.Width = 110;
+            this.dateFrom.Width = 120;
             // 
             // timeFrom
             // 
             this.timeFrom.Text = "Час відправлення";
-            this.timeFrom.Width = 110;
+            this.timeFrom.Width = 160;
             // 
             // seat
             // 
             this.seat.Text = "Заброньовано місць";
-            this.seat.Width = 130;
+            this.seat.Width = 180;
             // 
             // MyTravel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1013, 450);
             this.Controls.Add(this.listTicket);
-            this.Controls.Add(this.buttonReturnTicket);
-            this.Controls.Add(this.linkLabelBack);
-            this.MinimumSize = new System.Drawing.Size(816, 489);
+            this.Controls.Add(this.returnTicket);
+            this.Controls.Add(this.backLinkLabel);
+            this.MinimumSize = new System.Drawing.Size(1029, 489);
             this.Name = "MyTravel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Мої подорожі";
@@ -130,8 +144,8 @@
         }
 
         #endregion
-        private Button buttonReturnTicket;
-        private LinkLabel linkLabelBack;
+        private Button returnTicket;
+        private LinkLabel backLinkLabel;
         private ListView listTicket;
         private ColumnHeader number;
         private ColumnHeader from;

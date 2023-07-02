@@ -39,8 +39,8 @@ namespace BusStationCashDesk
 
         private void buttonRegistration_Click(object sender, EventArgs e)
         {
-            string name = textBoxName.Text;
-            string password = textBoxPassword.Text;
+            string name = nameTextBox.Text;
+            string password = passwordTextBox.Text;
 
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(password))
             {

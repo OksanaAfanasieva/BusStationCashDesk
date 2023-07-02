@@ -24,8 +24,8 @@ namespace BusStationCashDesk.Windows_Forms
         public Route()
         {
             InitializeComponent();
-            dateTimePickerFrom.MinDate = DateTime.Today;
-            dateTimePickerTo.MinDate = DateTime.Today;
+            fromDateTimePicker.MinDate = DateTime.Today;
+            toDateTimePicker.MinDate = DateTime.Today;
             file = new SaveLoadData<RouteData>("routeData.json");
             routeList = file.Load();
         }
@@ -47,9 +47,9 @@ namespace BusStationCashDesk.Windows_Forms
         private void Route_Load(object sender, EventArgs e)
         {
             this.FormClosing += Route_FormClosing;
-            timePickerFrom.CustomFormat = "HH:mm";
-            timePickerTo.CustomFormat = "HH:mm";
-            timePickerStop.CustomFormat = "HH:mm"; 
+            timeFromDateTimePicker.CustomFormat = "HH:mm";
+            timeToDateTimePicker.CustomFormat = "HH:mm";
+            timeStopDateTimePicker.CustomFormat = "HH:mm"; 
         }
 
         private void buttonCancel_Click_1(object sender, EventArgs e)
@@ -82,23 +82,23 @@ namespace BusStationCashDesk.Windows_Forms
                 timeStop = new List<string>();
             }
 
-            foreach(ListViewItem item in listViewStop.Items)
+            foreach(ListViewItem item in stopListView.Items)
             {
                 nameStop.Add(item.SubItems[0].Text);
                 timeStop.Add(item.SubItems[1].Text);
             }
 
-            string number = textBoxNumberRoute.Text;
-            string fromName = textBoxFrom.Text.ToLower();
-            string toName = textBoxTo.Text.ToLower();
-            DateTime dateTimeFrom = dateTimePickerFrom.Value.Date;
-            string timeFrom = timePickerFrom.Value.ToString("HH:mm");
-            DateTime dateTimeTo = dateTimePickerTo.Value.Date;
-            string timeTo = timePickerTo.Value.ToString("HH:mm");
+            string number = numberRouteTextBox.Text;
+            string fromName = fromTextBox.Text.ToLower();
+            string toName = toTextBox.Text.ToLower();
+            DateTime dateTimeFrom = fromDateTimePicker.Value.Date;
+            string timeFrom = timeFromDateTimePicker.Value.ToString("HH:mm");
+            DateTime dateTimeTo = toDateTimePicker.Value.Date;
+            string timeTo = timeToDateTimePicker.Value.ToString("HH:mm");
             List<string> stops = nameStop;
             List<string> timeStops = timeStop;
-            decimal freeSeats = numericFreeSeat.Value;
-            string price = textBoxPrice.Text;
+            decimal freeSeats = freeSeatNumeric.Value;
+            string price = priceTextBox.Text;
 
             if (string.IsNullOrEmpty(number) || string.IsNullOrEmpty(fromName) ||
                 string.IsNullOrEmpty(toName) || string.IsNullOrEmpty(price))
@@ -149,21 +149,21 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void buttonAddStop_Click_1(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(textBoxNameStop.Text) || string.IsNullOrEmpty(timePickerStop.Text))
+            if(string.IsNullOrEmpty(nameStopTextBox.Text) || string.IsNullOrEmpty(timeStopDateTimePicker.Text))
             {
                 MessageBox.Show("Введіть назву зупинки.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            ListViewItem item = new ListViewItem(textBoxNameStop.Text);
-            item.SubItems.Add(timePickerStop.Text);
-            listViewStop.Items.Add(item);
-            textBoxNameStop.Clear();
+            ListViewItem item = new ListViewItem(nameStopTextBox.Text);
+            item.SubItems.Add(timeStopDateTimePicker.Text);
+            stopListView.Items.Add(item);
+            nameStopTextBox.Clear();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (listViewStop.SelectedItems.Count > 0)
-                listViewStop.Items.Remove(listViewStop.SelectedItems[0]);
+            if (stopListView.SelectedItems.Count > 0)
+                stopListView.Items.Remove(stopListView.SelectedItems[0]);
         }
 
         private void textBoxFrom_KeyPress(object sender, KeyPressEventArgs e)
@@ -176,6 +176,39 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void textBoxNameStop_KeyPress(object sender, KeyPressEventArgs e)
         {
+        }
+
+        private void timePickerStop_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTimeStop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelNameStop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNameStop_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '\b' && e.KeyChar != '\u007F')
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == ',' && ((sender as TextBox)?.Text?.Contains(",") ?? false))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -34,24 +34,24 @@ namespace BusStationCashDesk.Windows_Forms
                 {
                     TextInfo title = CultureInfo.InvariantCulture.TextInfo;
 
-                    textBoxNumberRoute.Text = routeList[i].Number;
-                    textBoxFrom.Text = title.ToTitleCase(routeList[i].FromName ?? string.Empty);
-                    textBoxTo.Text = title.ToTitleCase(routeList[i].ToName ?? string.Empty);
-                    dateTimePickerFrom.Value = routeList[i].DateTimeFrom;
-                    textBoxTimeFrom.Text = routeList[i].TimeFrom;
-                    dateTimePickerTo.Value = routeList[i].DateTimeTo;
-                    textBoxTimeTo.Text = routeList[i].TimeTo;
-                    listViewStop.View = View.Details;
+                    numberRouteTextBox.Text = routeList[i].Number;
+                    fromTextBox.Text = title.ToTitleCase(routeList[i].FromName ?? string.Empty);
+                    toTextBox.Text = title.ToTitleCase(routeList[i].ToName ?? string.Empty);
+                    fromDateTimePicker.Value = routeList[i].DateTimeFrom;
+                    timeFromTextBox.Text = routeList[i].TimeFrom;
+                    toDateTimePicker.Value = routeList[i].DateTimeTo;
+                    timeToTextBox.Text = routeList[i].TimeTo;
+                    listStop.View = View.Details;
 
                     for (int j = 0; j < routeList[i].Stops.Count; j++)
                     {
                         ListViewItem item = new ListViewItem(title.ToTitleCase(routeList[i].Stops[j] ?? string.Empty));
                         item.SubItems.Add(routeList[i].TimeStop[j]);
-                        listViewStop.Items.Add(item);
+                        listStop.Items.Add(item);
                     }
 
-                    textBoxFreePlace.Text = (routeList[i].FreeSeats).ToString();
-                    textBoxPrice.Text = routeList[i].Price;
+                    freePlaceTextBox.Text = (routeList[i].FreeSeats).ToString();
+                    priceTextBox.Text = routeList[i].Price;
                 }
             }
         }

@@ -37,8 +37,8 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
-            string name = textBoxName.Text;
-            string password = textBoxPassword.Text;
+            string name = nameTextBox.Text;
+            string password = passwordTextBox.Text;
 
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(password))
             {
@@ -58,7 +58,7 @@ namespace BusStationCashDesk.Windows_Forms
             {
                 if (IsAdministrator(name) == false)
                 {
-                    nicknameList.Add(textBoxName.Text);
+                    nicknameList.Add(nameTextBox.Text);
                     file1.Save(nicknameList);
                     HomePage form = new HomePage();
                     form.Show();

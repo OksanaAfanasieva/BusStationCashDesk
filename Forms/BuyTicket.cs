@@ -65,14 +65,14 @@ namespace BusStationCashDesk.Windows_Forms
                 {
                     TextInfo title = CultureInfo.InvariantCulture.TextInfo;
 
-                    textBoxNumberRoute.Text = routeList[i].Number;
-                    textBoxFrom.Text = title.ToTitleCase(routeList[i].FromName ?? string.Empty);
-                    textBoxTo.Text = title.ToTitleCase(routeList[i].ToName ?? string.Empty);
-                    dateTimePickerFrom.Value = routeList[i].DateTimeFrom;
-                    textBoxTimeFrom.Text = routeList[i].TimeFrom;
-                    dateTimePickerTo.Value = routeList[i].DateTimeTo;
-                    textBoxTimeTo.Text = routeList[i].TimeTo;
-                    textBoxPrice.Text = routeList[i].Price;
+                    numberRouteTextBox.Text = routeList[i].Number;
+                    fromTextBox.Text = title.ToTitleCase(routeList[i].FromName ?? string.Empty);
+                    toTextBox.Text = title.ToTitleCase(routeList[i].ToName ?? string.Empty);
+                    fromDateTimePicker.Value = routeList[i].DateTimeFrom;
+                    timeFromTextBox.Text = routeList[i].TimeFrom;
+                    toDateTimePicker.Value = routeList[i].DateTimeTo;
+                    timeToTextBox.Text = routeList[i].TimeTo;
+                    priceTextBox.Text = routeList[i].Price;
                     index = i;
                 }
             }
@@ -99,10 +99,10 @@ namespace BusStationCashDesk.Windows_Forms
         private void buttonBuy_Click(object sender, EventArgs e)
         {
             string? number = selected;
-            string? name = textBoxName.Text;
-            string? surname = textBoxSurname.Text;
-            decimal seats = numericPassenger.Value;
-            string price = textBoxPrice.Text;
+            string? name = nameTextBox.Text;
+            string? surname = surnameTextBox.Text;
+            decimal seats = passengerNumeric.Value;
+            string price = priceTextBox.Text;
             string? nickname = nicknameList[0];
 
 
@@ -147,7 +147,7 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void numericPassenger_ValueChanged(object sender, EventArgs e)
         {
-            textBoxPrice.Text = (Math.Round(decimal.Parse(routeList[index].Price) * numericPassenger.Value, 2)).ToString();
+            priceTextBox.Text = (Math.Round(decimal.Parse(routeList[index].Price) * passengerNumeric.Value, 2)).ToString();
         }
     }
 }

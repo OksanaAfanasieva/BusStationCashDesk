@@ -42,7 +42,8 @@ namespace BusStationCashDesk.Windows_Forms
 
             for (int i = 0; i < routeList.Count; i++)
             {
-                if (routeList[i].DateTimeFrom.Date <= DateTime.Today && DateTime.Parse(routeList[i].TimeFrom) <= DateTime.Now)
+                if (routeList[i].DateTimeFrom.Date <= DateTime.Today && 
+                    DateTime.Parse(routeList[i].TimeFrom) <= DateTime.Now)
                 {
                     routeList.RemoveAt(i);
                 }
@@ -51,7 +52,8 @@ namespace BusStationCashDesk.Windows_Forms
             DisplayRoute(routeList);
         }
 
-        private void linkLabelMyTravels_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabelMyTravels_LinkClicked(object sender, 
+            LinkLabelLinkClickedEventArgs e)
         {
             MyTravel form = new MyTravel();
             form.Show();
@@ -64,7 +66,8 @@ namespace BusStationCashDesk.Windows_Forms
 
             foreach (RouteData route in routeList)
             {
-                if (route.FromName == from && route.ToName == to && route.DateTimeFrom == date && route.FreeSeats > 0)
+                if (route.FromName == from && route.ToName == to && route.DateTimeFrom == 
+                    date && route.FreeSeats > 0)
                 {
                     selectedRoute.Add(route);
                 }
@@ -77,7 +80,9 @@ namespace BusStationCashDesk.Windows_Forms
                     int min = i;
                     for (int j = i + 1; j < selectedRoute.Count; j++)
                     {
-                        if (DateTime.ParseExact(selectedRoute[j].TimeFrom, "HH:mm", CultureInfo.InvariantCulture) < DateTime.ParseExact(selectedRoute[min].TimeFrom, "HH:mm", CultureInfo.InvariantCulture))
+                        if (DateTime.ParseExact(selectedRoute[j].TimeFrom, "HH:mm", 
+                            CultureInfo.InvariantCulture) < DateTime.ParseExact(selectedRoute[min].TimeFrom, 
+                            "HH:mm", CultureInfo.InvariantCulture))
                         {
                             min = j;
                         }
@@ -112,13 +117,14 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void buttonSearch_Click_1(object sender, EventArgs e)
         {
-            string from = textBoxFrom.Text.ToLower();
-            string to = textBoxTo.Text.ToLower();
+            string from = fromTextBox.Text.ToLower();
+            string to = toTextBox.Text.ToLower();
             DateTime date = dateTimePicker.Value.Date;
 
             if (from == "" || to == "")
             {
-                MessageBox.Show("Введіть дані для пошуку.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Введіть дані для пошуку.", "Повідомлення", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information);
                 return;
             }
             else
@@ -127,7 +133,8 @@ namespace BusStationCashDesk.Windows_Forms
 
                 if (selectedRoute.Count == 0)
                 {
-                    MessageBox.Show("Жодного маршруту не знайдено.", "Повідомлення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Жодного маршруту не знайдено.", "Повідомлення", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 else DisplayRoute(selectedRoute);

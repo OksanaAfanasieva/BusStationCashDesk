@@ -65,8 +65,8 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            string from = textBoxFrom.Text.ToLower();
-            string to = textBoxTo.Text.ToLower();
+            string from = fromTextBox.Text.ToLower();
+            string to = toTextBox.Text.ToLower();
             DateTime date = dateTimePicker.Value.Date;
 
             if (from == "" || to == "")
@@ -143,9 +143,9 @@ namespace BusStationCashDesk.Windows_Forms
         {
             if (listRoute.SelectedItems.Count > 0)
             {
-                buttonRemove.Enabled = true;
+                remove.Enabled = true;
             }
-            else buttonRemove.Enabled = false;
+            else remove.Enabled = false;
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)

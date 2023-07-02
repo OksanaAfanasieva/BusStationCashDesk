@@ -28,214 +28,228 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxNumberRoute = new System.Windows.Forms.TextBox();
-            this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
-            this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.textBoxFreePlace = new System.Windows.Forms.TextBox();
-            this.textBoxTo = new System.Windows.Forms.TextBox();
-            this.textBoxFrom = new System.Windows.Forms.TextBox();
-            this.labelPrice = new System.Windows.Forms.Label();
-            this.labelFreePlace = new System.Windows.Forms.Label();
-            this.labelTimeTo = new System.Windows.Forms.Label();
-            this.labelDateTo = new System.Windows.Forms.Label();
-            this.labelTimeFrom = new System.Windows.Forms.Label();
-            this.labelDateFrom = new System.Windows.Forms.Label();
-            this.labelTo = new System.Windows.Forms.Label();
-            this.labelFrom = new System.Windows.Forms.Label();
-            this.labelNumberRoute = new System.Windows.Forms.Label();
-            this.listViewStop = new System.Windows.Forms.ListView();
+            this.numberRouteTextBox = new System.Windows.Forms.TextBox();
+            this.toDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.fromDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.priceTextBox = new System.Windows.Forms.TextBox();
+            this.freePlaceTextBox = new System.Windows.Forms.TextBox();
+            this.toTextBox = new System.Windows.Forms.TextBox();
+            this.fromTextBox = new System.Windows.Forms.TextBox();
+            this.priceLabel = new System.Windows.Forms.Label();
+            this.freePlaceLabel = new System.Windows.Forms.Label();
+            this.timeToLabel = new System.Windows.Forms.Label();
+            this.dateToLabel = new System.Windows.Forms.Label();
+            this.timeFromLabel = new System.Windows.Forms.Label();
+            this.dateFromLabel = new System.Windows.Forms.Label();
+            this.toLabel = new System.Windows.Forms.Label();
+            this.fromLabel = new System.Windows.Forms.Label();
+            this.numberRouteLabel = new System.Windows.Forms.Label();
+            this.listStop = new System.Windows.Forms.ListView();
             this.stop = new System.Windows.Forms.ColumnHeader();
             this.time = new System.Windows.Forms.ColumnHeader();
-            this.textBoxTimeFrom = new System.Windows.Forms.TextBox();
-            this.textBoxTimeTo = new System.Windows.Forms.TextBox();
+            this.timeFromTextBox = new System.Windows.Forms.TextBox();
+            this.timeToTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBoxNumberRoute
+            // numberRouteTextBox
             // 
-            this.textBoxNumberRoute.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNumberRoute.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxNumberRoute.Location = new System.Drawing.Point(148, 24);
-            this.textBoxNumberRoute.Name = "textBoxNumberRoute";
-            this.textBoxNumberRoute.ReadOnly = true;
-            this.textBoxNumberRoute.Size = new System.Drawing.Size(79, 24);
-            this.textBoxNumberRoute.TabIndex = 109;
-            this.textBoxNumberRoute.TabStop = false;
-            this.textBoxNumberRoute.TextChanged += new System.EventHandler(this.textBoxNumberRoute_TextChanged);
+            this.numberRouteTextBox.BackColor = System.Drawing.Color.White;
+            this.numberRouteTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numberRouteTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numberRouteTextBox.Location = new System.Drawing.Point(148, 24);
+            this.numberRouteTextBox.Name = "numberRouteTextBox";
+            this.numberRouteTextBox.ReadOnly = true;
+            this.numberRouteTextBox.Size = new System.Drawing.Size(79, 23);
+            this.numberRouteTextBox.TabIndex = 109;
+            this.numberRouteTextBox.TabStop = false;
+            this.numberRouteTextBox.TextChanged += new System.EventHandler(this.textBoxNumberRoute_TextChanged);
             // 
-            // dateTimePickerTo
+            // toDateTimePicker
             // 
-            this.dateTimePickerTo.Enabled = false;
-            this.dateTimePickerTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePickerTo.Location = new System.Drawing.Point(371, 116);
-            this.dateTimePickerTo.MinDate = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
-            this.dateTimePickerTo.Name = "dateTimePickerTo";
-            this.dateTimePickerTo.Size = new System.Drawing.Size(196, 31);
-            this.dateTimePickerTo.TabIndex = 106;
-            this.dateTimePickerTo.TabStop = false;
-            this.dateTimePickerTo.Value = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
+            this.toDateTimePicker.Enabled = false;
+            this.toDateTimePicker.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.toDateTimePicker.Location = new System.Drawing.Point(371, 116);
+            this.toDateTimePicker.MinDate = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
+            this.toDateTimePicker.Name = "toDateTimePicker";
+            this.toDateTimePicker.Size = new System.Drawing.Size(196, 30);
+            this.toDateTimePicker.TabIndex = 106;
+            this.toDateTimePicker.TabStop = false;
+            this.toDateTimePicker.Value = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
             // 
-            // dateTimePickerFrom
+            // fromDateTimePicker
             // 
-            this.dateTimePickerFrom.Enabled = false;
-            this.dateTimePickerFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePickerFrom.Location = new System.Drawing.Point(92, 116);
-            this.dateTimePickerFrom.MinDate = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
-            this.dateTimePickerFrom.Name = "dateTimePickerFrom";
-            this.dateTimePickerFrom.Size = new System.Drawing.Size(196, 31);
-            this.dateTimePickerFrom.TabIndex = 105;
-            this.dateTimePickerFrom.TabStop = false;
+            this.fromDateTimePicker.Enabled = false;
+            this.fromDateTimePicker.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.fromDateTimePicker.Location = new System.Drawing.Point(92, 116);
+            this.fromDateTimePicker.MinDate = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
+            this.fromDateTimePicker.Name = "fromDateTimePicker";
+            this.fromDateTimePicker.Size = new System.Drawing.Size(196, 30);
+            this.fromDateTimePicker.TabIndex = 105;
+            this.fromDateTimePicker.TabStop = false;
             // 
-            // textBoxPrice
+            // priceTextBox
             // 
-            this.textBoxPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPrice.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPrice.Location = new System.Drawing.Point(487, 348);
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.ReadOnly = true;
-            this.textBoxPrice.Size = new System.Drawing.Size(80, 24);
-            this.textBoxPrice.TabIndex = 104;
-            this.textBoxPrice.TabStop = false;
+            this.priceTextBox.BackColor = System.Drawing.Color.White;
+            this.priceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.priceTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.priceTextBox.Location = new System.Drawing.Point(487, 348);
+            this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.ReadOnly = true;
+            this.priceTextBox.Size = new System.Drawing.Size(80, 23);
+            this.priceTextBox.TabIndex = 104;
+            this.priceTextBox.TabStop = false;
             // 
-            // textBoxFreePlace
+            // freePlaceTextBox
             // 
-            this.textBoxFreePlace.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFreePlace.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxFreePlace.ForeColor = System.Drawing.Color.Black;
-            this.textBoxFreePlace.Location = new System.Drawing.Point(223, 348);
-            this.textBoxFreePlace.Name = "textBoxFreePlace";
-            this.textBoxFreePlace.ReadOnly = true;
-            this.textBoxFreePlace.Size = new System.Drawing.Size(51, 24);
-            this.textBoxFreePlace.TabIndex = 103;
-            this.textBoxFreePlace.TabStop = false;
+            this.freePlaceTextBox.BackColor = System.Drawing.Color.White;
+            this.freePlaceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.freePlaceTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.freePlaceTextBox.ForeColor = System.Drawing.Color.Black;
+            this.freePlaceTextBox.Location = new System.Drawing.Point(223, 348);
+            this.freePlaceTextBox.Name = "freePlaceTextBox";
+            this.freePlaceTextBox.ReadOnly = true;
+            this.freePlaceTextBox.Size = new System.Drawing.Size(51, 23);
+            this.freePlaceTextBox.TabIndex = 103;
+            this.freePlaceTextBox.TabStop = false;
             // 
-            // textBoxTo
+            // toTextBox
             // 
-            this.textBoxTo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxTo.Location = new System.Drawing.Point(371, 80);
-            this.textBoxTo.Name = "textBoxTo";
-            this.textBoxTo.ReadOnly = true;
-            this.textBoxTo.Size = new System.Drawing.Size(196, 24);
-            this.textBoxTo.TabIndex = 102;
-            this.textBoxTo.TabStop = false;
-            this.textBoxTo.TextChanged += new System.EventHandler(this.textBoxTo_TextChanged);
+            this.toTextBox.BackColor = System.Drawing.Color.White;
+            this.toTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.toTextBox.Location = new System.Drawing.Point(371, 80);
+            this.toTextBox.Name = "toTextBox";
+            this.toTextBox.ReadOnly = true;
+            this.toTextBox.Size = new System.Drawing.Size(196, 23);
+            this.toTextBox.TabIndex = 102;
+            this.toTextBox.TabStop = false;
+            this.toTextBox.TextChanged += new System.EventHandler(this.textBoxTo_TextChanged);
             // 
-            // textBoxFrom
+            // fromTextBox
             // 
-            this.textBoxFrom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxFrom.Location = new System.Drawing.Point(92, 79);
-            this.textBoxFrom.Name = "textBoxFrom";
-            this.textBoxFrom.ReadOnly = true;
-            this.textBoxFrom.Size = new System.Drawing.Size(196, 24);
-            this.textBoxFrom.TabIndex = 101;
-            this.textBoxFrom.TabStop = false;
+            this.fromTextBox.BackColor = System.Drawing.Color.White;
+            this.fromTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.fromTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.fromTextBox.Location = new System.Drawing.Point(92, 79);
+            this.fromTextBox.Name = "fromTextBox";
+            this.fromTextBox.ReadOnly = true;
+            this.fromTextBox.Size = new System.Drawing.Size(196, 23);
+            this.fromTextBox.TabIndex = 101;
+            this.fromTextBox.TabStop = false;
             // 
-            // labelPrice
+            // priceLabel
             // 
-            this.labelPrice.AutoSize = true;
-            this.labelPrice.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPrice.Location = new System.Drawing.Point(429, 346);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(52, 25);
-            this.labelPrice.TabIndex = 100;
-            this.labelPrice.Text = "Ціна:";
+            this.priceLabel.AutoSize = true;
+            this.priceLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.priceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.priceLabel.Location = new System.Drawing.Point(429, 346);
+            this.priceLabel.Name = "priceLabel";
+            this.priceLabel.Size = new System.Drawing.Size(50, 23);
+            this.priceLabel.TabIndex = 100;
+            this.priceLabel.Text = "Ціна:";
             // 
-            // labelFreePlace
+            // freePlaceLabel
             // 
-            this.labelFreePlace.AutoSize = true;
-            this.labelFreePlace.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelFreePlace.Location = new System.Drawing.Point(17, 346);
-            this.labelFreePlace.Name = "labelFreePlace";
-            this.labelFreePlace.Size = new System.Drawing.Size(200, 25);
-            this.labelFreePlace.TabIndex = 99;
-            this.labelFreePlace.Text = "Кількість вільних місць:";
-            this.labelFreePlace.Click += new System.EventHandler(this.labelFreePlace_Click);
+            this.freePlaceLabel.AutoSize = true;
+            this.freePlaceLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.freePlaceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.freePlaceLabel.Location = new System.Drawing.Point(17, 346);
+            this.freePlaceLabel.Name = "freePlaceLabel";
+            this.freePlaceLabel.Size = new System.Drawing.Size(200, 23);
+            this.freePlaceLabel.TabIndex = 99;
+            this.freePlaceLabel.Text = "Кількість вільних місць:";
+            this.freePlaceLabel.Click += new System.EventHandler(this.labelFreePlace_Click);
             // 
-            // labelTimeTo
+            // timeToLabel
             // 
-            this.labelTimeTo.AutoSize = true;
-            this.labelTimeTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTimeTo.Location = new System.Drawing.Point(320, 154);
-            this.labelTimeTo.Name = "labelTimeTo";
-            this.labelTimeTo.Size = new System.Drawing.Size(45, 25);
-            this.labelTimeTo.TabIndex = 98;
-            this.labelTimeTo.Text = "Час:";
+            this.timeToLabel.AutoSize = true;
+            this.timeToLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.timeToLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.timeToLabel.Location = new System.Drawing.Point(320, 154);
+            this.timeToLabel.Name = "timeToLabel";
+            this.timeToLabel.Size = new System.Drawing.Size(43, 23);
+            this.timeToLabel.TabIndex = 98;
+            this.timeToLabel.Text = "Час:";
             // 
-            // labelDateTo
+            // dateToLabel
             // 
-            this.labelDateTo.AutoSize = true;
-            this.labelDateTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelDateTo.Location = new System.Drawing.Point(312, 120);
-            this.labelDateTo.Name = "labelDateTo";
-            this.labelDateTo.Size = new System.Drawing.Size(53, 25);
-            this.labelDateTo.TabIndex = 97;
-            this.labelDateTo.Text = "Дата:";
+            this.dateToLabel.AutoSize = true;
+            this.dateToLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateToLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.dateToLabel.Location = new System.Drawing.Point(312, 120);
+            this.dateToLabel.Name = "dateToLabel";
+            this.dateToLabel.Size = new System.Drawing.Size(51, 23);
+            this.dateToLabel.TabIndex = 97;
+            this.dateToLabel.Text = "Дата:";
             // 
-            // labelTimeFrom
+            // timeFromLabel
             // 
-            this.labelTimeFrom.AutoSize = true;
-            this.labelTimeFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTimeFrom.Location = new System.Drawing.Point(41, 154);
-            this.labelTimeFrom.Name = "labelTimeFrom";
-            this.labelTimeFrom.Size = new System.Drawing.Size(45, 25);
-            this.labelTimeFrom.TabIndex = 96;
-            this.labelTimeFrom.Text = "Час:";
+            this.timeFromLabel.AutoSize = true;
+            this.timeFromLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.timeFromLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.timeFromLabel.Location = new System.Drawing.Point(41, 154);
+            this.timeFromLabel.Name = "timeFromLabel";
+            this.timeFromLabel.Size = new System.Drawing.Size(43, 23);
+            this.timeFromLabel.TabIndex = 96;
+            this.timeFromLabel.Text = "Час:";
             // 
-            // labelDateFrom
+            // dateFromLabel
             // 
-            this.labelDateFrom.AutoSize = true;
-            this.labelDateFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelDateFrom.Location = new System.Drawing.Point(33, 120);
-            this.labelDateFrom.Name = "labelDateFrom";
-            this.labelDateFrom.Size = new System.Drawing.Size(53, 25);
-            this.labelDateFrom.TabIndex = 95;
-            this.labelDateFrom.Text = "Дата:";
+            this.dateFromLabel.AutoSize = true;
+            this.dateFromLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateFromLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.dateFromLabel.Location = new System.Drawing.Point(33, 120);
+            this.dateFromLabel.Name = "dateFromLabel";
+            this.dateFromLabel.Size = new System.Drawing.Size(51, 23);
+            this.dateFromLabel.TabIndex = 95;
+            this.dateFromLabel.Text = "Дата:";
             // 
-            // labelTo
+            // toLabel
             // 
-            this.labelTo.AutoSize = true;
-            this.labelTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTo.Location = new System.Drawing.Point(312, 79);
-            this.labelTo.Name = "labelTo";
-            this.labelTo.Size = new System.Drawing.Size(55, 25);
-            this.labelTo.TabIndex = 94;
-            this.labelTo.Text = "Куди:";
+            this.toLabel.AutoSize = true;
+            this.toLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.toLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.toLabel.Location = new System.Drawing.Point(312, 79);
+            this.toLabel.Name = "toLabel";
+            this.toLabel.Size = new System.Drawing.Size(51, 23);
+            this.toLabel.TabIndex = 94;
+            this.toLabel.Text = "Куди:";
             // 
-            // labelFrom
+            // fromLabel
             // 
-            this.labelFrom.AutoSize = true;
-            this.labelFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelFrom.Location = new System.Drawing.Point(17, 79);
-            this.labelFrom.Name = "labelFrom";
-            this.labelFrom.Size = new System.Drawing.Size(69, 25);
-            this.labelFrom.TabIndex = 93;
-            this.labelFrom.Text = "Звідки:";
+            this.fromLabel.AutoSize = true;
+            this.fromLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.fromLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.fromLabel.Location = new System.Drawing.Point(17, 79);
+            this.fromLabel.Name = "fromLabel";
+            this.fromLabel.Size = new System.Drawing.Size(65, 23);
+            this.fromLabel.TabIndex = 93;
+            this.fromLabel.Text = "Звідки:";
             // 
-            // labelNumberRoute
+            // numberRouteLabel
             // 
-            this.labelNumberRoute.AutoSize = true;
-            this.labelNumberRoute.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelNumberRoute.Location = new System.Drawing.Point(17, 19);
-            this.labelNumberRoute.Name = "labelNumberRoute";
-            this.labelNumberRoute.Size = new System.Drawing.Size(125, 28);
-            this.labelNumberRoute.TabIndex = 92;
-            this.labelNumberRoute.Text = "Маршрут №";
+            this.numberRouteLabel.AutoSize = true;
+            this.numberRouteLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.numberRouteLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.numberRouteLabel.Location = new System.Drawing.Point(17, 19);
+            this.numberRouteLabel.Name = "numberRouteLabel";
+            this.numberRouteLabel.Size = new System.Drawing.Size(129, 28);
+            this.numberRouteLabel.TabIndex = 92;
+            this.numberRouteLabel.Text = "Маршрут №";
             // 
-            // listViewStop
+            // listStop
             // 
-            this.listViewStop.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listStop.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.stop,
             this.time});
-            this.listViewStop.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listViewStop.Location = new System.Drawing.Point(17, 199);
-            this.listViewStop.Name = "listViewStop";
-            this.listViewStop.Size = new System.Drawing.Size(550, 137);
-            this.listViewStop.TabIndex = 110;
-            this.listViewStop.TabStop = false;
-            this.listViewStop.UseCompatibleStateImageBehavior = false;
-            this.listViewStop.View = System.Windows.Forms.View.Details;
+            this.listStop.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.listStop.Location = new System.Drawing.Point(17, 199);
+            this.listStop.Name = "listStop";
+            this.listStop.Size = new System.Drawing.Size(550, 137);
+            this.listStop.TabIndex = 110;
+            this.listStop.TabStop = false;
+            this.listStop.UseCompatibleStateImageBehavior = false;
+            this.listStop.View = System.Windows.Forms.View.Details;
             // 
             // stop
             // 
@@ -247,53 +261,56 @@
             this.time.Text = "Час";
             this.time.Width = 190;
             // 
-            // textBoxTimeFrom
+            // timeFromTextBox
             // 
-            this.textBoxTimeFrom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTimeFrom.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxTimeFrom.Location = new System.Drawing.Point(92, 154);
-            this.textBoxTimeFrom.Name = "textBoxTimeFrom";
-            this.textBoxTimeFrom.ReadOnly = true;
-            this.textBoxTimeFrom.Size = new System.Drawing.Size(196, 24);
-            this.textBoxTimeFrom.TabIndex = 111;
-            this.textBoxTimeFrom.TabStop = false;
+            this.timeFromTextBox.BackColor = System.Drawing.Color.White;
+            this.timeFromTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.timeFromTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.timeFromTextBox.Location = new System.Drawing.Point(92, 154);
+            this.timeFromTextBox.Name = "timeFromTextBox";
+            this.timeFromTextBox.ReadOnly = true;
+            this.timeFromTextBox.Size = new System.Drawing.Size(196, 23);
+            this.timeFromTextBox.TabIndex = 111;
+            this.timeFromTextBox.TabStop = false;
             // 
-            // textBoxTimeTo
+            // timeToTextBox
             // 
-            this.textBoxTimeTo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTimeTo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxTimeTo.Location = new System.Drawing.Point(371, 155);
-            this.textBoxTimeTo.Name = "textBoxTimeTo";
-            this.textBoxTimeTo.ReadOnly = true;
-            this.textBoxTimeTo.Size = new System.Drawing.Size(196, 24);
-            this.textBoxTimeTo.TabIndex = 112;
-            this.textBoxTimeTo.TabStop = false;
+            this.timeToTextBox.BackColor = System.Drawing.Color.White;
+            this.timeToTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.timeToTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.timeToTextBox.Location = new System.Drawing.Point(371, 155);
+            this.timeToTextBox.Name = "timeToTextBox";
+            this.timeToTextBox.ReadOnly = true;
+            this.timeToTextBox.Size = new System.Drawing.Size(196, 23);
+            this.timeToTextBox.TabIndex = 112;
+            this.timeToTextBox.TabStop = false;
             // 
             // InformationRoute
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 391);
-            this.Controls.Add(this.textBoxTimeTo);
-            this.Controls.Add(this.textBoxTimeFrom);
-            this.Controls.Add(this.listViewStop);
-            this.Controls.Add(this.textBoxNumberRoute);
-            this.Controls.Add(this.dateTimePickerTo);
-            this.Controls.Add(this.dateTimePickerFrom);
-            this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.textBoxFreePlace);
-            this.Controls.Add(this.textBoxTo);
-            this.Controls.Add(this.textBoxFrom);
-            this.Controls.Add(this.labelPrice);
-            this.Controls.Add(this.labelFreePlace);
-            this.Controls.Add(this.labelTimeTo);
-            this.Controls.Add(this.labelDateTo);
-            this.Controls.Add(this.labelTimeFrom);
-            this.Controls.Add(this.labelDateFrom);
-            this.Controls.Add(this.labelTo);
-            this.Controls.Add(this.labelFrom);
-            this.Controls.Add(this.labelNumberRoute);
+            this.Controls.Add(this.timeToTextBox);
+            this.Controls.Add(this.timeFromTextBox);
+            this.Controls.Add(this.listStop);
+            this.Controls.Add(this.numberRouteTextBox);
+            this.Controls.Add(this.toDateTimePicker);
+            this.Controls.Add(this.fromDateTimePicker);
+            this.Controls.Add(this.priceTextBox);
+            this.Controls.Add(this.freePlaceTextBox);
+            this.Controls.Add(this.toTextBox);
+            this.Controls.Add(this.fromTextBox);
+            this.Controls.Add(this.priceLabel);
+            this.Controls.Add(this.freePlaceLabel);
+            this.Controls.Add(this.timeToLabel);
+            this.Controls.Add(this.dateToLabel);
+            this.Controls.Add(this.timeFromLabel);
+            this.Controls.Add(this.dateFromLabel);
+            this.Controls.Add(this.toLabel);
+            this.Controls.Add(this.fromLabel);
+            this.Controls.Add(this.numberRouteLabel);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(600, 430);
             this.MinimumSize = new System.Drawing.Size(600, 430);
@@ -308,26 +325,26 @@
 
         #endregion
 
-        private TextBox textBoxNumberRoute;
-        private DateTimePicker dateTimePickerTo;
-        private DateTimePicker dateTimePickerFrom;
-        private TextBox textBoxPrice;
-        private TextBox textBoxFreePlace;
-        private TextBox textBoxTo;
-        private TextBox textBoxFrom;
-        private Label labelPrice;
-        private Label labelFreePlace;
-        private Label labelTimeTo;
-        private Label labelDateTo;
-        private Label labelTimeFrom;
-        private Label labelDateFrom;
-        private Label labelTo;
-        private Label labelFrom;
-        private Label labelNumberRoute;
-        private ListView listViewStop;
+        private TextBox numberRouteTextBox;
+        private DateTimePicker toDateTimePicker;
+        private DateTimePicker fromDateTimePicker;
+        private TextBox priceTextBox;
+        private TextBox freePlaceTextBox;
+        private TextBox toTextBox;
+        private TextBox fromTextBox;
+        private Label priceLabel;
+        private Label freePlaceLabel;
+        private Label timeToLabel;
+        private Label dateToLabel;
+        private Label timeFromLabel;
+        private Label dateFromLabel;
+        private Label toLabel;
+        private Label fromLabel;
+        private Label numberRouteLabel;
+        private ListView listStop;
         private ColumnHeader stop;
         private ColumnHeader time;
-        private TextBox textBoxTimeFrom;
-        private TextBox textBoxTimeTo;
+        private TextBox timeFromTextBox;
+        private TextBox timeToTextBox;
     }
 }

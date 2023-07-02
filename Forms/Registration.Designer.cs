@@ -28,94 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelRegistration = new System.Windows.Forms.Label();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.buttonRegistration = new System.Windows.Forms.Button();
-            this.linkLabelToLogIn = new System.Windows.Forms.LinkLabel();
+            this.registrationLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.registrationButton = new System.Windows.Forms.Button();
+            this.toLogInLinkLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // labelRegistration
+            // registrationLabel
             // 
-            this.labelRegistration.AutoSize = true;
-            this.labelRegistration.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelRegistration.Location = new System.Drawing.Point(98, 52);
-            this.labelRegistration.Name = "labelRegistration";
-            this.labelRegistration.Size = new System.Drawing.Size(148, 37);
-            this.labelRegistration.TabIndex = 0;
-            this.labelRegistration.Text = "Реєстрація";
+            this.registrationLabel.AutoSize = true;
+            this.registrationLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.registrationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.registrationLabel.Location = new System.Drawing.Point(98, 52);
+            this.registrationLabel.Name = "registrationLabel";
+            this.registrationLabel.Size = new System.Drawing.Size(159, 37);
+            this.registrationLabel.TabIndex = 0;
+            this.registrationLabel.Text = "Реєстрація";
             // 
-            // labelName
+            // nameLabel
             // 
-            this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelName.Location = new System.Drawing.Point(58, 115);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(43, 25);
-            this.labelName.TabIndex = 1;
-            this.labelName.Text = "Ім\'я";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.nameLabel.Location = new System.Drawing.Point(58, 115);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(41, 23);
+            this.nameLabel.TabIndex = 1;
+            this.nameLabel.Text = "Ім\'я";
             // 
-            // labelPassword
+            // passwordLabel
             // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPassword.Location = new System.Drawing.Point(27, 140);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(74, 25);
-            this.labelPassword.TabIndex = 2;
-            this.labelPassword.Text = "Пароль";
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.passwordLabel.Location = new System.Drawing.Point(27, 140);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(71, 23);
+            this.passwordLabel.TabIndex = 2;
+            this.passwordLabel.Text = "Пароль";
             // 
-            // textBoxName
+            // nameTextBox
             // 
-            this.textBoxName.Location = new System.Drawing.Point(107, 115);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(203, 23);
-            this.textBoxName.TabIndex = 3;
+            this.nameTextBox.Location = new System.Drawing.Point(107, 115);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(203, 23);
+            this.nameTextBox.TabIndex = 3;
             // 
-            // textBoxPassword
+            // passwordTextBox
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(107, 145);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(203, 23);
-            this.textBoxPassword.TabIndex = 4;
+            this.passwordTextBox.Location = new System.Drawing.Point(107, 145);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(203, 23);
+            this.passwordTextBox.TabIndex = 4;
             // 
-            // buttonRegistration
+            // registrationButton
             // 
-            this.buttonRegistration.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonRegistration.Location = new System.Drawing.Point(91, 183);
-            this.buttonRegistration.Name = "buttonRegistration";
-            this.buttonRegistration.Size = new System.Drawing.Size(190, 41);
-            this.buttonRegistration.TabIndex = 5;
-            this.buttonRegistration.Text = "Зареєструватися";
-            this.buttonRegistration.UseVisualStyleBackColor = true;
-            this.buttonRegistration.Click += new System.EventHandler(this.buttonRegistration_Click);
+            this.registrationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.registrationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registrationButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.registrationButton.ForeColor = System.Drawing.Color.White;
+            this.registrationButton.Location = new System.Drawing.Point(78, 183);
+            this.registrationButton.Name = "registrationButton";
+            this.registrationButton.Size = new System.Drawing.Size(190, 41);
+            this.registrationButton.TabIndex = 5;
+            this.registrationButton.Text = "Зареєструватися";
+            this.registrationButton.UseVisualStyleBackColor = false;
+            this.registrationButton.Click += new System.EventHandler(this.buttonRegistration_Click);
             // 
-            // linkLabelToLogIn
+            // toLogInLinkLabel
             // 
-            this.linkLabelToLogIn.AutoSize = true;
-            this.linkLabelToLogIn.Location = new System.Drawing.Point(117, 227);
-            this.linkLabelToLogIn.Name = "linkLabelToLogIn";
-            this.linkLabelToLogIn.Size = new System.Drawing.Size(129, 15);
-            this.linkLabelToLogIn.TabIndex = 6;
-            this.linkLabelToLogIn.TabStop = true;
-            this.linkLabelToLogIn.Text = "Я вже зареєстрований";
-            this.linkLabelToLogIn.VisitedLinkColor = System.Drawing.Color.Blue;
-            this.linkLabelToLogIn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.toLogInLinkLabel.ActiveLinkColor = System.Drawing.Color.Blue;
+            this.toLogInLinkLabel.AutoSize = true;
+            this.toLogInLinkLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.toLogInLinkLabel.Location = new System.Drawing.Point(98, 227);
+            this.toLogInLinkLabel.Name = "toLogInLinkLabel";
+            this.toLogInLinkLabel.Size = new System.Drawing.Size(149, 19);
+            this.toLogInLinkLabel.TabIndex = 6;
+            this.toLogInLinkLabel.TabStop = true;
+            this.toLogInLinkLabel.Text = "Я вже зареєстрований";
+            this.toLogInLinkLabel.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.toLogInLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(344, 281);
-            this.Controls.Add(this.linkLabelToLogIn);
-            this.Controls.Add(this.buttonRegistration);
-            this.Controls.Add(this.textBoxPassword);
-            this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.labelName);
-            this.Controls.Add(this.labelRegistration);
+            this.Controls.Add(this.toLogInLinkLabel);
+            this.Controls.Add(this.registrationButton);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.registrationLabel);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(360, 320);
             this.MinimumSize = new System.Drawing.Size(360, 320);
@@ -130,12 +139,12 @@
 
         #endregion
 
-        private Label labelRegistration;
-        private Label labelName;
-        private Label labelPassword;
-        private TextBox textBoxName;
-        private TextBox textBoxPassword;
-        private Button buttonRegistration;
-        private LinkLabel linkLabelToLogIn;
+        private Label registrationLabel;
+        private Label nameLabel;
+        private Label passwordLabel;
+        private TextBox nameTextBox;
+        private TextBox passwordTextBox;
+        private Button registrationButton;
+        private LinkLabel toLogInLinkLabel;
     }
 }

@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonCreate = new System.Windows.Forms.Button();
-            this.buttonBoardingList = new System.Windows.Forms.Button();
-            this.buttonEdit = new System.Windows.Forms.Button();
-            this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonRemove = new System.Windows.Forms.Button();
-            this.labelDate = new System.Windows.Forms.Label();
+            this.create = new System.Windows.Forms.Button();
+            this.boardingList = new System.Windows.Forms.Button();
+            this.edit = new System.Windows.Forms.Button();
+            this.search = new System.Windows.Forms.Button();
+            this.remove = new System.Windows.Forms.Button();
+            this.dateLabel = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.textBoxTo = new System.Windows.Forms.TextBox();
-            this.labelTo = new System.Windows.Forms.Label();
-            this.labelFrom = new System.Windows.Forms.Label();
-            this.textBoxFrom = new System.Windows.Forms.TextBox();
+            this.toTextBox = new System.Windows.Forms.TextBox();
+            this.toLabel = new System.Windows.Forms.Label();
+            this.fromLabel = new System.Windows.Forms.Label();
+            this.fromTextBox = new System.Windows.Forms.TextBox();
             this.listRoute = new System.Windows.Forms.ListView();
             this.number = new System.Windows.Forms.ColumnHeader();
             this.from = new System.Windows.Forms.ColumnHeader();
@@ -46,115 +46,158 @@
             this.dateFrom = new System.Windows.Forms.ColumnHeader();
             this.timeFrom = new System.Windows.Forms.ColumnHeader();
             this.freeSeat = new System.Windows.Forms.ColumnHeader();
-            this.buttonAllRoute = new System.Windows.Forms.Button();
-            this.buttonLogOut = new System.Windows.Forms.Button();
+            this.allRoute = new System.Windows.Forms.Button();
+            this.logOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // buttonCreate
+            // create
             // 
-            this.buttonCreate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonCreate.Location = new System.Drawing.Point(404, 409);
-            this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(112, 32);
-            this.buttonCreate.TabIndex = 34;
-            this.buttonCreate.Text = "Створити";
-            this.buttonCreate.UseVisualStyleBackColor = true;
-            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
+            this.create.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.create.AutoSize = true;
+            this.create.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.create.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.create.ForeColor = System.Drawing.Color.White;
+            this.create.Location = new System.Drawing.Point(515, 401);
+            this.create.Name = "create";
+            this.create.Size = new System.Drawing.Size(112, 37);
+            this.create.TabIndex = 34;
+            this.create.Text = "Створити";
+            this.create.UseVisualStyleBackColor = false;
+            this.create.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
-            // buttonBoardingList
+            // boardingList
             // 
-            this.buttonBoardingList.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonBoardingList.Location = new System.Drawing.Point(758, 409);
-            this.buttonBoardingList.Name = "buttonBoardingList";
-            this.buttonBoardingList.Size = new System.Drawing.Size(160, 32);
-            this.buttonBoardingList.TabIndex = 33;
-            this.buttonBoardingList.Text = "Посадкова відомість";
-            this.buttonBoardingList.UseVisualStyleBackColor = true;
-            this.buttonBoardingList.Click += new System.EventHandler(this.buttonBoardingList_Click);
+            this.boardingList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.boardingList.AutoSize = true;
+            this.boardingList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.boardingList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boardingList.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.boardingList.ForeColor = System.Drawing.Color.White;
+            this.boardingList.Location = new System.Drawing.Point(866, 401);
+            this.boardingList.Name = "boardingList";
+            this.boardingList.Size = new System.Drawing.Size(195, 37);
+            this.boardingList.TabIndex = 33;
+            this.boardingList.Text = "Посадкова відомість";
+            this.boardingList.UseVisualStyleBackColor = false;
+            this.boardingList.Click += new System.EventHandler(this.buttonBoardingList_Click);
             // 
-            // buttonEdit
+            // edit
             // 
-            this.buttonEdit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonEdit.Location = new System.Drawing.Point(522, 409);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(112, 32);
-            this.buttonEdit.TabIndex = 32;
-            this.buttonEdit.Text = "Редагувати";
-            this.buttonEdit.UseVisualStyleBackColor = true;
-            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            this.edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.edit.AutoSize = true;
+            this.edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.edit.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.edit.ForeColor = System.Drawing.Color.White;
+            this.edit.Location = new System.Drawing.Point(631, 401);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(114, 37);
+            this.edit.TabIndex = 32;
+            this.edit.Text = "Редагувати";
+            this.edit.UseVisualStyleBackColor = false;
+            this.edit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
-            // buttonSearch
+            // search
             // 
-            this.buttonSearch.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSearch.Location = new System.Drawing.Point(14, 182);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(188, 39);
-            this.buttonSearch.TabIndex = 31;
-            this.buttonSearch.Text = "Пошук";
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            this.search.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.search.AutoSize = true;
+            this.search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.search.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.search.ForeColor = System.Drawing.Color.White;
+            this.search.Location = new System.Drawing.Point(12, 206);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(203, 39);
+            this.search.TabIndex = 31;
+            this.search.Text = "Пошук";
+            this.search.UseVisualStyleBackColor = false;
+            this.search.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // buttonRemove
+            // remove
             // 
-            this.buttonRemove.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonRemove.Location = new System.Drawing.Point(640, 409);
-            this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(112, 32);
-            this.buttonRemove.TabIndex = 30;
-            this.buttonRemove.Text = "Видалити";
-            this.buttonRemove.UseVisualStyleBackColor = true;
-            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
+            this.remove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.remove.AutoSize = true;
+            this.remove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.remove.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.remove.ForeColor = System.Drawing.Color.White;
+            this.remove.Location = new System.Drawing.Point(751, 401);
+            this.remove.Name = "remove";
+            this.remove.Size = new System.Drawing.Size(112, 37);
+            this.remove.TabIndex = 30;
+            this.remove.Text = "Видалити";
+            this.remove.UseVisualStyleBackColor = false;
+            this.remove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
-            // labelDate
+            // dateLabel
             // 
-            this.labelDate.AutoSize = true;
-            this.labelDate.Location = new System.Drawing.Point(13, 118);
-            this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(32, 15);
-            this.labelDate.TabIndex = 29;
-            this.labelDate.Text = "Дата";
+            this.dateLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dateLabel.AutoSize = true;
+            this.dateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.dateLabel.Location = new System.Drawing.Point(12, 129);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(47, 23);
+            this.dateLabel.TabIndex = 29;
+            this.dateLabel.Text = "Дата";
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(12, 136);
+            this.dateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dateTimePicker.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker.Location = new System.Drawing.Point(12, 157);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(189, 23);
+            this.dateTimePicker.Size = new System.Drawing.Size(189, 31);
             this.dateTimePicker.TabIndex = 27;
             // 
-            // textBoxTo
+            // toTextBox
             // 
-            this.textBoxTo.Location = new System.Drawing.Point(13, 80);
-            this.textBoxTo.Name = "textBoxTo";
-            this.textBoxTo.Size = new System.Drawing.Size(189, 23);
-            this.textBoxTo.TabIndex = 26;
+            this.toTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.toTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.toTextBox.Location = new System.Drawing.Point(12, 97);
+            this.toTextBox.Name = "toTextBox";
+            this.toTextBox.Size = new System.Drawing.Size(189, 29);
+            this.toTextBox.TabIndex = 26;
             // 
-            // labelTo
+            // toLabel
             // 
-            this.labelTo.AutoSize = true;
-            this.labelTo.Location = new System.Drawing.Point(13, 62);
-            this.labelTo.Name = "labelTo";
-            this.labelTo.Size = new System.Drawing.Size(22, 15);
-            this.labelTo.TabIndex = 25;
-            this.labelTo.Text = "До";
+            this.toLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.toLabel.AutoSize = true;
+            this.toLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.toLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.toLabel.Location = new System.Drawing.Point(12, 69);
+            this.toLabel.Name = "toLabel";
+            this.toLabel.Size = new System.Drawing.Size(32, 23);
+            this.toLabel.TabIndex = 25;
+            this.toLabel.Text = "До";
             // 
-            // labelFrom
+            // fromLabel
             // 
-            this.labelFrom.AutoSize = true;
-            this.labelFrom.Location = new System.Drawing.Point(12, 9);
-            this.labelFrom.Name = "labelFrom";
-            this.labelFrom.Size = new System.Drawing.Size(23, 15);
-            this.labelFrom.TabIndex = 24;
-            this.labelFrom.Text = "Від";
+            this.fromLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.fromLabel.AutoSize = true;
+            this.fromLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.fromLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.fromLabel.Location = new System.Drawing.Point(12, 9);
+            this.fromLabel.Name = "fromLabel";
+            this.fromLabel.Size = new System.Drawing.Size(34, 23);
+            this.fromLabel.TabIndex = 24;
+            this.fromLabel.Text = "Від";
             // 
-            // textBoxFrom
+            // fromTextBox
             // 
-            this.textBoxFrom.Location = new System.Drawing.Point(12, 27);
-            this.textBoxFrom.Name = "textBoxFrom";
-            this.textBoxFrom.Size = new System.Drawing.Size(190, 23);
-            this.textBoxFrom.TabIndex = 23;
+            this.fromTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.fromTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fromTextBox.Location = new System.Drawing.Point(12, 37);
+            this.fromTextBox.Name = "fromTextBox";
+            this.fromTextBox.Size = new System.Drawing.Size(189, 29);
+            this.fromTextBox.TabIndex = 23;
             // 
             // listRoute
             // 
+            this.listRoute.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listRoute.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.number,
             this.from,
@@ -162,9 +205,11 @@
             this.dateFrom,
             this.timeFrom,
             this.freeSeat});
-            this.listRoute.Location = new System.Drawing.Point(219, 7);
+            this.listRoute.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.listRoute.FullRowSelect = true;
+            this.listRoute.Location = new System.Drawing.Point(221, 7);
             this.listRoute.Name = "listRoute";
-            this.listRoute.Size = new System.Drawing.Size(699, 396);
+            this.listRoute.Size = new System.Drawing.Size(840, 390);
             this.listRoute.TabIndex = 35;
             this.listRoute.UseCompatibleStateImageBehavior = false;
             this.listRoute.View = System.Windows.Forms.View.Details;
@@ -173,17 +218,17 @@
             // number
             // 
             this.number.Text = "Номер рейса";
-            this.number.Width = 85;
+            this.number.Width = 120;
             // 
             // from
             // 
             this.from.Text = "Місто відправлення";
-            this.from.Width = 150;
+            this.from.Width = 170;
             // 
             // to
             // 
             this.to.Text = "Місто призначення";
-            this.to.Width = 150;
+            this.to.Width = 170;
             // 
             // dateFrom
             // 
@@ -193,57 +238,66 @@
             // timeFrom
             // 
             this.timeFrom.Text = "Час відправлення";
-            this.timeFrom.Width = 110;
+            this.timeFrom.Width = 150;
             // 
             // freeSeat
             // 
             this.freeSeat.Text = "Вільні місця";
-            this.freeSeat.Width = 80;
+            this.freeSeat.Width = 110;
             // 
-            // buttonAllRoute
+            // allRoute
             // 
-            this.buttonAllRoute.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonAllRoute.Location = new System.Drawing.Point(12, 227);
-            this.buttonAllRoute.Name = "buttonAllRoute";
-            this.buttonAllRoute.Size = new System.Drawing.Size(189, 39);
-            this.buttonAllRoute.TabIndex = 38;
-            this.buttonAllRoute.Text = "Вивести усі маршрути";
-            this.buttonAllRoute.UseVisualStyleBackColor = true;
-            this.buttonAllRoute.Click += new System.EventHandler(this.buttonAllRoute_Click);
+            this.allRoute.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.allRoute.AutoSize = true;
+            this.allRoute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.allRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.allRoute.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.allRoute.ForeColor = System.Drawing.Color.White;
+            this.allRoute.Location = new System.Drawing.Point(12, 251);
+            this.allRoute.Name = "allRoute";
+            this.allRoute.Size = new System.Drawing.Size(203, 39);
+            this.allRoute.TabIndex = 38;
+            this.allRoute.Text = "Вивести усі маршрути";
+            this.allRoute.UseVisualStyleBackColor = false;
+            this.allRoute.Click += new System.EventHandler(this.buttonAllRoute_Click);
             // 
-            // buttonLogOut
+            // logOut
             // 
-            this.buttonLogOut.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonLogOut.Location = new System.Drawing.Point(14, 409);
-            this.buttonLogOut.Name = "buttonLogOut";
-            this.buttonLogOut.Size = new System.Drawing.Size(109, 32);
-            this.buttonLogOut.TabIndex = 39;
-            this.buttonLogOut.Text = "Вийти";
-            this.buttonLogOut.UseVisualStyleBackColor = true;
-            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+            this.logOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.logOut.AutoSize = true;
+            this.logOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
+            this.logOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOut.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.logOut.ForeColor = System.Drawing.Color.White;
+            this.logOut.Location = new System.Drawing.Point(14, 406);
+            this.logOut.Name = "logOut";
+            this.logOut.Size = new System.Drawing.Size(109, 35);
+            this.logOut.TabIndex = 39;
+            this.logOut.Text = "Вийти";
+            this.logOut.UseVisualStyleBackColor = false;
+            this.logOut.Click += new System.EventHandler(this.buttonLogOut_Click);
             // 
             // HomePageAdministration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(930, 450);
-            this.Controls.Add(this.buttonLogOut);
-            this.Controls.Add(this.buttonAllRoute);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1073, 450);
+            this.Controls.Add(this.logOut);
+            this.Controls.Add(this.allRoute);
             this.Controls.Add(this.listRoute);
-            this.Controls.Add(this.buttonCreate);
-            this.Controls.Add(this.buttonBoardingList);
-            this.Controls.Add(this.buttonEdit);
-            this.Controls.Add(this.buttonSearch);
-            this.Controls.Add(this.buttonRemove);
-            this.Controls.Add(this.labelDate);
+            this.Controls.Add(this.create);
+            this.Controls.Add(this.boardingList);
+            this.Controls.Add(this.edit);
+            this.Controls.Add(this.search);
+            this.Controls.Add(this.remove);
+            this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.dateTimePicker);
-            this.Controls.Add(this.textBoxTo);
-            this.Controls.Add(this.labelTo);
-            this.Controls.Add(this.labelFrom);
-            this.Controls.Add(this.textBoxFrom);
-            this.MinimumSize = new System.Drawing.Size(946, 489);
+            this.Controls.Add(this.toTextBox);
+            this.Controls.Add(this.toLabel);
+            this.Controls.Add(this.fromLabel);
+            this.Controls.Add(this.fromTextBox);
+            this.MinimumSize = new System.Drawing.Size(1089, 489);
             this.Name = "HomePageAdministration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Головна сторінка";
@@ -255,17 +309,17 @@
 
         #endregion
 
-        private Button buttonCreate;
-        private Button buttonBoardingList;
-        private Button buttonEdit;
-        private Button buttonSearch;
-        private Button buttonRemove;
-        private Label labelDate;
+        private Button create;
+        private Button boardingList;
+        private Button edit;
+        private Button search;
+        private Button remove;
+        private Label dateLabel;
         private DateTimePicker dateTimePicker;
-        private TextBox textBoxTo;
-        private Label labelTo;
-        private Label labelFrom;
-        private TextBox textBoxFrom;
+        private TextBox toTextBox;
+        private Label toLabel;
+        private Label fromLabel;
+        private TextBox fromTextBox;
         private ListView listRoute;
         private ColumnHeader number;
         private ColumnHeader from;
@@ -273,7 +327,7 @@
         private ColumnHeader dateFrom;
         private ColumnHeader timeFrom;
         private ColumnHeader freeSeat;
-        private Button buttonAllRoute;
-        private Button buttonLogOut;
+        private Button allRoute;
+        private Button logOut;
     }
 }
