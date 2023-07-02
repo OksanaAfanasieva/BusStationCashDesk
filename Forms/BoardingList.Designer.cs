@@ -91,11 +91,12 @@
             // 
             this.textBoxNumberRoute.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNumberRoute.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxNumberRoute.Location = new System.Drawing.Point(138, 9);
+            this.textBoxNumberRoute.Location = new System.Drawing.Point(138, 14);
             this.textBoxNumberRoute.Name = "textBoxNumberRoute";
             this.textBoxNumberRoute.ReadOnly = true;
             this.textBoxNumberRoute.Size = new System.Drawing.Size(100, 24);
             this.textBoxNumberRoute.TabIndex = 5;
+            this.textBoxNumberRoute.TabStop = false;
             // 
             // labelNumberRoute
             // 

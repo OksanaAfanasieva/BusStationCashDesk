@@ -70,6 +70,7 @@
             this.buttonBoardingList.TabIndex = 33;
             this.buttonBoardingList.Text = "Посадкова відомість";
             this.buttonBoardingList.UseVisualStyleBackColor = true;
+            this.buttonBoardingList.Click += new System.EventHandler(this.buttonBoardingList_Click);
             // 
             // buttonEdit
             // 

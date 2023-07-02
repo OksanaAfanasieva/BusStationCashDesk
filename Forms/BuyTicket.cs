@@ -102,7 +102,7 @@ namespace BusStationCashDesk.Windows_Forms
             string? name = textBoxName.Text;
             string? surname = textBoxSurname.Text;
             decimal seats = numericPassenger.Value;
-            decimal price = Math.Round(decimal.Parse(textBoxPrice.Text) * seats, 2);
+            string price = textBoxPrice.Text;
             string? nickname = nicknameList[0];
 
 
@@ -115,7 +115,7 @@ namespace BusStationCashDesk.Windows_Forms
 
             if (routeList[index].FreeSeats >= seats)
             {
-                if (nicknameList == null)
+                if (ticketList == null)
                 {
                     routeList[index].FreeSeats = routeList[index].FreeSeats - seats;
                     List<TicketData> ticketList = new List<TicketData>();

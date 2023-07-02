@@ -12,10 +12,10 @@ namespace BusStationCashDesk.Models
         public string? Name { get; set; }
         public string? Surname { get; set; } 
         public decimal Seats { get; set; }
-        public decimal Price { get; set; }
+        public string Price { get; set; }
         public string? Nickname { get; set; }
 
-        public TicketData(string? number, string? name, string? surname, decimal seats, decimal price, string? nickname)
+        public TicketData(string? number, string? name, string? surname, decimal seats, string price, string? nickname)
         {
             Number = number;
             Name = name;

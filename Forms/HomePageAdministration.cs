@@ -223,5 +223,25 @@ namespace BusStationCashDesk.Windows_Forms
                 this.Hide();
             }
         }
+
+        private void buttonBoardingList_Click(object sender, EventArgs e)
+        {
+            if (listRoute.SelectedItems.Count > 0)
+            {
+                string selected = listRoute.SelectedItems[0].Text;
+
+                for (int i = 0; i < routeList.Count; i++)
+                {
+                    if (routeList[i].Number == selected && selected != null)
+                    {
+                        BoardingList form = new BoardingList(selected);
+                        form.Show();
+                        this.Hide();
+                    }
+                }
+            }
+            else MessageBox.Show("Виберіть маршрут, посадкову відомість якого хочете переглянути.",
+                    "Посадкова відомість", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

@@ -38,12 +38,26 @@ namespace BusStationCashDesk.Windows_Forms
             nicknameList = file1.Load();
             file2 = new SaveLoadData<TicketData>("ticketData.json");
             ticketList = file2.Load();
+        }
+
+        private void MyTravel_FormClosing(object? sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void MyTravel_Load(object sender, EventArgs e)
+        {
+            this.FormClosing += MyTravel_FormClosing;
+
             List<RouteData> boughtRoute = new List<RouteData>();
             for (int i = 0; i < ticketList.Count; i++)
             {
                 if (ticketList[i].Nickname == nicknameList[0])
                 {
-                    for(int j = 0; j < routeList.Count; j++)
+                    for (int j = 0; j < routeList.Count; j++)
                     {
                         if (ticketList[i].Number == routeList[j].Number)
                         {
@@ -74,12 +88,16 @@ namespace BusStationCashDesk.Windows_Forms
                 for (int i = 0; i < ticketList.Count; i++)
                 {
                     bool found = false;
-                    for (int j = 0; j < boughtRoute.Count; j++)
+                    for (int j = 0; j <= boughtRoute.Count; j++)
                     {
-                        if (ticketList[i].Number == boughtRoute[j].Number)
+                        if(ticketList[i].Nickname == nicknameList[0] && j != boughtRoute.Count)
                         {
-                            found = true;
+                            if (ticketList[i].Number == boughtRoute[j].Number)
+                            {
+                                found = true;
+                            }
                         }
+                        else found = true;
                     }
                     if (found == false)
                     {
@@ -93,12 +111,16 @@ namespace BusStationCashDesk.Windows_Forms
                 for (int i = 0; i < boughtRoute.Count; i++)
                 {
                     bool found = false;
-                    for (int j = 0; j < ticketList.Count; j++)
+                    for (int j = 0; j <= ticketList.Count; j++)
                     {
-                        if (ticketList[i].Number == boughtRoute[j].Number)
+                        if (ticketList[j].Nickname == nicknameList[0] && j != boughtRoute.Count)
                         {
-                            found = true;
+                            if (ticketList[j].Number == boughtRoute[i].Number)
+                            {
+                                found = true;
+                            }
                         }
+                        else found = true;
                     }
                     if (found == false)
                     {
@@ -106,19 +128,6 @@ namespace BusStationCashDesk.Windows_Forms
                     }
                 }
             }
-        }
-
-        private void MyTravel_FormClosing(object? sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                Application.Exit();
-            }
-        }
-
-        private void MyTravel_Load(object sender, EventArgs e)
-        {
-            this.FormClosing += MyTravel_FormClosing;
         }
 
         private void linkLabelBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
