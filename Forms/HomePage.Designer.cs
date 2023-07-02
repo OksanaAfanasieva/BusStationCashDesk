@@ -45,6 +45,7 @@
             this.timeFrom = new System.Windows.Forms.ColumnHeader();
             this.freeSeat = new System.Windows.Forms.ColumnHeader();
             this.buttonAllRoute = new System.Windows.Forms.Button();
+            this.buttonLogOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonSearch
@@ -190,11 +191,23 @@
             this.buttonAllRoute.UseVisualStyleBackColor = true;
             this.buttonAllRoute.Click += new System.EventHandler(this.buttonAllRoute_Click);
             // 
+            // buttonLogOut
+            // 
+            this.buttonLogOut.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonLogOut.Location = new System.Drawing.Point(14, 412);
+            this.buttonLogOut.Name = "buttonLogOut";
+            this.buttonLogOut.Size = new System.Drawing.Size(109, 32);
+            this.buttonLogOut.TabIndex = 38;
+            this.buttonLogOut.Text = "Вийти";
+            this.buttonLogOut.UseVisualStyleBackColor = true;
+            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 450);
+            this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.buttonAllRoute);
             this.Controls.Add(this.listRoute);
             this.Controls.Add(this.buttonSearch);
@@ -235,5 +248,6 @@
         private ColumnHeader timeFrom;
         private ColumnHeader freeSeat;
         private Button buttonAllRoute;
+        private Button buttonLogOut;
     }
 }

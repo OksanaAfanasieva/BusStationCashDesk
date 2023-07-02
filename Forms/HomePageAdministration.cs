@@ -210,5 +210,18 @@ namespace BusStationCashDesk.Windows_Forms
         {
             DisplayRoute(routeList);
         }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Ви впевнені, що хочете вийти з облікового запису?",
+                "Підтвердження виходу", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                LogIn form = new LogIn();
+                form.Show();
+                this.Hide();
+            }
+        }
     }
 }

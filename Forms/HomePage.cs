@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace BusStationCashDesk.Windows_Forms
 {
@@ -173,6 +174,20 @@ namespace BusStationCashDesk.Windows_Forms
             }
             else MessageBox.Show("Виберіть маршрут, який хочете відредагувати.",
                     "Редагування", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Ви впевнені, що хочете вийти з облікового запису?", 
+                "Підтвердження виходу", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                LogIn form = new LogIn();
+                form.Show();
+                this.Hide();
+            }
+
         }
     }
 }

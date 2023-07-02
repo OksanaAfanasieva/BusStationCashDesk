@@ -45,7 +45,7 @@ namespace BusStationCashDesk.Windows_Forms
 
                     for (int j = 0; j < routeList[i].Stops.Count; j++)
                     {
-                        ListViewItem item = new ListViewItem(routeList[i].Stops[j]);
+                        ListViewItem item = new ListViewItem(title.ToTitleCase(routeList[i].Stops[j] ?? string.Empty));
                         item.SubItems.Add(routeList[i].TimeStop[j]);
                         listViewStop.Items.Add(item);
                     }
