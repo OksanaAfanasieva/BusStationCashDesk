@@ -64,6 +64,7 @@
             this.textBoxPrice.ReadOnly = true;
             this.textBoxPrice.Size = new System.Drawing.Size(99, 24);
             this.textBoxPrice.TabIndex = 86;
+            this.textBoxPrice.TabStop = false;
             // 
             // numericPassenger
             // 
@@ -168,6 +169,7 @@
             this.textBoxNumberRoute.ReadOnly = true;
             this.textBoxNumberRoute.Size = new System.Drawing.Size(79, 24);
             this.textBoxNumberRoute.TabIndex = 76;
+            this.textBoxNumberRoute.TabStop = false;
             // 
             // dateTimePickerTo
             // 
@@ -177,6 +179,7 @@
             this.dateTimePickerTo.Name = "dateTimePickerTo";
             this.dateTimePickerTo.Size = new System.Drawing.Size(196, 31);
             this.dateTimePickerTo.TabIndex = 73;
+            this.dateTimePickerTo.TabStop = false;
             // 
             // dateTimePickerFrom
             // 
@@ -186,6 +189,7 @@
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
             this.dateTimePickerFrom.Size = new System.Drawing.Size(196, 31);
             this.dateTimePickerFrom.TabIndex = 72;
+            this.dateTimePickerFrom.TabStop = false;
             // 
             // textBoxTo
             // 
@@ -196,6 +200,7 @@
             this.textBoxTo.ReadOnly = true;
             this.textBoxTo.Size = new System.Drawing.Size(196, 24);
             this.textBoxTo.TabIndex = 71;
+            this.textBoxTo.TabStop = false;
             // 
             // textBoxFrom
             // 
@@ -206,6 +211,7 @@
             this.textBoxFrom.ReadOnly = true;
             this.textBoxFrom.Size = new System.Drawing.Size(196, 24);
             this.textBoxFrom.TabIndex = 70;
+            this.textBoxFrom.TabStop = false;
             // 
             // labelTimeTo
             // 
@@ -286,6 +292,7 @@
             this.textBoxTimeFrom.ReadOnly = true;
             this.textBoxTimeFrom.Size = new System.Drawing.Size(196, 24);
             this.textBoxTimeFrom.TabIndex = 87;
+            this.textBoxTimeFrom.TabStop = false;
             // 
             // textBoxTimeTo
             // 
@@ -296,6 +303,7 @@
             this.textBoxTimeTo.ReadOnly = true;
             this.textBoxTimeTo.Size = new System.Drawing.Size(196, 24);
             this.textBoxTimeTo.TabIndex = 88;
+            this.textBoxTimeTo.TabStop = false;
             // 
             // BuyTicket
             // 

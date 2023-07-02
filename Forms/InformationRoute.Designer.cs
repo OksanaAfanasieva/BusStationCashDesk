@@ -60,6 +60,7 @@
             this.textBoxNumberRoute.ReadOnly = true;
             this.textBoxNumberRoute.Size = new System.Drawing.Size(79, 24);
             this.textBoxNumberRoute.TabIndex = 109;
+            this.textBoxNumberRoute.TabStop = false;
             this.textBoxNumberRoute.TextChanged += new System.EventHandler(this.textBoxNumberRoute_TextChanged);
             // 
             // dateTimePickerTo
@@ -71,6 +72,7 @@
             this.dateTimePickerTo.Name = "dateTimePickerTo";
             this.dateTimePickerTo.Size = new System.Drawing.Size(196, 31);
             this.dateTimePickerTo.TabIndex = 106;
+            this.dateTimePickerTo.TabStop = false;
             this.dateTimePickerTo.Value = new System.DateTime(2023, 6, 28, 0, 0, 0, 0);
             // 
             // dateTimePickerFrom
@@ -82,6 +84,7 @@
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
             this.dateTimePickerFrom.Size = new System.Drawing.Size(196, 31);
             this.dateTimePickerFrom.TabIndex = 105;
+            this.dateTimePickerFrom.TabStop = false;
             // 
             // textBoxPrice
             // 
@@ -92,6 +95,7 @@
             this.textBoxPrice.ReadOnly = true;
             this.textBoxPrice.Size = new System.Drawing.Size(80, 24);
             this.textBoxPrice.TabIndex = 104;
+            this.textBoxPrice.TabStop = false;
             // 
             // textBoxFreePlace
             // 
@@ -103,6 +107,7 @@
             this.textBoxFreePlace.ReadOnly = true;
             this.textBoxFreePlace.Size = new System.Drawing.Size(51, 24);
             this.textBoxFreePlace.TabIndex = 103;
+            this.textBoxFreePlace.TabStop = false;
             // 
             // textBoxTo
             // 
@@ -113,6 +118,7 @@
             this.textBoxTo.ReadOnly = true;
             this.textBoxTo.Size = new System.Drawing.Size(196, 24);
             this.textBoxTo.TabIndex = 102;
+            this.textBoxTo.TabStop = false;
             this.textBoxTo.TextChanged += new System.EventHandler(this.textBoxTo_TextChanged);
             // 
             // textBoxFrom
@@ -124,6 +130,7 @@
             this.textBoxFrom.ReadOnly = true;
             this.textBoxFrom.Size = new System.Drawing.Size(196, 24);
             this.textBoxFrom.TabIndex = 101;
+            this.textBoxFrom.TabStop = false;
             // 
             // labelPrice
             // 
@@ -226,6 +233,7 @@
             this.listViewStop.Name = "listViewStop";
             this.listViewStop.Size = new System.Drawing.Size(550, 137);
             this.listViewStop.TabIndex = 110;
+            this.listViewStop.TabStop = false;
             this.listViewStop.UseCompatibleStateImageBehavior = false;
             this.listViewStop.View = System.Windows.Forms.View.Details;
             // 
@@ -248,6 +256,7 @@
             this.textBoxTimeFrom.ReadOnly = true;
             this.textBoxTimeFrom.Size = new System.Drawing.Size(196, 24);
             this.textBoxTimeFrom.TabIndex = 111;
+            this.textBoxTimeFrom.TabStop = false;
             // 
             // textBoxTimeTo
             // 
@@ -258,11 +267,13 @@
             this.textBoxTimeTo.ReadOnly = true;
             this.textBoxTimeTo.Size = new System.Drawing.Size(196, 24);
             this.textBoxTimeTo.TabIndex = 112;
+            this.textBoxTimeTo.TabStop = false;
             // 
             // InformationRoute
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(584, 391);
             this.Controls.Add(this.textBoxTimeTo);
             this.Controls.Add(this.textBoxTimeFrom);

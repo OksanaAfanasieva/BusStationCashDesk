@@ -50,7 +50,7 @@ namespace BusStationCashDesk.Windows_Forms
                         listViewStop.Items.Add(item);
                     }
 
-                    textBoxFreePlace.Text = routeList[i].FreeSeats;
+                    textBoxFreePlace.Text = (routeList[i].FreeSeats).ToString();
                     textBoxPrice.Text = routeList[i].Price;
                 }
             }

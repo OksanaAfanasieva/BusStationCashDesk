@@ -87,7 +87,7 @@ namespace BusStationCashDesk.Windows_Forms
 
             foreach (RouteData route in routeList)
             {
-                if (route.FromName == from && route.ToName == to && route.DateTimeFrom == date && int.Parse(route.FreeSeats) > 0)
+                if (route.FromName == from && route.ToName == to && route.DateTimeFrom == date && route.FreeSeats > 0)
                 {
                     selectedRoute.Add(route);
                 }
@@ -127,7 +127,7 @@ namespace BusStationCashDesk.Windows_Forms
                 item.SubItems.Add(title.ToTitleCase(route1.ToName ?? string.Empty));
                 item.SubItems.Add(route1.DateTimeFrom.ToString("dd/MM/yyyy"));
                 item.SubItems.Add(route1.TimeFrom);
-                item.SubItems.Add(route1.FreeSeats);
+                item.SubItems.Add(route1.FreeSeats.ToString());
 
                 listRoute.Items.Add(item);
             }

@@ -41,7 +41,6 @@
             this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.textBoxFreePlace = new System.Windows.Forms.TextBox();
             this.textBoxTo = new System.Windows.Forms.TextBox();
             this.textBoxFrom = new System.Windows.Forms.TextBox();
             this.labelPrice = new System.Windows.Forms.Label();
@@ -57,6 +56,8 @@
             this.stop = new System.Windows.Forms.ColumnHeader();
             this.time = new System.Windows.Forms.ColumnHeader();
             this.buttonRemoveStop = new System.Windows.Forms.Button();
+            this.numericFreeSeat = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFreeSeat)).BeginInit();
             this.SuspendLayout();
             // 
             // timePickerStop
@@ -179,13 +180,6 @@
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(80, 23);
             this.textBoxPrice.TabIndex = 107;
-            // 
-            // textBoxFreePlace
-            // 
-            this.textBoxFreePlace.Location = new System.Drawing.Point(223, 355);
-            this.textBoxFreePlace.Name = "textBoxFreePlace";
-            this.textBoxFreePlace.Size = new System.Drawing.Size(51, 23);
-            this.textBoxFreePlace.TabIndex = 106;
             // 
             // textBoxTo
             // 
@@ -327,12 +321,30 @@
             this.buttonRemoveStop.UseVisualStyleBackColor = true;
             this.buttonRemoveStop.Click += new System.EventHandler(this.button1_Click);
             // 
+            // numericFreeSeat
+            // 
+            this.numericFreeSeat.Location = new System.Drawing.Point(223, 359);
+            this.numericFreeSeat.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericFreeSeat.Name = "numericFreeSeat";
+            this.numericFreeSeat.Size = new System.Drawing.Size(69, 23);
+            this.numericFreeSeat.TabIndex = 122;
+            this.numericFreeSeat.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Route
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(584, 451);
+            this.Controls.Add(this.numericFreeSeat);
             this.Controls.Add(this.buttonRemoveStop);
             this.Controls.Add(this.listViewStop);
             this.Controls.Add(this.timePickerStop);
@@ -348,7 +360,6 @@
             this.Controls.Add(this.dateTimePickerTo);
             this.Controls.Add(this.dateTimePickerFrom);
             this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.textBoxFreePlace);
             this.Controls.Add(this.textBoxTo);
             this.Controls.Add(this.textBoxFrom);
             this.Controls.Add(this.labelPrice);
@@ -365,6 +376,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Маршрут";
             this.Load += new System.EventHandler(this.Route_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericFreeSeat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,7 +397,6 @@
         private DateTimePicker dateTimePickerTo;
         private DateTimePicker dateTimePickerFrom;
         private TextBox textBoxPrice;
-        private TextBox textBoxFreePlace;
         private TextBox textBoxTo;
         private TextBox textBoxFrom;
         private Label labelPrice;
@@ -401,5 +412,6 @@
         private ColumnHeader stop;
         private ColumnHeader time;
         private Button buttonRemoveStop;
+        private NumericUpDown numericFreeSeat;
     }
 }

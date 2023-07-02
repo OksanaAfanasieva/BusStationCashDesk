@@ -113,11 +113,11 @@ namespace BusStationCashDesk.Windows_Forms
                 return;
             }
 
-            if (decimal.Parse(routeList[index].FreeSeats) >= seats)
+            if (routeList[index].FreeSeats >= seats)
             {
                 if (nicknameList == null)
                 {
-                    routeList[index].FreeSeats = (decimal.Parse(routeList[index].FreeSeats) - seats).ToString();
+                    routeList[index].FreeSeats = routeList[index].FreeSeats - seats;
                     List<TicketData> ticketList = new List<TicketData>();
                     TicketData newTicket = new TicketData(number, name, surname, seats, price, nickname);
                     ticketList.Add(newTicket);
@@ -126,7 +126,7 @@ namespace BusStationCashDesk.Windows_Forms
                 }
                 else
                 {
-                    routeList[index].FreeSeats = (decimal.Parse(routeList[index].FreeSeats) - seats).ToString();
+                    routeList[index].FreeSeats = routeList[index].FreeSeats - seats;
                     TicketData newTicket = new TicketData(number, name, surname, seats, price, nickname);
                     ticketList.Add(newTicket);
                     file.Save(routeList);

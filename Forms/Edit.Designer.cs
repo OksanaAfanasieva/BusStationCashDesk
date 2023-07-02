@@ -45,7 +45,6 @@
             this.dateTimePickerTo = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFrom = new System.Windows.Forms.DateTimePicker();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.textBoxFreePlace = new System.Windows.Forms.TextBox();
             this.textBoxTo = new System.Windows.Forms.TextBox();
             this.textBoxFrom = new System.Windows.Forms.TextBox();
             this.labelPrice = new System.Windows.Forms.Label();
@@ -57,6 +56,8 @@
             this.labelTo = new System.Windows.Forms.Label();
             this.labelFrom = new System.Windows.Forms.Label();
             this.labelNumberRoute = new System.Windows.Forms.Label();
+            this.numericFreeSeat = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericFreeSeat)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonRemoveStop
@@ -213,13 +214,6 @@
             this.textBoxPrice.Size = new System.Drawing.Size(80, 23);
             this.textBoxPrice.TabIndex = 135;
             // 
-            // textBoxFreePlace
-            // 
-            this.textBoxFreePlace.Location = new System.Drawing.Point(225, 355);
-            this.textBoxFreePlace.Name = "textBoxFreePlace";
-            this.textBoxFreePlace.Size = new System.Drawing.Size(51, 23);
-            this.textBoxFreePlace.TabIndex = 134;
-            // 
             // textBoxTo
             // 
             this.textBoxTo.Location = new System.Drawing.Point(373, 73);
@@ -324,11 +318,29 @@
             this.labelNumberRoute.TabIndex = 123;
             this.labelNumberRoute.Text = "Маршрут №";
             // 
+            // numericFreeSeat
+            // 
+            this.numericFreeSeat.Location = new System.Drawing.Point(225, 358);
+            this.numericFreeSeat.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericFreeSeat.Name = "numericFreeSeat";
+            this.numericFreeSeat.Size = new System.Drawing.Size(69, 23);
+            this.numericFreeSeat.TabIndex = 149;
+            this.numericFreeSeat.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 451);
+            this.Controls.Add(this.numericFreeSeat);
             this.Controls.Add(this.buttonRemoveStop);
             this.Controls.Add(this.listViewStop);
             this.Controls.Add(this.timePickerStop);
@@ -344,7 +356,6 @@
             this.Controls.Add(this.dateTimePickerTo);
             this.Controls.Add(this.dateTimePickerFrom);
             this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.textBoxFreePlace);
             this.Controls.Add(this.textBoxTo);
             this.Controls.Add(this.textBoxFrom);
             this.Controls.Add(this.labelPrice);
@@ -361,6 +372,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit";
             this.Load += new System.EventHandler(this.Edit_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericFreeSeat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,7 +397,6 @@
         private DateTimePicker dateTimePickerTo;
         private DateTimePicker dateTimePickerFrom;
         private TextBox textBoxPrice;
-        private TextBox textBoxFreePlace;
         private TextBox textBoxTo;
         private TextBox textBoxFrom;
         private Label labelPrice;
@@ -397,5 +408,6 @@
         private Label labelTo;
         private Label labelFrom;
         private Label labelNumberRoute;
+        private NumericUpDown numericFreeSeat;
     }
 }

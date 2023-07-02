@@ -74,7 +74,7 @@ namespace BusStationCashDesk.Forms
                         listViewStop.Items.Add(item);
                     }
 
-                    textBoxFreePlace.Text = routeList[i].FreeSeats;
+                    numericFreeSeat.Value = routeList[i].FreeSeats;
                     textBoxPrice.Text = routeList[i].Price;
                 }
             }
@@ -139,12 +139,11 @@ namespace BusStationCashDesk.Forms
             string timeTo = timePickerTo.Value.ToString("HH:mm");
             List<string>? stops = nameStop;
             List<string>? timeStops = timeStop;
-            string freeSeats = textBoxFreePlace.Text;
+            decimal freeSeats = numericFreeSeat.Value;
             string price = textBoxPrice.Text;
 
             if (string.IsNullOrEmpty(number) || string.IsNullOrEmpty(fromName) ||
-                string.IsNullOrEmpty(toName) || string.IsNullOrEmpty(freeSeats) ||
-                string.IsNullOrEmpty(price))
+                string.IsNullOrEmpty(toName) || string.IsNullOrEmpty(price))
             {
                 MessageBox.Show("Введіть усі необхідні дані.", "Помилка збереження",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
