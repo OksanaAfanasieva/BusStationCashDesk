@@ -1,5 +1,6 @@
 ﻿using BusStationCashDesk.Classes;
 using BusStationCashDesk.Forms;
+using BusStationCashDesk.Models;
 using Microsoft.VisualBasic.Devices;
 using System;
 using System.Collections.Generic;
@@ -18,12 +19,17 @@ namespace BusStationCashDesk.Windows_Forms
     {
         private SaveLoadData<RouteData> route;
         private List<RouteData> routeList;
+        private SaveLoadData<TicketData> file1;
+        private List<TicketData> ticketList;
+
 
         public HomePageAdministration()
         {
             InitializeComponent();
             route = new SaveLoadData<RouteData>("routeData.json");
             routeList = route.Load();
+            file1 = new SaveLoadData<TicketData>("ticketData.json");
+            ticketList = file1.Load();
             dateTimePicker.MinDate = DateTime.Today;
         }
 
@@ -234,9 +240,26 @@ namespace BusStationCashDesk.Windows_Forms
                 {
                     if (routeList[i].Number == selected && selected != null)
                     {
-                        BoardingList form = new BoardingList(selected);
-                        form.Show();
-                        this.Hide();
+                        int found = 0;
+                        for (int j = 0; j < ticketList.Count; j++)
+                        {
+                            if (ticketList[j].Number == selected)
+                            {
+                                found++;
+                            }
+                        }
+
+                        if (found == 0)
+                        {
+                            MessageBox.Show("Ніхто не придбав квиток на цей маршрут.", "Посадкова відомість", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                        else
+                        {
+                            BoardingList form = new BoardingList(selected);
+                            form.Show();
+                            this.Hide();
+                        }
                     }
                 }
             }
