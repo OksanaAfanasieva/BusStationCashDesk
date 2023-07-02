@@ -41,7 +41,7 @@ namespace BusStationCashDesk.Windows_Forms
 
             for (int i = 0; i < routeList.Count; i++)
             {
-                if (routeList[i].DateTimeFrom.Date < DateTime.Today)
+                if (routeList[i].DateTimeFrom.Date <= DateTime.Today && DateTime.Parse(routeList[i].TimeFrom) <= DateTime.Now)
                 {
                     routeList.RemoveAt(i);
                 }

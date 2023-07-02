@@ -48,6 +48,7 @@
             this.buttonReturnTicket.TabIndex = 4;
             this.buttonReturnTicket.Text = "Повернути квиток";
             this.buttonReturnTicket.UseVisualStyleBackColor = true;
+            this.buttonReturnTicket.Click += new System.EventHandler(this.buttonReturnTicket_Click);
             // 
             // linkLabelBack
             // 

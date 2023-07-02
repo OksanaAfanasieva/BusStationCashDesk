@@ -69,7 +69,7 @@ namespace BusStationCashDesk.Windows_Forms
             DisplayRoute(boughtRoute);
 
 
-            if (boughtRoute.Count != ticketList.Count)
+            if (boughtRoute.Count < ticketList.Count)
             {
                 for (int i = 0; i < ticketList.Count; i++)
                 {
@@ -85,6 +85,24 @@ namespace BusStationCashDesk.Windows_Forms
                     {
                         ticketList.RemoveAt(i);
                         file2.Save(ticketList);
+                    }
+                }
+            }
+            else if (boughtRoute.Count > ticketList.Count)
+            {
+                for (int i = 0; i < boughtRoute.Count; i++)
+                {
+                    bool found = false;
+                    for (int j = 0; j < ticketList.Count; j++)
+                    {
+                        if (ticketList[i].Number == boughtRoute[j].Number)
+                        {
+                            found = true;
+                        }
+                    }
+                    if (found == false)
+                    {
+                        boughtRoute.RemoveAt(i);
                     }
                 }
             }
@@ -142,6 +160,45 @@ namespace BusStationCashDesk.Windows_Forms
                     }
                 }
             }
+        }
+
+        private void buttonReturnTicket_Click(object sender, EventArgs e)
+        {
+            if (listTicket.SelectedItems.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Ви впевнені, що хочете скасувати бронювання?",
+                    "Підтвердження повернення квитка", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    string selected = listTicket.SelectedItems[0].Text;
+                    int index = 0;
+
+                    for (int i = 0; i < ticketList.Count; i++)
+                    {
+                        if (ticketList[i].Number == selected)
+                        {
+                            index = i;
+                        }
+                    }
+                    
+                    for (int i = 0; i < routeList.Count; i++)
+                    {
+                        if (routeList[i].Number == selected)
+                        {
+                            routeList[i].FreeSeats += ticketList[index].Seats;
+                            ticketList.RemoveAt(index);
+                        }
+                    }
+                    file.Save(routeList);
+                    file2.Save(ticketList);
+                    MyTravel form = new MyTravel();
+                    form.Show();
+                    this.Hide();
+                }
+            }
+            else MessageBox.Show("Виберіть маршрут, який хочете видалити.",
+                    "Видалення", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
