@@ -71,7 +71,6 @@
             this.timeStopDateTimePicker.ShowUpDown = true;
             this.timeStopDateTimePicker.Size = new System.Drawing.Size(178, 29);
             this.timeStopDateTimePicker.TabIndex = 119;
-            this.timeStopDateTimePicker.ValueChanged += new System.EventHandler(this.timePickerStop_ValueChanged);
             // 
             // timeToDateTimePicker
             // 
@@ -155,7 +154,6 @@
             this.timeStopLabel.Size = new System.Drawing.Size(39, 23);
             this.timeStopLabel.TabIndex = 114;
             this.timeStopLabel.Text = "Час";
-            this.timeStopLabel.Click += new System.EventHandler(this.labelTimeStop_Click);
             // 
             // nameStopLabel
             // 
@@ -168,7 +166,6 @@
             this.nameStopLabel.Size = new System.Drawing.Size(58, 23);
             this.nameStopLabel.TabIndex = 113;
             this.nameStopLabel.Text = "Назва";
-            this.nameStopLabel.Click += new System.EventHandler(this.labelNameStop_Click);
             // 
             // nameStopTextBox
             // 
@@ -178,8 +175,6 @@
             this.nameStopTextBox.Name = "nameStopTextBox";
             this.nameStopTextBox.Size = new System.Drawing.Size(178, 29);
             this.nameStopTextBox.TabIndex = 112;
-            this.nameStopTextBox.TextChanged += new System.EventHandler(this.textBoxNameStop_TextChanged);
-            this.nameStopTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNameStop_KeyPress);
             // 
             // numberRouteTextBox
             // 
@@ -229,7 +224,6 @@
             this.toTextBox.Name = "toTextBox";
             this.toTextBox.Size = new System.Drawing.Size(196, 29);
             this.toTextBox.TabIndex = 105;
-            this.toTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTo_KeyPress);
             // 
             // fromTextBox
             // 
@@ -239,7 +233,6 @@
             this.fromTextBox.Name = "fromTextBox";
             this.fromTextBox.Size = new System.Drawing.Size(196, 29);
             this.fromTextBox.TabIndex = 104;
-            this.fromTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFrom_KeyPress);
             // 
             // priceLabel
             // 

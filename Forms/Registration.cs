@@ -5,7 +5,7 @@ using BusStationCashDesk.Classes;
 
 namespace BusStationCashDesk
 {
-    public partial class Registration : Form //Клас призначений для реєстрації
+    public partial class Registration : Form
     {
         private SaveLoadData<UserData> file;
         private List<UserData> userList;
@@ -77,7 +77,6 @@ namespace BusStationCashDesk
             this.Hide();
         }
 
-        //Метод призначений для перевірки чи існує вже користувач з таким ім'ям.
         private bool IsUserRegistered(string name)
         {
             if (userList == null)

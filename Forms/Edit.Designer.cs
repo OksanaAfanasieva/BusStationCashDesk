@@ -67,7 +67,7 @@
             this.removeStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeStop.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.removeStop.ForeColor = System.Drawing.Color.White;
-            this.removeStop.Location = new System.Drawing.Point(484, 298);
+            this.removeStop.Location = new System.Drawing.Point(497, 298);
             this.removeStop.Name = "removeStop";
             this.removeStop.Size = new System.Drawing.Size(99, 59);
             this.removeStop.TabIndex = 148;
@@ -84,7 +84,7 @@
             this.stopList.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.stopList.FullRowSelect = true;
             this.stopList.GridLines = true;
-            this.stopList.Location = new System.Drawing.Point(22, 181);
+            this.stopList.Location = new System.Drawing.Point(35, 181);
             this.stopList.Name = "stopList";
             this.stopList.Size = new System.Drawing.Size(561, 111);
             this.stopList.TabIndex = 147;
@@ -106,7 +106,7 @@
             this.timeStopDateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.timeStopDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.timeStopDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeStopDateTimePicker.Location = new System.Drawing.Point(206, 329);
+            this.timeStopDateTimePicker.Location = new System.Drawing.Point(219, 329);
             this.timeStopDateTimePicker.MinDate = new System.DateTime(2023, 6, 19, 0, 0, 0, 0);
             this.timeStopDateTimePicker.Name = "timeStopDateTimePicker";
             this.timeStopDateTimePicker.ShowUpDown = true;
@@ -118,7 +118,7 @@
             this.timeToDateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.timeToDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.timeToDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeToDateTimePicker.Location = new System.Drawing.Point(387, 147);
+            this.timeToDateTimePicker.Location = new System.Drawing.Point(400, 147);
             this.timeToDateTimePicker.MinDate = new System.DateTime(2023, 6, 19, 0, 0, 0, 0);
             this.timeToDateTimePicker.Name = "timeToDateTimePicker";
             this.timeToDateTimePicker.ShowUpDown = true;
@@ -130,7 +130,7 @@
             this.timeFromDateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.timeFromDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.timeFromDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeFromDateTimePicker.Location = new System.Drawing.Point(97, 147);
+            this.timeFromDateTimePicker.Location = new System.Drawing.Point(110, 147);
             this.timeFromDateTimePicker.MinDate = new System.DateTime(2023, 6, 19, 0, 0, 0, 0);
             this.timeFromDateTimePicker.Name = "timeFromDateTimePicker";
             this.timeFromDateTimePicker.ShowUpDown = true;
@@ -144,7 +144,7 @@
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cancel.ForeColor = System.Drawing.Color.White;
-            this.cancel.Location = new System.Drawing.Point(293, 452);
+            this.cancel.Location = new System.Drawing.Point(306, 452);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(142, 40);
             this.cancel.TabIndex = 143;
@@ -159,7 +159,7 @@
             this.save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.save.ForeColor = System.Drawing.Color.White;
-            this.save.Location = new System.Drawing.Point(441, 452);
+            this.save.Location = new System.Drawing.Point(454, 452);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(142, 40);
             this.save.TabIndex = 142;
@@ -174,7 +174,7 @@
             this.addStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addStop.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.addStop.ForeColor = System.Drawing.Color.White;
-            this.addStop.Location = new System.Drawing.Point(390, 298);
+            this.addStop.Location = new System.Drawing.Point(403, 298);
             this.addStop.Name = "addStop";
             this.addStop.Size = new System.Drawing.Size(99, 60);
             this.addStop.TabIndex = 122;
@@ -188,7 +188,7 @@
             this.timeStopLabel.AutoSize = true;
             this.timeStopLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.timeStopLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.timeStopLabel.Location = new System.Drawing.Point(206, 301);
+            this.timeStopLabel.Location = new System.Drawing.Point(219, 301);
             this.timeStopLabel.Name = "timeStopLabel";
             this.timeStopLabel.Size = new System.Drawing.Size(39, 23);
             this.timeStopLabel.TabIndex = 141;
@@ -200,7 +200,7 @@
             this.nameStopLabel.AutoSize = true;
             this.nameStopLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.nameStopLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.nameStopLabel.Location = new System.Drawing.Point(22, 301);
+            this.nameStopLabel.Location = new System.Drawing.Point(35, 301);
             this.nameStopLabel.Name = "nameStopLabel";
             this.nameStopLabel.Size = new System.Drawing.Size(58, 23);
             this.nameStopLabel.TabIndex = 140;
@@ -210,7 +210,7 @@
             // 
             this.nameStopTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nameStopTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameStopTextBox.Location = new System.Drawing.Point(22, 329);
+            this.nameStopTextBox.Location = new System.Drawing.Point(35, 329);
             this.nameStopTextBox.Name = "nameStopTextBox";
             this.nameStopTextBox.Size = new System.Drawing.Size(178, 29);
             this.nameStopTextBox.TabIndex = 139;
@@ -219,7 +219,7 @@
             // 
             this.numberRouteTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numberRouteTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numberRouteTextBox.Location = new System.Drawing.Point(153, 22);
+            this.numberRouteTextBox.Location = new System.Drawing.Point(166, 22);
             this.numberRouteTextBox.Name = "numberRouteTextBox";
             this.numberRouteTextBox.Size = new System.Drawing.Size(79, 29);
             this.numberRouteTextBox.TabIndex = 138;
@@ -228,7 +228,7 @@
             // 
             this.dateToDateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateToDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateToDateTimePicker.Location = new System.Drawing.Point(387, 111);
+            this.dateToDateTimePicker.Location = new System.Drawing.Point(400, 111);
             this.dateToDateTimePicker.MinDate = new System.DateTime(2023, 6, 12, 0, 0, 0, 0);
             this.dateToDateTimePicker.Name = "dateToDateTimePicker";
             this.dateToDateTimePicker.Size = new System.Drawing.Size(196, 29);
@@ -239,7 +239,7 @@
             // 
             this.dateFromDateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateFromDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateFromDateTimePicker.Location = new System.Drawing.Point(97, 111);
+            this.dateFromDateTimePicker.Location = new System.Drawing.Point(110, 111);
             this.dateFromDateTimePicker.MinDate = new System.DateTime(2023, 6, 19, 0, 0, 0, 0);
             this.dateFromDateTimePicker.Name = "dateFromDateTimePicker";
             this.dateFromDateTimePicker.Size = new System.Drawing.Size(196, 29);
@@ -249,7 +249,7 @@
             // 
             this.priceTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.priceTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.priceTextBox.Location = new System.Drawing.Point(448, 380);
+            this.priceTextBox.Location = new System.Drawing.Point(461, 380);
             this.priceTextBox.Name = "priceTextBox";
             this.priceTextBox.Size = new System.Drawing.Size(80, 29);
             this.priceTextBox.TabIndex = 135;
@@ -259,7 +259,7 @@
             // 
             this.toTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.toTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.toTextBox.Location = new System.Drawing.Point(387, 68);
+            this.toTextBox.Location = new System.Drawing.Point(400, 68);
             this.toTextBox.Name = "toTextBox";
             this.toTextBox.Size = new System.Drawing.Size(196, 29);
             this.toTextBox.TabIndex = 133;
@@ -268,7 +268,7 @@
             // 
             this.fromTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fromTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.fromTextBox.Location = new System.Drawing.Point(97, 68);
+            this.fromTextBox.Location = new System.Drawing.Point(110, 68);
             this.fromTextBox.Name = "fromTextBox";
             this.fromTextBox.Size = new System.Drawing.Size(196, 29);
             this.fromTextBox.TabIndex = 132;
@@ -279,7 +279,7 @@
             this.priceLabel.AutoSize = true;
             this.priceLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.priceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.priceLabel.Location = new System.Drawing.Point(390, 378);
+            this.priceLabel.Location = new System.Drawing.Point(403, 378);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(50, 23);
             this.priceLabel.TabIndex = 131;
@@ -291,7 +291,7 @@
             this.freePlaceLabel.AutoSize = true;
             this.freePlaceLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.freePlaceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.freePlaceLabel.Location = new System.Drawing.Point(22, 378);
+            this.freePlaceLabel.Location = new System.Drawing.Point(35, 378);
             this.freePlaceLabel.Name = "freePlaceLabel";
             this.freePlaceLabel.Size = new System.Drawing.Size(200, 23);
             this.freePlaceLabel.TabIndex = 130;
@@ -303,7 +303,7 @@
             this.timeToLabel.AutoSize = true;
             this.timeToLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.timeToLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.timeToLabel.Location = new System.Drawing.Point(336, 147);
+            this.timeToLabel.Location = new System.Drawing.Point(349, 147);
             this.timeToLabel.Name = "timeToLabel";
             this.timeToLabel.Size = new System.Drawing.Size(45, 25);
             this.timeToLabel.TabIndex = 129;
@@ -315,7 +315,7 @@
             this.dateToLabel.AutoSize = true;
             this.dateToLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dateToLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.dateToLabel.Location = new System.Drawing.Point(328, 111);
+            this.dateToLabel.Location = new System.Drawing.Point(341, 111);
             this.dateToLabel.Name = "dateToLabel";
             this.dateToLabel.Size = new System.Drawing.Size(55, 25);
             this.dateToLabel.TabIndex = 128;
@@ -327,7 +327,7 @@
             this.timeFromLabel.AutoSize = true;
             this.timeFromLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.timeFromLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.timeFromLabel.Location = new System.Drawing.Point(46, 147);
+            this.timeFromLabel.Location = new System.Drawing.Point(59, 147);
             this.timeFromLabel.Name = "timeFromLabel";
             this.timeFromLabel.Size = new System.Drawing.Size(45, 25);
             this.timeFromLabel.TabIndex = 127;
@@ -339,7 +339,7 @@
             this.dateFromLabel.AutoSize = true;
             this.dateFromLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dateFromLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.dateFromLabel.Location = new System.Drawing.Point(38, 111);
+            this.dateFromLabel.Location = new System.Drawing.Point(51, 111);
             this.dateFromLabel.Name = "dateFromLabel";
             this.dateFromLabel.Size = new System.Drawing.Size(55, 25);
             this.dateFromLabel.TabIndex = 126;
@@ -351,7 +351,7 @@
             this.toLabel.AutoSize = true;
             this.toLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.toLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.toLabel.Location = new System.Drawing.Point(326, 70);
+            this.toLabel.Location = new System.Drawing.Point(339, 70);
             this.toLabel.Name = "toLabel";
             this.toLabel.Size = new System.Drawing.Size(55, 25);
             this.toLabel.TabIndex = 125;
@@ -363,7 +363,7 @@
             this.fromLabel.AutoSize = true;
             this.fromLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.fromLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.fromLabel.Location = new System.Drawing.Point(22, 70);
+            this.fromLabel.Location = new System.Drawing.Point(35, 70);
             this.fromLabel.Name = "fromLabel";
             this.fromLabel.Size = new System.Drawing.Size(71, 25);
             this.fromLabel.TabIndex = 124;
@@ -375,7 +375,7 @@
             this.numberRouteLabel.AutoSize = true;
             this.numberRouteLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.numberRouteLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(4)))), ((int)(((byte)(94)))));
-            this.numberRouteLabel.Location = new System.Drawing.Point(22, 19);
+            this.numberRouteLabel.Location = new System.Drawing.Point(35, 19);
             this.numberRouteLabel.Name = "numberRouteLabel";
             this.numberRouteLabel.Size = new System.Drawing.Size(129, 28);
             this.numberRouteLabel.TabIndex = 123;
@@ -385,7 +385,7 @@
             // 
             this.freeSeatNumeric.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.freeSeatNumeric.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.freeSeatNumeric.Location = new System.Drawing.Point(228, 381);
+            this.freeSeatNumeric.Location = new System.Drawing.Point(241, 381);
             this.freeSeatNumeric.Minimum = new decimal(new int[] {
             1,
             0,
@@ -405,7 +405,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(591, 504);
+            this.ClientSize = new System.Drawing.Size(616, 504);
             this.Controls.Add(this.freeSeatNumeric);
             this.Controls.Add(this.removeStop);
             this.Controls.Add(this.stopList);

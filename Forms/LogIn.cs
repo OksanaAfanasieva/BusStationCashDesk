@@ -79,7 +79,6 @@ namespace BusStationCashDesk.Windows_Forms
             }
         }
 
-        //Метод призначений для перевірки імені та пароля.
         private bool IsPasswordRight(string name, string password)
         {
             if (userList == null)
@@ -99,7 +98,6 @@ namespace BusStationCashDesk.Windows_Forms
             return false;
         }
 
-        //Метод, що перевіряє чи є користувач адміністратором.
         private bool IsAdministrator(string name)
         {
             if (userList == null)
@@ -119,7 +117,6 @@ namespace BusStationCashDesk.Windows_Forms
             return false;
         }
 
-        //Метод, що перевіряє чи є зареєстрований користувач з таким ім'ям.
         private bool IsUserRegistered(string name)
         {
             if (userList == null)

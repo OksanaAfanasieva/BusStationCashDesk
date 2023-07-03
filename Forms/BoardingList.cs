@@ -52,7 +52,8 @@ namespace BusStationCashDesk.Windows_Forms
 
             if (found == 0)
             {
-                MessageBox.Show("Ніхто не придбав квиток на цей маршрут.", "Посадкова відомість", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ніхто не придбав квиток на цей маршрут.", 
+                    "Посадкова відомість", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

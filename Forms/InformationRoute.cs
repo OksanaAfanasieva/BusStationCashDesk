@@ -45,7 +45,8 @@ namespace BusStationCashDesk.Windows_Forms
 
                     for (int j = 0; j < routeList[i].Stops.Count; j++)
                     {
-                        ListViewItem item = new ListViewItem(title.ToTitleCase(routeList[i].Stops[j] ?? string.Empty));
+                        ListViewItem item = new ListViewItem(title.ToTitleCase(routeList[i].Stops[j] 
+                            ?? string.Empty));
                         item.SubItems.Add(routeList[i].TimeStop[j]);
                         listStop.Items.Add(item);
                     }
@@ -54,20 +55,6 @@ namespace BusStationCashDesk.Windows_Forms
                     priceTextBox.Text = routeList[i].Price;
                 }
             }
-        }
-
-        private void labelFreePlace_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void textBoxTo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxNumberRoute_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -45,7 +45,8 @@ namespace BusStationCashDesk.Windows_Forms
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                DialogResult result = MessageBox.Show("Дані не будуть збережені! Ви впевнені, що хочете закрити сторінку?", "Попередження",
+                DialogResult result = MessageBox.Show("Дані не будуть збережені! " +
+                    "Ви впевнені, що хочете закрити сторінку?", "Попередження",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
@@ -80,8 +81,8 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Ви впевнені, що хочете скасувати бронювання?", "Попередження",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Ви впевнені, що хочете скасувати бронювання?", 
+                "Попередження", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 HomePage form = new HomePage();
@@ -108,7 +109,7 @@ namespace BusStationCashDesk.Windows_Forms
 
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(surname))
             {
-                MessageBox.Show("Введіть усі необхідні дані.", "Помилка збереження",
+                MessageBox.Show("Введіть усі необхідні дані.", "Збереження",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -119,7 +120,8 @@ namespace BusStationCashDesk.Windows_Forms
                 {
                     routeList[index].FreeSeats = routeList[index].FreeSeats - seats;
                     List<TicketData> ticketList = new List<TicketData>();
-                    TicketData newTicket = new TicketData(number, name, surname, seats, price, nickname);
+                    TicketData newTicket = new TicketData(number, name, surname, seats, 
+                        price, nickname);
                     ticketList.Add(newTicket);
                     file.Save(routeList);
                     file2.Save(ticketList);
@@ -127,7 +129,8 @@ namespace BusStationCashDesk.Windows_Forms
                 else
                 {
                     routeList[index].FreeSeats = routeList[index].FreeSeats - seats;
-                    TicketData newTicket = new TicketData(number, name, surname, seats, price, nickname);
+                    TicketData newTicket = new TicketData(number, name, surname, seats, 
+                        price, nickname);
                     ticketList.Add(newTicket);
                     file.Save(routeList);
                     file2.Save(ticketList);
@@ -147,7 +150,8 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void numericPassenger_ValueChanged(object sender, EventArgs e)
         {
-            priceTextBox.Text = (Math.Round(decimal.Parse(routeList[index].Price) * passengerNumeric.Value, 2)).ToString();
+            priceTextBox.Text = (Math.Round(decimal.Parse(routeList[index].Price) * 
+                passengerNumeric.Value, 2)).ToString();
         }
     }
 }

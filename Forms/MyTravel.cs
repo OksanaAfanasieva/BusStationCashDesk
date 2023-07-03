@@ -206,8 +206,8 @@ namespace BusStationCashDesk.Windows_Forms
                     this.Hide();
                 }
             }
-            else MessageBox.Show("Виберіть маршрут, який хочете видалити.",
-                    "Видалення", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Виберіть маршрут, на який хочете скасувати бронювання.",
+                    "Повернення квитка", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -62,7 +62,6 @@
             this.numberRouteTextBox.Size = new System.Drawing.Size(79, 23);
             this.numberRouteTextBox.TabIndex = 109;
             this.numberRouteTextBox.TabStop = false;
-            this.numberRouteTextBox.TextChanged += new System.EventHandler(this.textBoxNumberRoute_TextChanged);
             // 
             // toDateTimePicker
             // 
@@ -123,7 +122,6 @@
             this.toTextBox.Size = new System.Drawing.Size(196, 23);
             this.toTextBox.TabIndex = 102;
             this.toTextBox.TabStop = false;
-            this.toTextBox.TextChanged += new System.EventHandler(this.textBoxTo_TextChanged);
             // 
             // fromTextBox
             // 
@@ -158,7 +156,6 @@
             this.freePlaceLabel.Size = new System.Drawing.Size(200, 23);
             this.freePlaceLabel.TabIndex = 99;
             this.freePlaceLabel.Text = "Кількість вільних місць:";
-            this.freePlaceLabel.Click += new System.EventHandler(this.labelFreePlace_Click);
             // 
             // timeToLabel
             // 

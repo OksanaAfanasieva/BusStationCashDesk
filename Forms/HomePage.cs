@@ -19,13 +19,17 @@ namespace BusStationCashDesk.Windows_Forms
     {
         private SaveLoadData<RouteData> route;
         private List<RouteData> routeList;
+        private HomePages homePages;
 
         public HomePage()
         {
             InitializeComponent();
+
             route = new SaveLoadData<RouteData>("routeData.json");
             routeList = route.Load();
+            homePages = new HomePages();
             dateTimePicker.MinDate = DateTime.Today;
+            this.FormClosing += HomePage_FormClosing;
         }
 
         private void HomePage_FormClosing(object? sender, FormClosingEventArgs e)
@@ -38,18 +42,8 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            this.FormClosing += HomePage_FormClosing;
-
-            for (int i = 0; i < routeList.Count; i++)
-            {
-                if (routeList[i].DateTimeFrom.Date <= DateTime.Today && 
-                    DateTime.Parse(routeList[i].TimeFrom) <= DateTime.Now)
-                {
-                    routeList.RemoveAt(i);
-                }
-            }
-            route.Save(routeList);
-            DisplayRoute(routeList);
+            homePages.RemoveExpiredRoutes(routeList);
+            homePages.DisplayRoute(routeList, listRoute);
         }
 
         private void linkLabelMyTravels_LinkClicked(object sender, 
@@ -60,85 +54,10 @@ namespace BusStationCashDesk.Windows_Forms
             this.Hide();
         }
 
-        private List<RouteData> SelectedRoute(string from, string to, DateTime date)
-        {
-            List<RouteData> selectedRoute = new List<RouteData>();
-
-            foreach (RouteData route in routeList)
-            {
-                if (route.FromName == from && route.ToName == to && route.DateTimeFrom == 
-                    date && route.FreeSeats > 0)
-                {
-                    selectedRoute.Add(route);
-                }
-            }
-
-            if (selectedRoute.Count > 1)
-            {
-                for (int i = 0; i < selectedRoute.Count - 1; i++)
-                {
-                    int min = i;
-                    for (int j = i + 1; j < selectedRoute.Count; j++)
-                    {
-                        if (DateTime.ParseExact(selectedRoute[j].TimeFrom, "HH:mm", 
-                            CultureInfo.InvariantCulture) < DateTime.ParseExact(selectedRoute[min].TimeFrom, 
-                            "HH:mm", CultureInfo.InvariantCulture))
-                        {
-                            min = j;
-                        }
-                    }
-
-                    RouteData k = selectedRoute[i];
-                    selectedRoute[i] = selectedRoute[min];
-                    selectedRoute[min] = k;
-                }
-            }
-            return selectedRoute;
-        }
-
-        private void DisplayRoute(List<RouteData> route)
-        {
-            listRoute.Items.Clear();
-
-            foreach (RouteData route1 in route)
-            {
-                TextInfo title = CultureInfo.InvariantCulture.TextInfo;
-
-                ListViewItem item = new ListViewItem(route1.Number);
-                item.SubItems.Add(title.ToTitleCase(route1.FromName ?? string.Empty));
-                item.SubItems.Add(title.ToTitleCase(route1.ToName ?? string.Empty));
-                item.SubItems.Add(route1.DateTimeFrom.ToString("dd/MM/yyyy"));
-                item.SubItems.Add(route1.TimeFrom);
-                item.SubItems.Add(route1.FreeSeats.ToString());
-
-                listRoute.Items.Add(item);
-            }
-        }
-
         private void buttonSearch_Click_1(object sender, EventArgs e)
         {
-            string from = fromTextBox.Text.ToLower();
-            string to = toTextBox.Text.ToLower();
-            DateTime date = dateTimePicker.Value.Date;
-
-            if (from == "" || to == "")
-            {
-                MessageBox.Show("Введіть дані для пошуку.", "Повідомлення", MessageBoxButtons.OK, 
-                    MessageBoxIcon.Information);
-                return;
-            }
-            else
-            {
-                List<RouteData> selectedRoute = SelectedRoute(from, to, date);
-
-                if (selectedRoute.Count == 0)
-                {
-                    MessageBox.Show("Жодного маршруту не знайдено.", "Повідомлення", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                else DisplayRoute(selectedRoute);
-            }
+            homePages.Search(fromTextBox.Text.ToLower(), toTextBox.Text.ToLower(), 
+                dateTimePicker.Value.Date, listRoute);
         }
 
         private void listRoute_DoubleClick(object sender, EventArgs e)
@@ -160,7 +79,7 @@ namespace BusStationCashDesk.Windows_Forms
 
         private void buttonAllRoute_Click(object sender, EventArgs e)
         {
-            DisplayRoute(routeList);
+            homePages.DisplayRoute(routeList, listRoute);
         }
 
         private void buttonBuy_Click(object sender, EventArgs e)
@@ -179,8 +98,8 @@ namespace BusStationCashDesk.Windows_Forms
                     }
                 }
             }
-            else MessageBox.Show("Виберіть маршрут, який хочете відредагувати.",
-                    "Редагування", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Виберіть маршрут, на який хочете придбати квиток.",
+                    "Бронювання", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)
