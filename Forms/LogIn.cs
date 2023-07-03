@@ -22,9 +22,9 @@ namespace BusStationCashDesk.Windows_Forms
         public LogIn()
         {
             InitializeComponent();
-            file = new SaveLoadData<UserData>("userData.json");
+            file = new SaveLoadData<UserData>("C:\\Users\\My HP\\source\\repos\\BusStationCashDesk\\Data\\userData.json");
             userList = file.Load();
-            file1 = new SaveLoadData<string>("nicknameData.json");
+            file1 = new SaveLoadData<string>("C:\\Users\\My HP\\source\\repos\\BusStationCashDesk\\Data\\nicknameData.json");
             nicknameList = new List<string>();
         }
 

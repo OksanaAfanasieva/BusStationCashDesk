@@ -386,19 +386,9 @@
             this.freeSeatNumeric.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.freeSeatNumeric.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.freeSeatNumeric.Location = new System.Drawing.Point(241, 381);
-            this.freeSeatNumeric.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.freeSeatNumeric.Name = "freeSeatNumeric";
             this.freeSeatNumeric.Size = new System.Drawing.Size(69, 29);
             this.freeSeatNumeric.TabIndex = 149;
-            this.freeSeatNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // Edit
             // 

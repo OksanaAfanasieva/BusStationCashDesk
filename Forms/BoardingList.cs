@@ -24,7 +24,7 @@ namespace BusStationCashDesk.Windows_Forms
         public BoardingList(string number)
         {
             InitializeComponent();
-            file = new SaveLoadData<TicketData>("ticketData.json");
+            file = new SaveLoadData<TicketData>("C:\\Users\\My HP\\source\\repos\\BusStationCashDesk\\Data\\ticketData.json");
             ticketList = file.Load();
             selected = number;
         }

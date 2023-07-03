@@ -21,7 +21,7 @@ namespace BusStationCashDesk.Windows_Forms
         public InformationRoute(string number)
         {
             InitializeComponent();
-            file = new SaveLoadData<RouteData>("routeData.json");
+            file = new SaveLoadData<RouteData>("C:\\Users\\My HP\\source\\repos\\BusStationCashDesk\\Data\\routeData.json");
             routeList = file.Load();
             selected = number;
         }

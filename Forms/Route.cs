@@ -26,7 +26,7 @@ namespace BusStationCashDesk.Windows_Forms
             InitializeComponent();
             fromDateTimePicker.MinDate = DateTime.Today;
             toDateTimePicker.MinDate = DateTime.Today;
-            file = new SaveLoadData<RouteData>("routeData.json");
+            file = new SaveLoadData<RouteData>("C:\\Users\\My HP\\source\\repos\\BusStationCashDesk\\Data\\routeData.json");
             routeList = file.Load();
         }
 

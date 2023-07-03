@@ -32,11 +32,11 @@ namespace BusStationCashDesk.Windows_Forms
         public MyTravel()
         {
             InitializeComponent();
-            file = new SaveLoadData<RouteData>("routeData.json");
+            file = new SaveLoadData<RouteData>("C:\\Users\\My HP\\source\\repos\\BusStationCashDesk\\Data\\routeData.json");
             routeList = file.Load();
-            file1 = new SaveLoadData<string>("nicknameData.json");
+            file1 = new SaveLoadData<string>("C:\\Users\\My HP\\source\\repos\\BusStationCashDesk\\Data\\nicknameData.json");
             nicknameList = file1.Load();
-            file2 = new SaveLoadData<TicketData>("ticketData.json");
+            file2 = new SaveLoadData<TicketData>("C:\\Users\\My HP\\source\\repos\\BusStationCashDesk\\Data\\ticketData.json");
             ticketList = file2.Load();
         }
 

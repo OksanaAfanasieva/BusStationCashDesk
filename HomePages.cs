@@ -18,7 +18,7 @@ namespace BusStationCashDesk
 
         public HomePages()
         {
-            route = new SaveLoadData<RouteData>("routeData.json");
+            route = new SaveLoadData<RouteData>("C:\\Users\\My HP\\source\\repos\\BusStationCashDesk\\Data\\routeData.json");
             routeList = route.Load();
         }
 
